@@ -381,35 +381,35 @@ gala
     <div class="footer1">
       <div class="slider1">
         <div class="logos">
-          <div class="logo lesmots"><a href="#"></a></div>
-          <div class="logo subrayado"><a href="#"></a></div>
-          <div class="logo sovieticode"><a href="#"></a></div>
-          <div class="logo vito"><a href="#"></a></div>
-          <div class="logo makeit"><a href="#"></a></div>
-          <div class="logo cativelli"><a href="#"></a></div>
-          <div class="logo diving"><a href="#"></a></div>
+          <div class="logo lesmots"><a target="_blank" href="http:/lesmots.uy"></a></div>
+          <div class="logo subrayado"><a target="_blank" href="http://www.subrayado.com.uy/"></a></div>
+          <div class="logo sovieticode"><a target="_blank" href="http://twitter.com/sovieticode"></a></div>
+          <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
+          <div class="logo makeit"><a target="_blank" href="http://makeitwork.com.uy/"></a></div>
+          <div class="logo cativelli"><a target="_blank" href="http://www.cattivelli.com/"></a></div>
+          <div class="logo diving"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
         </div>
         <div class="logos">
-          <div class="logo casitanno"><a href="#"></a></div>
-          <div class="logo fernet"><a href="#"></a></div>
-          <div class="logo miller"><a href="#"></a></div>
-          <div class="logo natalia"><a href="#"></a></div>
-          <div class="logo boton"><a href="#"></a></div>
-          <div class="logo tweet"><a href="#"></a></div>
-          <div class="logo blog"><a href="#"></a></div>
+          <div class="logo casitanno"><a target="_blank" href="http://www.facebook.com/pages/Casitanno-restobar/171005276275918"></a></div>
+          <div class="logo fernet"><a target="_blank" href="http://www.fernetbranca.com/"></a></div>
+          <div class="logo miller"><a target="_blank" href="http://www.mgd.com/"></a></div>
+          <div class="logo natalia"><a target="_blank" href="http://www.nataliasastre.com/"></a></div>
+          <div class="logo boton"><a target="_blank" href="http://boton.tv/index.php?region=uy"></a></div>
+          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
+          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
         </div>
         <div class="logos">
-          <div class="logo ataque"><a href="#"></a></div>
-          <div class="logo justicia"><a href="#"></a></div>
-          <div class="logo candilejas"><a href="#"></a></div>
-          <div class="logo petates"><a href="#"></a></div>
-          <div class="logo amareto"><a href="#"></a></div>
+          <div class="logo ataque"><a target="_blank" href="http://www.atacaesquimal.com/"></a></div>
+          <div class="logo justicia"><a target="_blank" href="http://www.oceanofm.com/justicia-infinita/"></a></div>
+          <div class="logo candilejas"><a target="_blank" href="http://www.facebook.com/candilejas.resto.7"></a></div>
+          <div class="logo petates"><a target="_blank" href="http://www.mispetates.com/"></a></div>
+          <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
         </div>
       </div>
     </div>
   <div class="footer2">
    Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    Diseño & Desarrollo: <a href="http://sovietico.de" targe="_blank">Sovieticode</a> 
+    Diseño & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
 
