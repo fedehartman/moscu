@@ -1,0 +1,331 @@
+
+/*--| Typefaces
+---------------------------------------------------------------------------------------------- |--*/
+
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Asap'), local('Asap-Regular'), url(http://themes.googleusercontent.com/static/fonts/asap/v2/SgBaq0dzhSGNMfqm2JX5ng.woff) format('woff');
+  }
+
+@font-face {
+  font-family: 'Asap';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Asap Bold'), local('Asap-Bold'), url(http://themes.googleusercontent.com/static/fonts/asap/v2/yVILXKVgPzaz72DegpV7Bg.woff) format('woff');
+  }
+
+@font-face {
+  font-family: 'aw';
+  src: url('../../typefaces/front/landing/awesome/fontawesome-webfont.eot?v=3.1.0');
+  src: url('../../typefaces/front/landing/awesome/fontawesome-webfont.eot?#iefix&v=3.1.0') format('embedded-opentype'),
+       url('../../typefaces/front/landing/awesome/fontawesome-webfont.woff?v=3.1.0') format('woff'),
+       url('../../typefaces/front/landing/awesome/fontawesome-webfont.ttf?v=3.1.0') format('truetype'),
+       url('../../typefaces/front/landing/awesome/fontawesome-webfont.svg#fontawesomeregular?v=3.1.0') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+
+
+
+/*--| Text selection backlight
+---------------------------------------------------------------------------------------------- |--*/
+
+::-moz-selection {background-color: #148fcc; color: #fff;}
+ ::selection {background-color: #148fcc; color: #fff;}
+
+
+
+/*--| Back
+---------------------------------------------------------------------------------------------- |--*/
+
+body {
+  height: 100%;
+  background-color: #fff;
+  }
+
+
+
+/*--| Content
+---------------------------------------------------------------------------------------------- |--*/
+
+.content {
+  width: 960px;
+  height: 550px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -265px 0px 0px -480px;
+  }
+
+.content h1, .content h2, .content h3 {font-size: 0;}
+
+.content .imago {
+  width: 200px;
+  height: 210px;
+  position: absolute;
+  margin: 28px 0px 0px 0px;
+  z-index: 10;
+  background: url(../../../img/front/landing/imago.png) no-repeat 0px 0px;
+  }
+
+.content h1 {
+  width: 590px;
+  height: 210px;
+  position: absolute;
+  margin: 28px 0px 0px 0px;
+  background: url(../../../img/front/landing/logo.png) no-repeat 0px 0px;
+  }
+
+.content h3 {
+  width: 231px;
+  height: 25px;
+  position: absolute;
+  margin: 119px 0px 0px 700px;
+  opacity: 0.95;
+  background: url(../../../img/front/landing/sabado.png) no-repeat 0px 0px;
+  }
+
+.content .line01, .content .line02, .content .line03 {
+  background-color: rgba(20, 143, 204, 0.21);
+  position: absolute;
+  }
+
+.content .line01 {
+  width: 90px;
+  height: 1px;
+  margin: 135px 0px 0px 599px;
+  }
+
+.content .line02 {
+  width: 1px;
+  height: 140px;
+  margin: 211px 0px 0px 507px;
+  }
+
+.content p {
+  position: absolute;
+  display: block;
+  margin: 362px 0px 0px 412px;
+  font: normal 1.5em/30px 'Asap', Arial, Helvetica, sans-serif;
+  color: rgba(20, 143, 204, 0.91);
+  }
+
+.content p a {
+  display: inline-block;
+  padding: 0px 15px 0px 10px;
+  height: 30px;
+  background-color: #148fcc;
+  opacity: .94;
+  color: #fff;
+  font-weight: 700;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  margin: 0px 0px 0px 10px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  }
+
+.content p a:hover {
+  opacity: 1;
+  -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+
+.content p a:active {
+  opacity: 1;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  }
+
+.content p.last {margin: 402px 0px 0px 295px;}
+.content p.last02 {margin: 443px 0px 0px 296px;}
+
+.content .social {
+  width: 90px;
+  height: 50px;
+  position: absolute;
+  margin: 211px 0px 0px 792px;
+  }
+
+.content .social .fb, .content .social .tw {
+  width: 90px;
+  height: 25px;
+  }
+
+.content .line03 {
+  width: 1px;
+  height: 36px;
+  margin: 158px 0px 0px 807px;
+  background-color: rgba(20, 143, 204, 0.21);
+  position: absolute;
+  }
+
+
+
+/*--| Footer
+---------------------------------------------------------------------------------------------- |--*/
+
+footer {
+  position: absolute;
+  z-index: 200;
+  right: 20px;
+  bottom: 15px;
+  font: normal 1.1em/25px 'Asap', Arial, Helvetica, sans-serif;
+  color: #000;
+  text-align: right;
+  width: 500px;
+  height: 30px;
+  opacity: .88;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  }
+  footer:hover {opacity: 1;}
+
+footer a {
+  margin: -2px 0px 0px 0px;
+  padding: 2px 4px 2px 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  color: #fff; background-color: #148fcc;
+  }
+  footer a:hover {color: #fff; background-color: #148fcc}
+
+
+
+/*--| Stage03
+---------------------------------------------------------------------------------------------- |--*/
+
+.stage03 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9090;
+  background-color: #148fcc;
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+  }
+
+.stage03 .content {
+  width: 960px;
+  height: 500px;
+  position: absolute;
+  margin: -250px 0px 0px -480px;
+  left: 50%;
+  top: 50%;
+  /*background: url(../../../img/front/landing/test.png) no-repeat 0px 0px;*/
+  }
+
+.stage03 h4 {font-size: 0em;}
+
+.stage03 .text {position: absolute;}
+
+.stage03 .text01 {
+  width: 275px;
+  height: 55px;
+  margin: 20px 0px 0px 14px;
+  background: url(../../../img/front/landing/text.png) no-repeat 0px 0px;
+  }
+
+.stage03 .text02 {
+  width: 355px;
+  height: 70px;
+  margin: 84px 0px 0px 74px;
+  background: url(../../../img/front/landing/text.png) no-repeat -60px -65px;
+  }
+
+.stage03 .text03 {
+  width: 60px;
+  height: 30px;
+  margin: 100px 0px 0px 434px;
+  background: url(../../../img/front/landing/text.png) no-repeat -420px -80px;
+  }
+
+.stage03 .text04 {
+  width: 45px;
+  height: 25px;
+  margin: 185px 0px 0px 174px;
+  background: url(../../../img/front/landing/text.png) no-repeat -160px -165px;
+  }
+
+.stage03 .text05 {
+  width: 265px;
+  height: 75px;
+  margin: 155px 0px 0px 229px;
+  background: url(../../../img/front/landing/text.png) no-repeat -215px -135px;
+  }
+
+.stage03 .text06 {
+  width: 60px;
+  height: 70px;
+  margin: 270px 0px 0px 112px;
+  background: url(../../../img/front/landing/text.png) no-repeat -90px -250px;
+  }
+
+.stage03 .text07 {
+  width: 325px;
+  height: 90px;
+  margin: 250px 0px 0px 189px;
+  background: url(../../../img/front/landing/text.png) no-repeat -175px -230px;
+  }
+
+.stage03 .text08 {
+  width: 255px;
+  height: 90px;
+  margin: 417px 0px 0px 692px;
+  background: url(../../../img/front/landing/text.png) no-repeat 0px -320px;
+  }
+
+.stage03 .text09 {
+  cursor: pointer;
+  width: 65px;
+  height: 20px;
+  margin: 485px 0px 0px 28px;
+  background: url(../../../img/front/landing/text.png) no-repeat -260px -325px;
+  }
+
+.stage03 figure {
+  padding: 2px;
+  width: 320px;
+  height: 235px;
+  padding: 30px;
+  background-color: #fff;
+  position: absolute;
+  margin: 48px 0px 0px 565px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+
+.stage03 .line04 {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 1px;
+  height: 75px;
+  margin: 362px 0px 0px 383px;
+  }
+
+.stage03 .line05 {
+  background-color: rgba(255, 255, 255, 0.21);
+  position: absolute;
+  width: 290px;
+  height: 1px;
+  margin: 437px 0px 0px 383px;
+  }
+
+.remove {margin-right: -100%;}

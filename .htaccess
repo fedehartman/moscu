@@ -1,0 +1,22 @@
+# Use PHP 5.4
+AddHandler application/x-httpd-php54 .php
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^premioscatatonias.com.uy [NC]
+RewriteRule ^(.*)$ http://www.premioscatatonias.uy/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.premioscatatonias.com.uy [NC]
+RewriteRule ^(.*)$ http://www.premioscatatonias.uy/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^premioscatatonias.uy [NC]
+RewriteRule ^(.*)$ http://www.premioscatatonias.uy/$1 [R=301,L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 year"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
