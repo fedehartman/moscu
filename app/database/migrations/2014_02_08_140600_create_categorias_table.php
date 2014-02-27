@@ -18,9 +18,12 @@ class CreateCategoriasTable extends Migration {
 			$table->string('nombre');
 			$table->text('descripcion');
 			$table->string('imagen');
+			$table->string('palabras_claves');
 			$table->string('sponsor_tipo');
 			$table->string('sponsor');
 			$table->string('sponsor_imagen');
+			$table->string('boton_votar');
+			$table->integer('orden');
 			$table->softDeletes();
 			$table->timestamps();
 		});

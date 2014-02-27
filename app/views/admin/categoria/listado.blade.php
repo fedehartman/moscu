@@ -26,6 +26,7 @@
           <table class="data-table table table-bordered table-striped">
             <thead>
               <tr>
+                <th>Orden</th>
                 <th>Nombre</th>
                 <th>Sponsor</th>
                 <th>Palabras Claves</th>
@@ -35,11 +36,16 @@
             <tbody>
               @foreach($categorias as $categoria)
               <tr id="categoria_{{ $categoria->id }}">
+                <td>{{{ $categoria->orden }}}</td>
                 <td>{{{ $categoria->nombre }}}</td>
                 <td>{{{ $categoria->mostrarSponsor() }}}</td>
                 <td>{{{ $categoria->palabras_claves }}}</td>
                 <td>
                   <div class="text-right">
+                    <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
+                      {{ count($categoria->participantes()) }}
+                      <i class="icon-group"></i>
+                    </a>
                     <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/categoria/editar/'. $categoria->id) }}" alt="Editar Categor&iacute;a" title="Editar Categor&iacute;a">
                       <i class="icon-pencil"></i>
                     </a>

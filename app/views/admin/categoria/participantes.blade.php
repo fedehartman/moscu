@@ -8,25 +8,14 @@
 @section('content')
 <div class="page-header">
   <h1 class="pull-left">
-    <i class="icon-bullhorn"></i>
-    <span>Votos por categor&iacute;a</span>
+    <i class="icon-cogs"></i>
+    <span>Participantes de la categor&iacute;a {{{ $categoria->nombre }}}</span>
   </h1>
 </div>
 
-@include('admin.partials.mensajes')
-
-@foreach($categorias as $categoria)
 <div class="row">
   <div class="col-sm-12">
-    <div class="box box-collapsed">
-      <div class="box-header purple-background">
-        <div class="title">{{{ $categoria->nombre }}}</div>
-        <div class="actions">          
-          <a class="btn box-collapse btn-lg btn-link" href="#">
-          Participantes: {{ count($categoria->participantes()) }} <i></i>
-          </a>
-        </div>
-      </div>
+    <div class="box">
       <div class="box-content">
         <div class="scrollable-area">
           <table class="data-table2 table table-bordered table-striped">
@@ -58,7 +47,6 @@
     </div>
   </div>
 </div>
-@endforeach
 @stop
 
 @section('script')
@@ -71,7 +59,7 @@
     $('.data-table2').dataTable( {
       "aaSorting": [[ 1, "desc" ]],
       "sPaginationType": "bootstrap",
-      "iDisplayLength": 10,
+      "iDisplayLength": 25,
       "bLengthChange": false,
       "oLanguage": {
         "sProcessing":     "Procesando...",

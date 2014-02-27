@@ -41,7 +41,6 @@ class Tweet extends Eloquent {
         $tweet_bd->categoria_id = $categoria_id;
         $tweet_bd->voto_repetido = Tweet::votoRepetido($categoria_id, $tweet_bd->twitero_id, $tweet_bd->tw_id_usuario);
         $tweet_bd->save();
-        return $tweet_bd;
     }
 
     public function categoria(){
