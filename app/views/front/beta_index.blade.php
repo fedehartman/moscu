@@ -109,7 +109,7 @@ Date: Feb - Mar | 2014
     <p class="last mov-brief-03">&iquest;Quer&eacute;s participar como marca? <a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}" target="_blank">Baj&aacute; nuestra propuesta comercial</a></p>
 
     <p class="last mov-brief-03">&iquest;Quer&eacute;s participar como marca? <a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}" target="_blank">Baj&aacute; nuestra propuesta comercial</a></p>
-    <!-- <p class="last02 mov-brief-03">&iquest;Quer&eacute;s saber cuándo vas a poder votar? <a href="#">Baj&aacute; las revoluciones acá</a></p -->>
+    <!-- <p class="last02 mov-brief-03">&iquest;Quer&eacute;s saber cuándo vas a poder votar? <a href="#">Baj&aacute; las revoluciones acá</a></p -->
     <div class="line03 mov-line03"></div>
     <div class="social mov-social">
       <div class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-text="¿Viste que el 15 de marzo son los #PremiosCatatonias? KENERVIO: " data-lang="es" data-count="none" data-hashtags="PremiosCatatonias">Twittear</a>
@@ -140,7 +140,7 @@ Date: Feb - Mar | 2014
         votar. Los ganadores serán anunciados en la <a href="#" class="b03">
         ceremonia de entrega de premios</a> que se realizará el sábado 15 de 
         marzo a partir de las 20:30 horas en un local coqueto que alquilamos en 
-        Prato esq. Cassinoni.</p>
+        Prato 2333 esq. Cassinoni.</p>
         <p>Dale a la flechita <i></i> y te seguimos contando.</p>
       </div>
       <div class="slide">
@@ -387,7 +387,7 @@ gala
           <div class="logo vito"><a href="#"></a></div>
           <div class="logo makeit"><a href="#"></a></div>
           <div class="logo cativelli"><a href="#"></a></div>
-          <div class="logo diving"><a href="#"></a></div>
+          <div class="logo living"><a href="#"></a></div>
         </div>
         <div class="logos">
           <div class="logo casitanno"><a href="#"></a></div>
