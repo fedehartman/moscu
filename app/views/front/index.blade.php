@@ -149,7 +149,6 @@ home
 
   <!--| Categorias
   ===================================== |-->
-
   <ul class="categorias">
     @foreach ($categorias as $categoria)
     <li>
