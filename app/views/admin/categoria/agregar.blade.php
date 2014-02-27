@@ -88,7 +88,17 @@
             <div class="col-sm-8 controls">
               <input class="form-control" data-rule-required="true" id="boton_votar" name="boton_votar" placeholder="Bot&oacute;n de votar" type="text" maxlength="140">
             </div>
-          </div>  
+          </div> 
+          <div class="form-group">
+            <label class="control-label col-sm-3" for="orden">Orden</label>
+            <div class="col-sm-4 controls">
+              <div class="row">
+                <div class="col-xs-4">
+                  <input class="form-control" data-rule-number="true" id="orden" name="orden" type="text" value="1">
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="form-actions">
             <div class="row">
               <div class="col-sm-9 col-sm-offset-3">

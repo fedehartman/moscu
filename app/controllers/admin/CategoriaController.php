@@ -29,12 +29,12 @@ class CategoriaController extends BaseController {
             $categoria->sponsor_tipo = Input::get('tipo');
             $categoria->sponsor = Input::get('sponsor');
             $categoria->boton_votar = Input::get('boton_votar');
+            $categoria->orden = Input::get('orden');
 
             if (Input::hasFile('imagen')) {
                 $file = Input::file('imagen');
                 if ($file->getError() != 4) {
                     $ext = pathinfo( $file->getClientOriginalName(), PATHINFO_EXTENSION );
-                    $ext = ($ext == 'jpg') ? 'jpeg' : $ext;
                     $fileName = md5( $file->getClientOriginalName() ).'.'.$ext;
                     if ($file->move(public_path() . '/uploads/categoria/', $fileName)){
                         $categoria->borrarImagenVieja();
@@ -47,7 +47,6 @@ class CategoriaController extends BaseController {
                 $file = Input::file('imagen_sponsor');
                 if ($file->getError() != 4) {
                     $ext = pathinfo( $file->getClientOriginalName(), PATHINFO_EXTENSION );
-                    $ext = ($ext == 'jpg') ? 'jpeg' : $ext;
                     $fileName = md5( $file->getClientOriginalName() ).'.'.$ext;
                     if ($file->move(public_path() . '/uploads/categoria/', $fileName)){
                         $categoria->borrarImagenSponsorVieja();
@@ -73,6 +72,11 @@ class CategoriaController extends BaseController {
             Log::error($e);
             return $e->getMessage();
         }        
+    }
+
+    public function getParticipantes($id) {
+        $data['categoria'] = Categoria::find($id);
+        return View::make('admin.categoria.participantes', $data);
     }
 
 }

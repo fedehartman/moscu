@@ -32,7 +32,6 @@ class ProductoController extends BaseController {
                 $file = Input::file('imagen');
                 if ($file->getError() != 4) {
                     $ext = pathinfo( $file->getClientOriginalName(), PATHINFO_EXTENSION );
-                    $ext = ($ext == 'jpg') ? 'jpeg' : $ext;
                     $fileName = md5( $file->getClientOriginalName() ).'.'.$ext;
                     if ($file->move(public_path() . '/uploads/producto/', $fileName)){
                         $producto->borrarImagenVieja();

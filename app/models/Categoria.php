@@ -27,13 +27,11 @@ class Categoria extends Eloquent {
 								if(strtolower($categoria->sponsor) == strtolower($hastag->text))
 									return $categoria->id;
 							}
-							return NULL;
 						}elseif($categoria->sponsor_tipo == 'mencion'){
 							foreach ($tweet->entities->user_mentions as $mencion) {
 								if(strtolower($categoria->sponsor) == strtolower($mencion->screen_name))
 									return $categoria->id;
 							}
-							return NULL;
 						}
 					}else{
 						return $categoria->id;
@@ -54,8 +52,6 @@ class Categoria extends Eloquent {
 						$buscar_sponsor = strpos(strtolower($tweet->texto), strtolower($categoria->mostrarSponsor()));
 						if($buscar_sponsor !== FALSE)
 							return $categoria->id;
-						else
-							return NULL;
 					}else{
 						return $categoria->id;
 					}				

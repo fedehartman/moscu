@@ -65,7 +65,7 @@ Route::get('admin/votos', function() {
 		$tweet->actualizarVoto($categoria_id);
 	}
 
-    $data['categorias'] = Categoria::orderBy('created_at', 'desc')->get();
+    $data['categorias'] = Categoria::orderBy('orden')->get();
     return View::make('admin.votos', $data);
 } );
 
@@ -103,7 +103,7 @@ Route::get('/', function()
 Route::get('/pagina', function()
 {
 	$data['productos'] = Producto::all();
-    $data['categorias'] = Categoria::all();
+    $data['categorias'] = Categoria::where('created_at', '<' , '2014-02-28')->orderBy('orden')->get();
 	return View::make('front.index', $data);
 });
 
