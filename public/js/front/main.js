@@ -5,7 +5,10 @@ $(document).ready(function() {
 
 $(".nano").nanoScroller();
 
-
+$(".mobile").click(function(e) {
+   $(".mobile-lay").addClass('none');
+  return false;
+  });
 
 /*--| Cycle Footer
 -------------------------------------------------------------------------- |--*/
