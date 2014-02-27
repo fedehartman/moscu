@@ -30,6 +30,7 @@
                 <th>Nombre</th>
                 <th>Sponsor</th>
                 <th>Palabras Claves</th>
+                <th>Fecha</th>
                 <th></th>
               </tr>
             </thead>
@@ -40,6 +41,7 @@
                 <td>{{{ $categoria->nombre }}}</td>
                 <td>{{{ $categoria->mostrarSponsor() }}}</td>
                 <td>{{{ $categoria->palabras_claves }}}</td>
+                <td>{{{ date('d/m/Y', strtotime($categoria->created_at)) }}}</td>
                 <td>
                   <div class="text-right">
                     <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
