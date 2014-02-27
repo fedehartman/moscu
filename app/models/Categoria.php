@@ -30,7 +30,7 @@ class Categoria extends Eloquent {
 							return NULL;
 						}elseif($categoria->sponsor_tipo == 'mencion'){
 							foreach ($tweet->entities->user_mentions as $mencion) {
-								if(strtolower($categoria->sponsor) == strtolower($mencion))
+								if(strtolower($categoria->sponsor) == strtolower($mencion->screen_name))
 									return $categoria->id;
 							}
 							return NULL;
