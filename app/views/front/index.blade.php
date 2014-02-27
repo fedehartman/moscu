@@ -154,12 +154,12 @@ home
     @foreach ($categorias as $categoria)
     <li>
       <div class="cabezal">
-        <figure><img src="{{{ URL::asset('uploads/categoria/' . $categoria->imagen) }}}" width="65" height="65"></figure>
+        <figure class="cat"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->imagen) }}}" width="65" height="65"></figure>
         <h5>{{{ $categoria->nombre }}}</h5>
       </div>
       <p>{{ $categoria->descripcion }}</p>
       @if($categoria->sponsor_imagen)
-      <figure><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
+      <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
       @endif
       <div class="vota">
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
