@@ -12,7 +12,7 @@ $(".nano").nanoScroller();
 
 $('.slider1').cycle({ 
     fx:     'fade', 
-    speed:  'fast', 
+    speed:  '800', 
     timeout: 3500, 
   });
 
