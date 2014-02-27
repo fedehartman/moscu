@@ -158,9 +158,12 @@ $(".b04").click(function(e) {
 
 });
 
+function popup(url, w, h){
+  win = window.open(url, '', 'width=' + w + ',height=' + h + ',toolbar=no,menubar=no,scrollbars=yes,resizable=no');
+}
+
 /*--| Modal
 -------------------------------------------------------------------------- |--*/
-
 function mostrarModal(texto){
   $(".a00, .a01, .a02, .a03, .a04, header, footer").addClass('blur');
   $(".modalbody p").html(texto);
@@ -175,16 +178,8 @@ function cerrarModal(){
   return false;
 }
 
-
-function popup(url, w, h){
-  win = window.open(url, '', 'width=' + w + ',height=' + h + ',toolbar=no,menubar=no,scrollbars=yes,resizable=no');
-}
-
-
-
 /*--| Tienda
 -------------------------------------------------------------------------- |--*/
-
 function agregarTienda(producto_id){
   var tipo = $('#' + producto_id).data('type');
   var producto = $('#' + producto_id + ' h4').html();

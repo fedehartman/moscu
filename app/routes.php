@@ -100,6 +100,12 @@ Route::get('/', function()
 	return View::make('front.landing');
 });
 
+Route::get('/beta', function()
+{
+    $data['categorias'] = Categoria::where('created_at', '<' , '2014-02-28')->orderBy('orden')->get();
+    return View::make('front.beta_index', $data);
+});
+
 Route::get('/pagina', function()
 {
 	$data['productos'] = Producto::all();
