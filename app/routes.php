@@ -58,12 +58,12 @@ Route::post('admin/cambiar-clave', function() {
 } );
 
 Route::get('admin/votos', function() {
-	$tweets = Tweet::orderBy('fecha', 'desc')->get();
-    Tweet::reiniciarVotosRepetido();
-    foreach ($tweets as $tweet) {
-		$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
-		$tweet->actualizarVoto($categoria_id);
-	}
+	// $tweets = Tweet::orderBy('fecha', 'desc')->get();
+ //    Tweet::reiniciarVotosRepetido();
+ //    foreach ($tweets as $tweet) {
+	// 	$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
+	// 	$tweet->actualizarVoto($categoria_id);
+	// }
 
     $data['categorias'] = Categoria::orderBy('orden')->get();
     return View::make('admin.votos', $data);
@@ -95,12 +95,12 @@ Route::controller('admin/pedido','PedidoController');
 /* -----------------------------------------------------------------------------------------------------------------*/
 /* ---------------------- RUTAS FRONT ------------------------------------------------------------------------------*/
 /* -----------------------------------------------------------------------------------------------------------------*/
-Route::get('/', function()
+Route::get('/landing', function()
 {
 	return View::make('front.landing');
 });
 
-Route::get('/beta', function()
+Route::get('/', function()
 {
     $data['categorias'] = Categoria::where('created_at', '<' , '2014-02-28')->orderBy('orden')->get();
     return View::make('front.beta_index', $data);

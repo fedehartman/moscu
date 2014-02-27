@@ -71,7 +71,7 @@ class Tweet extends Eloquent {
 
     static function votoRepetido($categoria_id, $twitero_id, $tw_id_usuario){        
         if($categoria_id != NULL && $twitero_id != NULL)
-            $yaVoto = Tweet::where('categoria_id', $categoria_id)->where('twitero_id', $twitero_id)->where('tw_id_usuario', $tw_id_usuario)->where('voto_repetido', 0)->count();
+            $yaVoto = Tweet::where('categoria_id', $categoria_id)->where('tw_id_usuario', $tw_id_usuario)->where('voto_repetido', 0)->count();
         else
             $yaVoto = FALSE;
 
