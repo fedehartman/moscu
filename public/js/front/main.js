@@ -7,9 +7,17 @@ $(".nano").nanoScroller();
 
 
 
+/*--| Cycle Footer
+-------------------------------------------------------------------------- |--*/
+
+$('.slider1').cycle({ 
+    fx:     'fade', 
+    speed:  'fast', 
+    timeout: 3500, 
+  });
 
 
-/*--| Cycle
+/*--| Cycle Textos
 -------------------------------------------------------------------------- |--*/
 $('.slider').cycle({ 
     fx:     'fade', 
@@ -33,6 +41,7 @@ $('#form-pedido').on('submit',enviarPedido);
 
 /*--| Nav
 -------------------------------------------------------------------------- |--*/
+
 $(".a00 .contenido").click(function(e) {
   e.preventDefault();
   $('header').delay(450).queue(function(){
