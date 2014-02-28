@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('#form-clave').on('submit',doCambiarClave);
     $('.ver').on('click',ver);
     $('.ver-votos').on('click',verVotos);
+    $('.ver-votos-ano').on('click',verVotosAno);
     $('.borrar').on('click',borrar);
 });
 
@@ -62,6 +63,24 @@ function verVotos(e){
   $.ajax({
     type: "get",
     url: BASE_PATH + '/admin/ver-votos/' + cat_id + '/' + twitero_id,
+    dataType: "html",
+    success: function(data){
+      $('#modal-ver .modal-title').html('Listado de Votos');
+      $('#modal-ver .modal-body').html(data);
+      $('#modal-ver').modal('toggle');
+    }
+  });
+}
+
+function verVotosAno(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  var cat_id = $(this).data('categoria');
+  var tweet_id = $(this).data('tweet');
+  $.ajax({
+    type: "get",
+    url: BASE_PATH + '/admin/ver-votos-ano/' + cat_id + '/' + tweet_id,
     dataType: "html",
     success: function(data){
       $('#modal-ver .modal-title').html('Listado de Votos');

@@ -11,6 +11,11 @@
     <i class="icon-cogs"></i>
     <span>Participantes de la categor&iacute;a {{{ $categoria->nombre }}}</span>
   </h1>
+  <div class="pull-right">
+    <div class="btn-group">
+      <a class="btn hidden-xs" href="{{ URL::to('/admin/categoria/listado/') }}"><i class="icon-circle-arrow-left"></i> Volver al listado</a>
+    </div>
+  </div>
 </div>
 
 <div class="row">
@@ -18,6 +23,35 @@
     <div class="box">
       <div class="box-content">
         <div class="scrollable-area">
+          @if(Categoria::esTweetDelAno($categoria->id))
+          <table class="data-table2 table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Tweet</th>
+                <th>Votos</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($categoria->tweetsAno() as $tweet)
+              <tr>
+                <td>
+                  <span class="label label-info">{{{ $tweet->tweetAno->tw_nombre_usuario }}} - @{{{ $tweet->tweetAno->tw_usuario }}}</span><br/>
+                  {{{ $tweet->tweetAno->texto }}}
+                </td>
+                <td>{{ $tweet->contarVotosAno() }}</td>
+                <td>
+                  <div class="text-right">
+                    <a class="btn btn-primary btn-xs ver-votos-ano" href="#" data-categoria="{{ $tweet->categoria_id }}" data-tweet="{{ $tweet->tweetAno->id }}" alt="Ver Votos" title="Ver Votos">
+                      <i class="icon-search"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>
+          @else
           <table class="data-table2 table table-bordered table-striped">
             <thead>
               <tr>
@@ -42,6 +76,7 @@
               @endforeach
             </tbody>
           </table>
+          @endif
         </div>
       </div>
     </div>

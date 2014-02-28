@@ -85,6 +85,10 @@ class Categoria extends Eloquent {
 		return $this->tweets()->whereNotNull('twitero_id')->groupBy('twitero_id')->get();
 	}
 
+	public function tweetsAno(){
+		return $this->tweets()->whereNotNull('tweet_id')->groupBy('tweet_id')->get();
+	}	
+
 	public function mostrarSponsor(){
 		if($this->sponsor)
         	return ($this->sponsor_tipo == 'hashtag') ? '#' . $this->sponsor : '@' . $this->sponsor;

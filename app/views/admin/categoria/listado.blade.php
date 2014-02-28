@@ -45,7 +45,9 @@
                 <td>
                   <div class="text-right">
                     <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
-                      {{ count($categoria->participantes()) }}
+                      @if(Categoria::esTweetDelAno($categoria->id)) {{ count($categoria->tweetsAno()) }}
+                      @else {{ count($categoria->participantes()) }}
+                      @endif
                       <i class="icon-group"></i>
                     </a>
                     <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/categoria/editar/'. $categoria->id) }}" alt="Editar Categor&iacute;a" title="Editar Categor&iacute;a">

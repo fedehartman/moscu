@@ -22,6 +22,47 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="box box-collapsed">
+      @if(Categoria::esTweetDelAno($categoria->id))
+      <div class="box-header purple-background">
+        <div class="title">{{{ $categoria->nombre }}}</div>
+        <div class="actions">          
+          <a class="btn box-collapse btn-lg btn-link" href="#">
+          Participantes: {{ count($categoria->tweetsAno()) }} <i></i>
+          </a>
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="scrollable-area">        
+          <table class="data-table2 table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Tweet</th>
+                <th>Votos</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach($categoria->tweetsAno() as $tweet)
+              <tr>
+                <td>
+                  <span class="label label-info">{{{ $tweet->tweetAno->tw_nombre_usuario }}} - @{{{ $tweet->tweetAno->tw_usuario }}}</span><br/>
+                  {{{ $tweet->tweetAno->texto }}}
+                </td>
+                <td>{{ $tweet->contarVotosAno() }}</td>
+                <td>
+                  <div class="text-right">
+                    <a class="btn btn-primary btn-xs ver-votos-ano" href="#" data-categoria="{{ $tweet->categoria_id }}" data-tweet="{{ $tweet->tweetAno->id }}" alt="Ver Votos" title="Ver Votos">
+                      <i class="icon-search"></i>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              @endforeach
+            </tbody>
+          </table>                   
+        </div>
+      </div>
+      @else
       <div class="box-header purple-background">
         <div class="title">{{{ $categoria->nombre }}}</div>
         <div class="actions">          
@@ -31,7 +72,7 @@
         </div>
       </div>
       <div class="box-content">
-        <div class="scrollable-area">
+        <div class="scrollable-area">        
           <table class="data-table2 table table-bordered table-striped">
             <thead>
               <tr>
@@ -55,9 +96,10 @@
               </tr>
               @endforeach
             </tbody>
-          </table>
+          </table>                   
         </div>
       </div>
+      @endif
     </div>
   </div>
 </div>

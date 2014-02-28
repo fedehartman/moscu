@@ -29,15 +29,21 @@ class Twitero extends Eloquent {
 			$url = str_replace('http://favstar.fm/users/', '', $url);
 
 			$screen_name = explode('/', $url);
+			$tweet_ano_id = explode('/', $tweet->entities->urls[0]->expanded_url);
 
-			$parameters = array('screen_name' => $screen_name[0]);
-			$mencion = $connection->get('users/show', $parameters);
+			$tweet_ano = NULL;
+			$tw_ano = $connection->get('statuses/show', array('id' => end($tweet_ano_id)));
+			if (!isset($tw_ano->errors)) {
+				$tweet_ano = Tweet::guardarTweetAno($tw_ano);
+			}
+
+			$mencion = $connection->get('users/show', array('screen_name' => $screen_name[0]));
 
 			if($mencion){
 				if (!isset($mencion->errors)) {
 					// Log::error($url);
 					$twitero = Twitero::cargarDatosTwitero($mencion);
-					return $twitero->id;
+					return array('twitero_id' => $twitero->id, 'tweet_id' => $tweet_ano);
 				}			
 			}
 		}

@@ -6,12 +6,13 @@ class Tweet extends Eloquent {
 	
 	protected $table = 'tweets';
 
-	static function guardarVoto($tweet, $categoria_id, $twitero_id){
+	static function guardarVoto($tweet, $categoria_id, $twitero_id, $tweet_id){
       	$tweet_bd = Tweet::where('tw_id', $tweet->id_str)->first();
       	if(!$tweet_bd){
             $tweet_bd = new Tweet;
             $tweet_bd->categoria_id = $categoria_id;
             $tweet_bd->twitero_id = $twitero_id;
+            $tweet_bd->tweet_id = $tweet_id;
             $tweet_bd->tw_id = $tweet->id_str;
             $tweet_bd->texto = $tweet->text;
             $tweet_bd->fecha = date('Y-m-d H:i:s', strtotime($tweet->created_at));
@@ -19,11 +20,12 @@ class Tweet extends Eloquent {
             $tweet_bd->tw_nombre_usuario = $tweet->user->name;
             $tweet_bd->tw_usuario = $tweet->user->screen_name;
             $tweet_bd->voto_repetido = 0;
+            $tweet_bd->tweet_ano = 0;
             $tweet_bd->save();
       	}else{
-            DB::table('tweets')->where('id', $tweet_bd->id)->update(array('voto_repetido' => 0));
       		$tweet_bd->categoria_id = $categoria_id;
             $tweet_bd->twitero_id = $twitero_id;
+            $tweet_bd->tweet_id = $tweet_id;
             $tweet_bd->tw_id = $tweet->id_str;
             $tweet_bd->texto = $tweet->text;
             $tweet_bd->fecha = date('Y-m-d H:i:s', strtotime($tweet->created_at));
@@ -31,16 +33,35 @@ class Tweet extends Eloquent {
             $tweet_bd->tw_nombre_usuario = $tweet->user->name;
             $tweet_bd->tw_usuario = $tweet->user->screen_name;
             $tweet_bd->voto_repetido = 0;
+            $tweet_bd->tweet_ano = 0;
             $tweet_bd->save();
       	}
       	return $tweet_bd;
     }
 
-    public function actualizarVoto($categoria_id, $twitero_id){
+    static function guardarTweetAno($tweet){
+        $tweet_bd = Tweet::where('tw_id', $tweet->id_str)->first();
+        if(!$tweet_bd){
+            $tweet_bd = new Tweet;
+            $tweet_bd->tw_id = $tweet->id_str;
+            $tweet_bd->texto = $tweet->text;
+            $tweet_bd->fecha = date('Y-m-d H:i:s', strtotime($tweet->created_at));
+            $tweet_bd->tw_id_usuario = $tweet->user->id_str;
+            $tweet_bd->tw_nombre_usuario = $tweet->user->name;
+            $tweet_bd->tw_usuario = $tweet->user->screen_name;
+            $tweet_bd->tweet_ano = 1;
+            $tweet_bd->save();
+        }
+        return $tweet_bd->id;
+    }
+
+    public function actualizarVoto($categoria_id, $twitero_id, $tweet_id){
         $tweet_bd = Tweet::find($this->id);
         $tweet_bd->categoria_id = $categoria_id;
         if($twitero_id != NULL)
             $tweet_bd->twitero_id = $twitero_id;
+        if($tweet_id != NULL)
+            $tweet_bd->tweet_id = $tweet_id;
         $tweet_bd->voto_repetido = Tweet::votoRepetido($categoria_id, $tweet_bd->tw_id_usuario);
         $tweet_bd->save();
     }
@@ -51,6 +72,10 @@ class Tweet extends Eloquent {
 
     public function voto(){
         return $this->belongsTo('Twitero', 'twitero_id');
+    }
+
+    public function tweetAno(){
+        return $this->belongsTo('Tweet', 'tweet_id');
     }
 
     public function mostrarCategoria(){
@@ -85,6 +110,10 @@ class Tweet extends Eloquent {
 
     public function contarVotos(){
         return Tweet::where('categoria_id', $this->categoria_id)->where('twitero_id', $this->twitero_id)->where('voto_repetido', 0)->count();
+    }
+
+    public function contarVotosAno(){
+        return Tweet::where('categoria_id', $this->categoria_id)->where('tweet_id', $this->tweet_id)->where('voto_repetido', 0)->count();
     }
 
 }
