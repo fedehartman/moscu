@@ -9,7 +9,8 @@ Route::get('/admin', function() {
 } );
 
 Route::get('/admin/dashboard', function() {
-    return View::make('admin.dashboard');
+	$data['tweets'] = Tweet::orderBy('fecha', 'desc')->take(50)->get();
+    return View::make('admin.dashboard', $data);
 } );
 
 Route::get('login', function() {

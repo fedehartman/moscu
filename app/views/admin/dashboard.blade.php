@@ -15,61 +15,24 @@
           <div class='box-header'>
             <div class='title'>
               <i class='icon-refresh'></i>
-              Actividades recientes de los Clientes
+              Ultimos tweets de #PremiosCatatonias
             </div>
             <div class='actions'>
             </div>
           </div>
           <div class='box-content box-no-padding'>
             <ul class='list-unstyled users list-hover list-striped'>
+              @foreach($tweets as $tweet)
               <li>
-                <div class='avatar pull-left'>
-                  <div class='icon-user'></div>
-                </div>
                 <div class='action pull-left'>
-                  <a class="text-contrast" href="#">Jean</a>
-                  signed in
+                  <a class="text-contrast" href="#">{{{ $tweet->tw_nombre_usuario }}} - @{{{ $tweet->tw_usuario }}}</a>
+                  <br/>{{{ $tweet->texto }}}
                 </div>
                 <small class='date pull-right text-muted'>
-                  <span>September 15, 2013 - 17:34</span> <i class='icon-time'></i>
+                  <span>{{{ date('d-m-Y H:i:s', strtotime($tweet->fecha)) }}}</span> <i class='icon-time'></i>
                 </small>
               </li>
-              <li>
-                <div class='avatar pull-left'>
-                  <div class='icon-user'></div>
-                </div>
-                <div class='action pull-left'>
-                  <a class="text-contrast" href="#">Jason</a>
-                  signed in
-                </div>
-                <small class='date pull-right text-muted'>
-                  <span>September 15, 2013 - 17:34</span> <i class='icon-time'></i>
-                </small>
-              </li>
-              <li>
-                <div class='avatar pull-left'>
-                  <div class='icon-user'></div>
-                </div>
-                <div class='action pull-left'>
-                  <a class="text-contrast" href="#">Johnnie</a>
-                  commented
-                </div>
-                <small class='date pull-right text-muted'>
-                  <span>September 15, 2013 - 17:34</span> <i class='icon-time'></i>
-                </small>
-              </li>
-              <li>
-                <div class='avatar pull-left'>
-                  <div class='icon-user'></div>
-                </div>
-                <div class='action pull-left'>
-                  <a class="text-contrast" href="#">Alma</a>
-                  commented
-                </div>
-                <small class='date pull-right text-muted'>
-                  <span>September 15, 2013 - 17:34</span> <i class='icon-time'></i>
-                </small>
-              </li>
+              @endforeach
             </ul>
           </div>
         </div>
