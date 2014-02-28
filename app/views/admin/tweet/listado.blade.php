@@ -1,14 +1,9 @@
 @extends('admin.layout')
 
-@section('styles')
-<link href="{{ URL::to('/css/admin/plugins/datatables/bootstrap-datatable.css') }}" media="all" rel="stylesheet" type="text/css" />
-@parent
-@stop
-
 @section('content')
 <div class="page-header">
   <h1 class="pull-left">
-    <i class="icon-envelope-alt"></i>
+    <i class="icon-twitter"></i>
     <span>Listado de Tweets</span>
   </h1>
 </div>
@@ -20,7 +15,18 @@
     <div class="box">
       <div class="box-content">
         <div class="scrollable-area">
-          <table class="data-table table table-bordered table-striped">
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-sm-8"></div>
+            <div class="col-sm-4 col-lg-4 text-right">
+              <div class="input-group">
+                <input class="form-control input-buscar" type="text" placeholder="Buscar" value="{{$buscar}}">
+                <div class="input-group-btn">
+                  <a class="btn buscar" href="#">Buscar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="table table-bordered table-striped">
             <thead>
               <tr>
               	<th>Fecha</th>
@@ -43,16 +49,13 @@
               @endforeach
             </tbody>
           </table>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 text-right">{{$paginado}}</div>
+          </div> 
         </div>
       </div>
     </div>
   </div>
 </div>
-@stop
-
-@section('script')
-@parent
-<script src="{{ URL::to('/js/admin/plugins/datatables/jquery.dataTables.min.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('/js/admin/plugins/datatables/jquery.dataTables.columnFilter.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('/js/admin/plugins/datatables/dataTables.overrides.js') }}" type="text/javascript"></script>
 @stop

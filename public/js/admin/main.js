@@ -4,6 +4,12 @@ $(document).ready(function(){
     $('.ver-votos').on('click',verVotos);
     $('.ver-votos-ano').on('click',verVotosAno);
     $('.borrar').on('click',borrar);
+
+    $('.buscar').on('click',function(){
+      var valor = $('.input-buscar').val();
+
+      window.location = BASE_PATH + '/admin/tweet/listado?buscar='+ valor;
+    });
 });
 
 $('#modal-clave').on('show.bs.modal', function () {

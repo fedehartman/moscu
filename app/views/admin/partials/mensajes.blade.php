@@ -18,3 +18,33 @@
   {{ Session::get('msg', 'Los cambios fueron guardados.') }}
 </div>
 @endif
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="box">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="box-content box-statistic">
+            <h3 class="title text-primary">{{ Tweet::totalTweets() }}</h3>
+            <small>tweets</small>
+            <div class="text-primary icon-twitter align-right"></div>
+          </div>
+        </div>        
+        <div class="col-sm-3">
+          <div class="box-content box-statistic">
+            <h3 class="title text-success">{{ Tweet::totalVotos() }}</h3>
+            <small>votos</small>
+            <div class="text-success icon-thumbs-up align-right"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="box-content box-statistic">
+            <h3 class="title text-info">{{ count(Twitero::all()) }}</h3>
+            <small>twiteros</small>
+            <div class="text-info icon-group align-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

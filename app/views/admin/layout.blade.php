@@ -105,7 +105,7 @@
             </li>
             <li class="{{ Request::is('admin/tweet*') ? 'active' : '' }}">
               <a href="{{ URL::to('/admin/tweet/listado') }}">
-                <i class='icon-envelope-alt'></i>
+                <i class='icon-twitter'></i>
                 <span>Tweets</span>
               </a>
             </li>

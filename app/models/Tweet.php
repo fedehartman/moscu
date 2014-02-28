@@ -116,4 +116,12 @@ class Tweet extends Eloquent {
         return Tweet::where('categoria_id', $this->categoria_id)->where('tweet_id', $this->tweet_id)->where('voto_repetido', 0)->count();
     }
 
+    static function totalVotos(){
+        return Tweet::whereNotNull('categoria_id')->whereNotNull('twitero_id')->where('voto_repetido', 0)->count();
+    }
+
+    static function totalTweets(){
+        return Tweet::where('tweet_ano', 0)->count();
+    }
+
 }
