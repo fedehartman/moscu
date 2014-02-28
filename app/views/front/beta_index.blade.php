@@ -79,7 +79,7 @@ Date: Feb - Mar | 2014
   js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-
+<div class="mobile-lay"><div class="mobile"></div></div>
 
 <!--| Modal
 =========================================================================== |-->
