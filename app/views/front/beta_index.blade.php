@@ -16,7 +16,7 @@ Date: Feb - Mar | 2014
 <html lang="es-UY">
 
 <head>
-  <title>Premios Catatonias</title>
+  <title>Premios Catatonias 2014</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -43,6 +43,13 @@ Date: Feb - Mar | 2014
   <script type="text/javascript">
     var BASE_PATH = "{{Request::root()}}";
   </script>
+
+  <meta property="og:title" content="Premios Catatonias 2014" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://premioscatatonias.com.uy" />
+  <meta property="og:image" content="http://premioscatatonias.com.uy/img/logoprlanding/omo.png" />
+  <meta property="og:site_name" content="Premios Catatonias 2014" />
+  <meta property="og:description" content="Votá a twitteros, ganá premios sorpresa, denuncianos por terrajas, vestite lindo y andá el 15 de marzo a la más mejor gala del mundo y el universo." />
 </head>
 
 <body>

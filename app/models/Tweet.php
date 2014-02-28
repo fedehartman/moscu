@@ -36,10 +36,12 @@ class Tweet extends Eloquent {
       	return $tweet_bd;
     }
 
-    public function actualizarVoto($categoria_id){
+    public function actualizarVoto($categoria_id, $twitero_id){
         $tweet_bd = Tweet::find($this->id);
         $tweet_bd->categoria_id = $categoria_id;
-        $tweet_bd->voto_repetido = Tweet::votoRepetido($categoria_id, $tweet_bd->twitero_id, $tweet_bd->tw_id_usuario);
+        if($twitero_id != NULL)
+            $tweet_bd->twitero_id = $twitero_id;
+        $tweet_bd->voto_repetido = Tweet::votoRepetido($categoria_id, $tweet_bd->tw_id_usuario);
         $tweet_bd->save();
     }
 
@@ -69,8 +71,8 @@ class Tweet extends Eloquent {
         DB::table('tweets')->update(array('voto_repetido' => 0));
     }
 
-    static function votoRepetido($categoria_id, $twitero_id, $tw_id_usuario){        
-        if($categoria_id != NULL && $twitero_id != NULL)
+    static function votoRepetido($categoria_id, $tw_id_usuario){        
+        if($categoria_id != NULL)
             $yaVoto = Tweet::where('categoria_id', $categoria_id)->where('tw_id_usuario', $tw_id_usuario)->where('voto_repetido', 0)->count();
         else
             $yaVoto = FALSE;

@@ -61,6 +61,18 @@ class Categoria extends Eloquent {
 		return NULL;
     }
 
+    static function esTweetDelAno($cat_id){
+		$cat = Categoria::find($cat_id);
+		if($cat){
+			if(strtolower($cat->nombre) == 'tweet del año')
+				return true;
+			else
+				return false;
+		}else{
+			return false;
+		}
+    }
+
     static function mencionEsSponsor($mencion){
 		$sponsor = Categoria::where('sponsor_tipo', 'mencion')->where('sponsor', $mencion)->first();
 		if($sponsor)

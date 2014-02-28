@@ -74,7 +74,11 @@ Route::get('admin/procesar-votos', function() {
     Tweet::reiniciarVotosRepetido();
     foreach ($tweets as $tweet) {
 		$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
-		$tweet->actualizarVoto($categoria_id);
+		if(Categoria::esTweetDelAno($categoria_id))
+			$twitero_id = Twitero::votoAlTwiteroDelTweet($tweet->tw_id);
+		else
+			$twitero_id = NULL;
+		$tweet->actualizarVoto($categoria_id, $twitero_id);
 	}
 
     return Redirect::to('admin/votos')->with('msg_ok', true)->with('msg', 'Se procesaron los votos.');
@@ -257,7 +261,10 @@ Route::get('procesar-nuevos-votos', function() {
 		foreach (array_reverse($votos->statuses) as $tweet) {
 			$c++;
 			$categoria_id = Categoria::votoEnLaCategoria($tweet);
-			$twitero_id = Twitero::votoAlTwitero($tweet);
+			if(Categoria::esTweetDelAno($categoria_id))
+				$twitero_id = Twitero::votoAlTwiteroDelTweet($tweet->id_str);
+			else
+				$twitero_id = Twitero::votoAlTwitero($tweet);			
 			Tweet::guardarVoto($tweet, $categoria_id, $twitero_id);
 			if($c == count($votos->statuses)){
 				Configuracion::saveConfiguracion('max_id', $tweet->id_str);
@@ -297,8 +304,11 @@ Route::get('procesar-viejos-votos', function() {
 	$c = 0;
 	foreach ($votos->statuses as $tweet) {
 		$c++;
-		$categoria_id = Categoria::votoEnLaCategoria($tweet);
-		$twitero_id = Twitero::votoAlTwitero($tweet);
+		$categoria_id = Categoria::votoEnLaCategoria($tweet);		
+		if(Categoria::esTweetDelAno($categoria_id))
+			$twitero_id = Twitero::votoAlTwiteroDelTweet($tweet->id_str);
+		else
+			$twitero_id = Twitero::votoAlTwitero($tweet);		
 		Tweet::guardarVoto($tweet, $categoria_id, $twitero_id);
 		if($c == count($votos->statuses)){
 			Configuracion::saveConfiguracion('max_id', $tweet->id_str);	
