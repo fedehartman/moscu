@@ -113,15 +113,15 @@ class Tweet extends Eloquent {
     }
 
     public function contarVotos(){
-        return Tweet::where('categoria_id', $this->categoria_id)->where('twitero_id', $this->twitero_id)->where('voto_repetido', 0)->count();
+        return Tweet::where('categoria_id', $this->categoria_id)->where('twitero_id', $this->twitero_id)->where('voto_repetido', 0)->where('procesado', 1)->count();
     }
 
     public function contarVotosAno(){
-        return Tweet::where('categoria_id', $this->categoria_id)->where('tweet_id', $this->tweet_id)->where('voto_repetido', 0)->count();
+        return Tweet::where('categoria_id', $this->categoria_id)->where('tweet_id', $this->tweet_id)->where('voto_repetido', 0)->where('procesado', 1)->count();
     }
 
     static function totalVotos(){
-        return Tweet::whereNotNull('categoria_id')->whereNotNull('twitero_id')->where('voto_repetido', 0)->count();
+        return Tweet::whereNotNull('categoria_id')->whereNotNull('twitero_id')->where('voto_repetido', 0)->where('procesado', 1)->count();
     }
 
     static function totalTweets(){

@@ -6,6 +6,9 @@
     <i class="icon-twitter"></i>
     <span>Listado de Tweets</span>
   </h1>
+  <div class="pull-right">
+    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
+  </div>
 </div>
 
 @include('admin.partials.mensajes')
