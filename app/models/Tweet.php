@@ -128,4 +128,8 @@ class Tweet extends Eloquent {
         return Tweet::where('tweet_ano', 0)->count();
     }
 
+    static function totalTweetsSinProcesar(){
+        return Tweet::where('tweet_ano', 0)->where('procesado', 0)->count();
+    }
+
 }

@@ -34,7 +34,14 @@
           <div class="box-content box-statistic">
             <h3 class="title text-success">{{ Tweet::totalVotos() }}</h3>
             <small>votos</small>
-            <div class="text-success icon-thumbs-up align-right"></div>
+            <div class="text-success icon-star align-right"></div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="box-content box-statistic">
+            <h3 class="title text-error">{{ Tweet::totalTweetsSinProcesar() }}</h3>
+            <small>tweets sin procesar</small>
+            <div class="text-error icon-twitter-sign align-right"></div>
           </div>
         </div>
         <div class="col-sm-3">
@@ -43,14 +50,7 @@
             <small>twiteros</small>
             <div class="text-info icon-group align-right"></div>
           </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="box-content box-statistic">
-            <h3 class="title text-error">{{ count(Pedido::all()) }}</h3>
-            <small>pedidos</small>
-            <div class="text-error icon-shopping-cart align-right"></div>
-          </div>
-        </div>
+        </div>        
       </div>
     </div>
   </div>

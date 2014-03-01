@@ -10,6 +10,9 @@
     <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
   </div>
 </div>
+
+@include('admin.partials.mensajes')
+
 <div class='row'>
   <div class='col-sm-12'>
     <div class='row recent-activity'>
@@ -18,7 +21,7 @@
           <div class='box-header'>
             <div class='title'>
               <i class='icon-twitter-sign'></i>
-              Tweets que faltan procesar
+              Tweets sin procesar
             </div>
             <div class='actions'>
             </div>
