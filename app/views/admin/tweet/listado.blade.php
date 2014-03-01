@@ -16,14 +16,14 @@
       <div class="box-content">
         <div class="scrollable-area">
           <div class="row" style="margin-bottom: 20px;">
-            <div class="col-sm-8"></div>
-            <div class="col-sm-4 col-lg-4 text-right">
-              <div class="input-group">
-                <input class="form-control input-buscar" type="text" placeholder="Buscar" value="{{$buscar}}">
-                <div class="input-group-btn">
-                  <a class="btn buscar" href="#">Buscar</a>
-                </div>
-              </div>
+            <div class="col-sm-9"></div>
+            <div class="col-lg-3 text-right">
+              <select class="form-control" name="categoria" id="categoria">
+                <option value="">Todas las categor&iacute;as</option>
+                @foreach(Categoria::all() as $cat)
+                <option value="{{ $cat->id }}" {{ ($cat->id == $categoria) ? 'selected' : '' }}>{{ $cat->nombre }}</option>
+                @endforeach
+              </select>
             </div>
           </div>
           <table class="table table-bordered table-striped">
@@ -58,4 +58,17 @@
     </div>
   </div>
 </div>
+@stop
+
+@section('script')
+@parent
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#categoria').on('change',function(){
+    if( $('#categoria').val() > 0){
+      window.location = '/admin/tweet/listado?categoria=' + $('#categoria').val();
+    }
+  });
+});
+</script>
 @stop

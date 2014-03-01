@@ -21,6 +21,7 @@ class Tweet extends Eloquent {
             $tweet_bd->tw_usuario = $tweet->user->screen_name;
             $tweet_bd->voto_repetido = 0;
             $tweet_bd->tweet_ano = 0;
+            $tweet_bd->procesado = 0;
             $tweet_bd->save();
       	}else{
       		$tweet_bd->categoria_id = $categoria_id;
@@ -34,6 +35,7 @@ class Tweet extends Eloquent {
             $tweet_bd->tw_usuario = $tweet->user->screen_name;
             $tweet_bd->voto_repetido = 0;
             $tweet_bd->tweet_ano = 0;
+            $tweet_bd->procesado = 0;
             $tweet_bd->save();
       	}
       	return $tweet_bd;
@@ -50,6 +52,7 @@ class Tweet extends Eloquent {
             $tweet_bd->tw_nombre_usuario = $tweet->user->name;
             $tweet_bd->tw_usuario = $tweet->user->screen_name;
             $tweet_bd->tweet_ano = 1;
+            $tweet_bd->procesado = 1;
             $tweet_bd->save();
         }
         return $tweet_bd->id;
@@ -63,6 +66,7 @@ class Tweet extends Eloquent {
         if($tweet_id != NULL)
             $tweet_bd->tweet_id = $tweet_id;
         $tweet_bd->voto_repetido = Tweet::votoRepetido($categoria_id, $tweet_bd->tw_id_usuario);
+        $tweet_bd->procesado = 1;
         $tweet_bd->save();
     }
 

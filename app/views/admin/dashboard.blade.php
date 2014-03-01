@@ -6,6 +6,9 @@
     <i class='icon-dashboard'></i>
     <span>Escritorio</span>
   </h1>
+  <div class="pull-right">
+    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
+  </div>
 </div>
 <div class='row'>
   <div class='col-sm-12'>
@@ -14,8 +17,8 @@
         <div class='box'>
           <div class='box-header'>
             <div class='title'>
-              <i class='icon-refresh'></i>
-              Ultimos tweets de #PremiosCatatonias
+              <i class='icon-twitter-sign'></i>
+              Tweets que faltan procesar
             </div>
             <div class='actions'>
             </div>

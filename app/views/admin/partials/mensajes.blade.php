@@ -44,6 +44,13 @@
             <div class="text-info icon-group align-right"></div>
           </div>
         </div>
+        <div class="col-sm-3">
+          <div class="box-content box-statistic">
+            <h3 class="title text-error">{{ count(Pedido::all()) }}</h3>
+            <small>pedidos</small>
+            <div class="text-error icon-shopping-cart align-right"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

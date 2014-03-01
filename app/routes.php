@@ -9,7 +9,7 @@ Route::get('/admin', function() {
 } );
 
 Route::get('/admin/dashboard', function() {
-	$data['tweets'] = Tweet::orderBy('fecha', 'desc')->take(50)->get();
+	$data['tweets'] = Tweet::orderBy('fecha', 'desc')->where('tweet_ano', 0)->where('procesado', 0)->get();
     return View::make('admin.dashboard', $data);
 } );
 
@@ -71,8 +71,8 @@ Route::get('admin/votos', function() {
 } );
 
 Route::get('admin/procesar-votos', function() {
-    $tweets = Tweet::where('tweet_ano', 0)->orderBy('fecha', 'desc')->get();
-    Tweet::reiniciarVotosRepetido();
+    $tweets = Tweet::where('tweet_ano', 0)->where('procesado', '0')->orderBy('fecha', 'desc')->get();
+    // Tweet::reiniciarVotosRepetido();
     foreach ($tweets as $tweet) {
 		$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
 		if(Categoria::esTweetDelAno($categoria_id)){
@@ -82,12 +82,11 @@ Route::get('admin/procesar-votos', function() {
 		}else{
 			$twitero_id = NULL;
 			$tweet_id = NULL;
-		}
-		
+		}		
 		$tweet->actualizarVoto($categoria_id, $twitero_id, $tweet_id);
 	}
 
-    return Redirect::to('admin/votos')->with('msg_ok', true)->with('msg', 'Se procesaron los votos.');
+    return Redirect::to('admin/votos')->with('msg_ok', true)->with('msg', 'Se procesaron ' . count($tweets) . ' votos.');
 } );
 
 Route::get('admin/ver-votos/{categoria_id}/{twitero_id}', function($categoria_id, $twitero_id) {
