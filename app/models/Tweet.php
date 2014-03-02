@@ -96,6 +96,16 @@ class Tweet extends Eloquent {
             return '---';
     }
 
+    public function mostrarEstado(){
+        if($this->voto_repetido == 0){
+            if($this->twitero_id == null)
+                return '<span class="label label-warning has-tooltip" data-placement="top" data-original-title="El tweet no sigue la estructura para validarlo">Voto inválido</span>';
+            else
+                return '<span class="label label-success">Voto válido</span>';
+        }elseif($this->voto_repetido == 1)
+            return '<span class="label label-important has-tooltip" data-placement="top" data-original-title="El usuario ya voto en la categoría">Voto inválido</span>';
+    }
+
     static function reiniciarVotosRepetido(){
         DB::table('tweets')->update(array('voto_repetido' => 0));
     }
@@ -131,5 +141,5 @@ class Tweet extends Eloquent {
     static function totalTweetsSinProcesar(){
         return Tweet::where('tweet_ano', 0)->where('procesado', 0)->count();
     }
-
+    
 }

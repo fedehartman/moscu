@@ -41,12 +41,14 @@
                 <td>{{{ $pedido->direccion }}}</td>
                 <td>
                   <div class="text-right">
-                    <a class="btn btn-primary btn-xs ver" href="#" data-id="{{ $pedido->id }}" data-modelo="pedido" alt="Ver Pedido" title="Ver Pedido">
-                      <i class="icon-search"></i>
-                    </a>
-                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $pedido->id }}" data-modelo="pedido" alt="Borrar Pedido" title="Borrar Pedido">
-                      <i class="icon-remove"></i>
-                    </a>
+                  	<div class="btn-group">
+	                    <a class="btn btn-primary btn-xs ver" href="#" data-id="{{ $pedido->id }}" data-modelo="pedido" alt="Ver Pedido" title="Ver Pedido">
+	                      <i class="icon-search"></i>
+	                    </a>
+	                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $pedido->id }}" data-modelo="pedido" alt="Borrar Pedido" title="Borrar Pedido">
+	                      <i class="icon-remove"></i>
+	                    </a>
+	                   </div>
                   </div>
                 </td>
               </tr>

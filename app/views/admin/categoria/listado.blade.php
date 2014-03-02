@@ -44,18 +44,25 @@
                 <td>{{{ date('d/m/Y', strtotime($categoria->created_at)) }}}</td>
                 <td>
                   <div class="text-right">
-                    <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
-                      @if(Categoria::esTweetDelAno($categoria->id)) {{ count($categoria->tweetsAno()) }}
-                      @else {{ count($categoria->participantes()) }}
-                      @endif
-                      <i class="icon-group"></i>
-                    </a>
-                    <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/categoria/editar/'. $categoria->id) }}" alt="Editar Categor&iacute;a" title="Editar Categor&iacute;a">
-                      <i class="icon-pencil"></i>
-                    </a>
-                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $categoria->id }}" data-modelo="categoria" alt="Borrar Categor&iacute;a" title="Borrar Categor&iacute;a">
-                      <i class="icon-remove"></i>
-                    </a>
+	                  <div class="btn-group">
+	                    <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
+	                      @if(Categoria::esTweetDelAno($categoria->id)) {{ count($categoria->tweetsAno()) }}
+	                      @else {{ count($categoria->participantes()) }}
+	                      @endif
+	                      <i class="icon-group"></i>
+	                    </a>
+	                    <a class="btn btn-warning btn-xs" href="{{ URL::to('/admin/categoria/tweets/'. $categoria->id) }}" alt="Tweets de la Categor&iacute;a" title="Tweets de la Categor&iacute;a">
+	                      <i class="icon-twitter"></i>
+	                    </a>
+                    </div>
+                    <div class="btn-group">
+	                    <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/categoria/editar/'. $categoria->id) }}" alt="Editar Categor&iacute;a" title="Editar Categor&iacute;a">
+	                      <i class="icon-pencil"></i>
+	                    </a>
+	                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $categoria->id }}" data-modelo="categoria" alt="Borrar Categor&iacute;a" title="Borrar Categor&iacute;a">
+	                      <i class="icon-remove"></i>
+	                    </a>
+                    </div>
                   </div>
                 </td>
               </tr>

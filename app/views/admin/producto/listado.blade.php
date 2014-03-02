@@ -40,12 +40,14 @@
                 <td>{{{ $producto->precio }}}</td>
                 <td>
                   <div class="text-right">
-                    <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/producto/editar/'. $producto->id) }}" alt="Editar Producto" title="Editar Producto">
-                      <i class="icon-pencil"></i>
-                    </a>
-                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $producto->id }}" data-modelo="producto" alt="Borrar Producto" title="Borrar Producto">
-                      <i class="icon-remove"></i>
-                    </a>
+                  	<div class="btn-group">
+	                    <a class="btn btn-success btn-xs" href="{{ URL::to('/admin/producto/editar/'. $producto->id) }}" alt="Editar Producto" title="Editar Producto">
+	                      <i class="icon-pencil"></i>
+	                    </a>
+	                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $producto->id }}" data-modelo="producto" alt="Borrar Producto" title="Borrar Producto">
+	                      <i class="icon-remove"></i>
+	                    </a>
+                   	</div>
                   </div>
                 </td>
               </tr>

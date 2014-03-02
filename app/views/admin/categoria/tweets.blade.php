@@ -8,15 +8,15 @@
 @section('content')
 <div class="page-header">
   <h1 class="pull-left">
-    <i class="icon-user"></i>
-    <span>Listado de Usuarios</span>
+    <i class="icon-cogs"></i>
+    <span>Tweets de la categor&iacute;a <b class="text-info">{{{ $categoria->nombre }}}</b></span>
   </h1>
   <div class="pull-right">
-    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/usuario/agregar/') }}">Nuevo Usuario</a>
+    <div class="btn-group">
+      <a class="btn hidden-xs" href="{{ URL::to('/admin/categoria/listado/') }}"><i class="icon-circle-arrow-left"></i> Volver al listado</a>
+    </div>
   </div>
 </div>
-
-@include('admin.partials.mensajes')
 
 <div class="row">
   <div class="col-sm-12">
@@ -26,28 +26,24 @@
           <table class="data-table table table-bordered table-striped">
             <thead>
               <tr>
-                <th>Nombre</th>
-                <th>Usuario</th>
-                <th></th>
+                <th>#</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Tweet</th>
+                <th>Twitero</th>                
               </tr>
             </thead>
             <tbody>
-              @foreach($usuarios as $usuario)
-              <tr id="usuario_{{ $usuario->id }}">
-                <td>{{{ $usuario->nombre }}}</td>
-                <td>{{{ $usuario->usuario }}}</td>
+              @foreach($categoria->tweets as $tweet)
+              <tr>
+                <td>{{ $tweet->id }}</td>
+                <td>{{{ date('d-m-Y H:i:s', strtotime($tweet->fecha)) }}}</td>
+                <td>{{ $tweet->mostrarEstado() }}</td>
                 <td>
-                  <div class="text-right">
-                  	<div class="btn-group">
-                    	<a class="btn btn-success btn-xs" href="{{ URL::to('/admin/usuario/editar/'. $usuario->id) }}" alt="Editar Usuario" title="Editar Usuario">
-	                      <i class="icon-pencil"></i>
-	                    </a>
-	                    <a class="btn btn-danger btn-xs borrar" href="#" data-id="{{ $usuario->id }}" data-modelo="usuario" alt="Borrar Usuario" title="Borrar Usuario">
-	                      <i class="icon-remove"></i>
-	                    </a>
-                   	</div>
-                  </div>
+                  <span class="label label-info">{{{ $tweet->tw_nombre_usuario }}} - @{{{ $tweet->tw_usuario }}}</span><br/>
+                  {{{ $tweet->texto }}}
                 </td>
+                <td>{{{ $tweet->mostrarVoto() }}}</td>                
               </tr>
               @endforeach
             </tbody>

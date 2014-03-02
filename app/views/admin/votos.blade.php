@@ -76,7 +76,7 @@
           <table class="data-table2 table table-bordered table-striped">
             <thead>
               <tr>
-                <th>Usuario</th>
+                <th>Twitero</th>
                 <th>Votos</th>
                 <th></th>
               </tr>

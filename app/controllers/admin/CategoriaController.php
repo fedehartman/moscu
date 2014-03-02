@@ -79,4 +79,9 @@ class CategoriaController extends BaseController {
         return View::make('admin.categoria.participantes', $data);
     }
 
+    public function getTweets($id) {
+        $data['categoria'] = Categoria::find($id);
+        return View::make('admin.categoria.tweets', $data);
+    }
+
 }

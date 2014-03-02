@@ -35,7 +35,7 @@
               	<th>Fecha</th>
                 <th>Tweet</th>
                 <th>Categor&iacute;a</th>
-                <th>Voto a</th>
+                <th>Twitero</th>
               </tr>
             </thead>
             <tbody>

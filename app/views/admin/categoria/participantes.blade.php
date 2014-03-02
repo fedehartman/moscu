@@ -9,7 +9,7 @@
 <div class="page-header">
   <h1 class="pull-left">
     <i class="icon-cogs"></i>
-    <span>Participantes de la categor&iacute;a {{{ $categoria->nombre }}}</span>
+    <span>Participantes de la categor&iacute;a <b class="text-info">{{{ $categoria->nombre }}}</b></span>
   </h1>
   <div class="pull-right">
     <div class="btn-group">
