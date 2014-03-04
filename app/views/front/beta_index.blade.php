@@ -107,7 +107,7 @@ Date: Feb - Mar | 2014
     <li class="b01 none" ><span class="none">Votación</span></li>
     <li class="b02 none" ><span class="none">Los Premios</span></li>
     <li class="b03 none" ><span class="none">La Gala</span></li>
-    <li class="b04 none" ><span class="none">Tienda</span></li>
+    <li class="b04" ><span class="none">Tienda</span></li>
     <li class="b05 none" ><span class="none">Contacto</span></li>
   </ul>
 </header>
@@ -283,12 +283,11 @@ gala
 
 <!--| 4· Tienda
 =========================================================================== |-->
+<div class="a04 tienda"><div class="wrapper nano"><div class="nano-content">
 
-<div class="a04 tienda none"><div class="wrapper nano"><div class="nano-content">
 
   <!--| Header
   ===================================== |-->
-
   <header class="cabezal">
     <h3>Tienda</h3>
     <article>
@@ -303,112 +302,73 @@ gala
      </article>
   </header>
 
-  <!--| Menú
-  ===================================== |-->
-
-  <nav>
-    <ul>
-      <li class="filter active autoadhesivos" data-filter="autoadhesivos">Autoadhesivos</li>
-      <li class="filter cuadernolas" data-filter="cuadernolas">Cuadernolas</li>
-      <li class="filter lapices" data-filter="lapices">Lápices</li>
-      <li class="filter pins" data-filter="pins">Pins</li>
-      <li class="filter remeras" data-filter="remeras">Remeras</li>
-      <li class="filter tazas" data-filter="tazas">Tazas</li>
-      <li class="filter combos" data-filter="combos">Combos</li>
-      <li class="filter todos" data-filter="all">Todos</li>
-    </ul>
-  </nav>
-
-
   <!--| Listado
   ===================================== |-->
-
   <section class="listado">
     <ul id="Grid">
-      <li class="mix autoadhesivos">
+      @foreach ($productos as $producto)
+      <li class="mix {{{ $producto->categoria }}}" data-type="{{{ $producto->categoria }}}" id="{{ $producto->id }}">
         <div class="comprado none"></div>
         <div class="top"></div>
         <div class="etiqueta">
           <figure>
-            <a href="../img/front/dummys/producto01.png" data-lightbox="image-1" title="Este es un tuit que va a tener 140 caracteres y va a servir para medir la cantidad de texto que va a entrar en esta parte del diseño acá va">
-            <img src="../img/front/dummys/producto01.png" width="175" height="175"></a>
+            <a href="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" data-lightbox="image-1" title="{{{ $producto->descripcion }}}">
+            <img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="175" height="175"></a>
           </figure>
-          <h4>¿#Premios Catatonias? Prefiero coger</h4>
+          <h4>{{{ $producto->nombre }}}</h4>
           <div class="preciogo">
-            <div class="precio"><span>$</span>358</div>
+            <div class="precio" id="precio">$ <span>{{{ $producto->precio }}}</span></div>
             <form class="go">
-              <select>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>Pará bo!</option>
+              <select name="cantidad" id="cantidad">
+              @for ($i = 1; $i <= 5; $i++)
+                <option>{{ $i }}</option>
+              @endfor
               </select>
-              <input type="submit" class="comprar" value="Comprar" />
+              <a href="#" class="comprar" onclick="agregarTienda({{ $producto->id }})">Comprar</a>
             </form>
           </div>
         </div>
       </li>
+      @endforeach
     </ul>
   </section>
 
-
   <!--| Checkout
   ===================================== |-->
+  <form id="form-pedido">
+    <section class="checkout">
+      <div class="tabla">
+        <h5>Hasta ahora vas comprando esto:</h5>
+        <table>
+          <tbody>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="total">Total:</td>
+              <td class="precio" id="total">$ <span>0</span></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="form">
+        <h5>Ahora tus datos y te lo mandamos</h5>      
+        <div class="form-column">
+          <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
+          <input type="email" placeholder="Email" name="email" id="email" required />
+          <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
+          <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
+        </div>
+        <div class="form-column">
+          <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+          <input type="submit" class="submit" value="enviar" /> 
+        </div>      
+      </div>
+    </section>
+  </form>
 
-  <section class="checkout">
-    <div class="tabla">
-      <h5>Hasta ahora vas comprando esto:</h5>
-      <table>
-        <tr>
-          <td>15</td>
-          <td>Remera</td>
-          <td>¿Premios Catatonias? Prefiero coger</td>
-          <td>$ 3589</td>
-          <td class="delete"></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Remera</td>
-          <td>¿Premios Catatonias? Prefiero coger</td>
-          <td>$ 3589</td>
-          <td class="delete"></td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td>Remera</td>
-          <td>¿Premios Catatonias? Prefiero coger</td>
-          <td>$ 3589</td>
-          <td class="delete"></td>
-        </tr>
-        <tfoot>
-          <tr>
-            <td></td>
-            <td></td>
-            <td class="total">Total:</td>
-            <td class="precio">$ 3589</td>
-            <td></td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-    <div class="form">
-      <h5>Ahora tus datos y te lo mandamos</h5>
-      <form>
-        <div class="form-column">
-          <input type="text" placeholder="Nombre y apellido" required />
-          <input type="email" placeholder="Email" required />
-          <input type="text" placeholder="Dirección" required />
-          <input type="tel" placeholder="Teléfono" required />
-        </div>
-        <div class="form-column">
-          <textarea>¿Algún comentario?</textarea>
-          <input type="submit" class="submit llamar-modal" value="Enviar" />
-        </div>
-      </form>
-    </div>
-  </section>
 </div></div></div>
 
 

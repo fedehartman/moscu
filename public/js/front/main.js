@@ -37,7 +37,7 @@ $('.slider').cycle({
 /*--| Tienda
 -------------------------------------------------------------------------- |--*/
 
-$('#Grid').mixitup({});
+// $('#Grid').mixitup({});
 
 $('#form-pedido').on('submit',enviarPedido);
 
