@@ -31,10 +31,7 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/reset.css') }}">
   <link rel="stylesheet" href="{{ URL::to('/css/front/style.css') }}">
-  <link rel="stylesheet" href="{{ URL::to('/css/front/mq.css') }}">
-  <link rel="stylesheet" href="{{ URL::to('/css/front/move.css') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="{{ URL::to('/js/front/main.js') }}"></script>
@@ -115,30 +112,46 @@ Date: Feb - Mar | 2014
 <!--| 1· Home
 =========================================================================== |-->
 
-<div class="a00 home"><div class="wrapper nano"><div class="nano-content">
-  <div class="stage02 mov-stage">
-  <div class="content">
-    <div class="imago mov-imago"></div>
-    <h1 class="mov-logo">Premios Catatonias</h1>
-    <h2>Edici&oacute;n 2014</h2>
-    <h3 class="mov-fecha">S&aacute;bado 15 de marzo</h3>
-    <div class="line01 mov-line01"></div><div class="line02 mov-line02"></div>
-    <p class="pri mov-brief-01"><a href="#" class="b01">Empezá a votar acá</a></p>
-    <p class="bre mov-brief-02">En breve habrá más información sobre la Gala y muchas más novedades.</p>
-    <p class="sec mov-brief-02">&iquest;Quer&eacute;s saber de qu&eacute; se trata? <a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}" target="_blank">Baj&aacute; nuestro brief</a></p>
-    <p class="last mov-brief-03">&iquest;Quer&eacute;s participar como marca? <a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}" target="_blank">Baj&aacute; nuestra propuesta comercial</a></p>
-
-    <p class="last mov-brief-03">&iquest;Quer&eacute;s participar como marca? <a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}" target="_blank">Baj&aacute; nuestra propuesta comercial</a></p>
-    <!-- <p class="last02 mov-brief-03">&iquest;Quer&eacute;s saber cuándo vas a poder votar? <a href="#">Baj&aacute; las revoluciones acá</a></p -->
-    <div class="line03 mov-line03"></div>
-    <div class="social mov-social">
-      <div class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-text="¿Viste que el 15 de marzo son los #PremiosCatatonias? KENERVIO: " data-lang="es" data-count="none" data-hashtags="PremiosCatatonias">Twittear</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
-      <div class="fb"><div class="fb-like" data-href="http://premioscatatonias.com.uy/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div></div>
+<div class="a00 home"><div class="wrapper">
+  <h1><span class="none">Premios Catatonias</span></h1>
+  <div class="line line01"></div>
+  <h2>Los Premios Catatonias al Patético Mundo <br>del Twitter Uruguasho
+  llegaron a su 3ra edición. <br><strong>Sábado 15 de Marzo, 20:30hrs.</strong>
+  <br><a href="https://www.google.es/maps/ms?msid=210811873514161027997.0004f3bf0567e6e6f30e7&msa=0&ll=-34.907983,-56.166101&spn=0.015784,0.033023" target="_blank">
+  Prato 2333 esq. Cassinoni.</a></h2>
+  <div class="gif none"><img src="img/.gif" width="200" height="105"></div>
+  <div class="line line02"></div>
+  <div class="line line03"></div>
+  <nav>
+    <ul>
+      <li class="b01"><a href="#">Votá acá</a></li>
+      <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}">&iquest;Quer&eacute;s saber de qu&eacute; se trata?</a></li>
+      <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
+      <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
+      <li class="b03 none"><a href="#">Participá como marca</a></li>
+      <li class="b04 none"><a href="#">Do’ pesito’ pa’l vino</a></li>
+      <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
+    </ul>
+  </nav>
+  <div class="social">
+    <div class="tw">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="¿Viste que el 15 de marzo son los #PremiosCatatonias? KENERVIO: " data-lang="es" data-count="none" data-hashtags="PremiosCatatonias">Twittear</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+    <div class="fb">
+      <div class="fb-like" data-href="http://premioscatatonias.uy" data-width="120" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
     </div>
   </div>
+  <div class="line line04"></div>
+  <div class="widget">
+    <a class="twitter-timeline" href="https://twitter.com/search?q=%23PremiosCatatonias" data-widget-id="433411683554308096">Tweets sobre "#PremiosCatatonias"</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+  <div class="creditos">
+    <div class="les"><a href="http://lesmots.uy" target="_blank"><span class="none">Les Mots</span></a></div>
+    <div class="sov"><a href="http://sovietico.de" target="_blank"><span class="none">Sovieticode</span></a></div>
 </div>
-</div></div></div>
+</div></div>
 
 
 
