@@ -7,7 +7,7 @@
     <span>Escritorio</span>
   </h1>
   <div class="pull-right">
-    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
+    <a class="btn btn-success" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
   </div>
 </div>
 

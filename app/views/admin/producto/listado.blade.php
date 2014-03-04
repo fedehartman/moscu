@@ -12,7 +12,7 @@
     <span>Listado de Productos</span>
   </h1>
   <div class="pull-right">
-    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/producto/agregar/') }}">Nuevo Producto</a>
+    <a class="btn btn-success" href="{{ URL::to('/admin/producto/agregar/') }}">Nuevo Producto</a>
   </div>
 </div>
 

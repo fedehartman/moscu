@@ -8,8 +8,8 @@
   </h1>
   <div class="pull-right">
     <div class="btn-group">
-      <a class="btn hidden-xs" href="{{ URL::to('/admin/usuario/listado/') }}"><i class="icon-circle-arrow-left"></i> Volver al listado</a>
-      <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/usuario/agregar/') }}">Nuevo Usuario</a>
+      <a class="btn" href="{{ URL::to('/admin/usuario/listado/') }}"><i class="icon-circle-arrow-left"></i> Volver al listado</a>
+      <a class="btn btn-success" href="{{ URL::to('/admin/usuario/agregar/') }}">Nuevo Usuario</a>
     </div>    
   </div>
 </div>
