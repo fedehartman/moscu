@@ -52,31 +52,38 @@ Date: Feb - Mar | 2014
 <body>
 
 <!--| Analytics
-=============================================================================================== |-->
+=========================================================================== |-->
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-36135240-1', 'premioscatatonias.uy');
   ga('send', 'pageview');
-
 </script>
 
-<figure class="none"><img src="{{ URL::asset('/img/front/landing/logopromo.png') }}" width="750px" height="550px"></figure>
+
+
+
 
 <!--| Facebook Stuff
-=============================================================================================== |-->
+=========================================================================== |-->
+
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="mobile-lay"><div class="mobile"></div></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<figure class="none"><img src="{{ URL::asset('/img/front/logopromo.png') }}" width="750px" height="550px"></figure>
+
+
+
+
 
 <!--| Modal
 =========================================================================== |-->
@@ -97,11 +104,11 @@ Date: Feb - Mar | 2014
 <header class="main-header">
   <ul>
     <li class="b00"><span class="none">Inicio</span></li>
-    <!-- <li class="b01"><span class="none">Votación</span></li> -->
-    <!-- <li class="b02"><span class="none">Los Premios</span></li>
-    <li class="b03"><span class="none">La Gala</span></li>
-    <li class="b04"><span class="none">Tienda</span></li>
-    <li class="b05"><span class="none">Contacto</span></li> -->
+    <li class="b01 none" ><span class="none">Votación</span></li>
+    <li class="b02 none" ><span class="none">Los Premios</span></li>
+    <li class="b03 none" ><span class="none">La Gala</span></li>
+    <li class="b04 none" ><span class="none">Tienda</span></li>
+    <li class="b05 none" ><span class="none">Contacto</span></li>
   </ul>
 </header>
 
@@ -152,6 +159,8 @@ Date: Feb - Mar | 2014
     <div class="sov"><a href="http://sovietico.de" target="_blank"><span class="none">Sovieticode</span></a></div>
 </div>
 </div></div>
+
+
 
 
 
