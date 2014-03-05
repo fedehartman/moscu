@@ -51,6 +51,9 @@ Date: Feb - Mar | 2014
 
 <body>
 
+
+
+
 <!--| Analytics
 =========================================================================== |-->
 
@@ -285,20 +288,38 @@ gala
 =========================================================================== |-->
 <div class="a04 tienda"><div class="wrapper nano"><div class="nano-content">
 
-
   <!--| Header
   ===================================== |-->
   <header class="cabezal">
-    <h3>Tienda</h3>
-    <article>
-      <p>Este es un tuit que va a tener 140 caracteres y va a servir para medir la
-       cantidad de texto que va a entrar en esta parte del diseño acá va. Este es 
-       un tuit que va a tener 140 caracteres y va a servir para medir la cantidad 
-       de texto que va a entrar en esta parte del diseño acá va. Este es un tuit 
-       que va a tener 140 caracteres y va a servir para medir la cantidad de texto 
-       que va a entrar en esta parte del diseño acá va. Este es un tuit que va a 
-       tener 140 caracteres y va a servir para medir la cantidad de texto que va a 
-       entrar en esta parte del diseño acá va.</p>
+    <h3>Donaciones</h3>
+    <a href="#" class="prev"></a><a href="#" class="next"></a>
+    <article class="slider">
+      <div class="slide">
+        <p>Este año mucha gente nos preguntó cómo nos podían dar una mano 
+        económica para asegurarse que los #PremiosCatatonias se hagan y se sigan 
+        haciendo. Si bien algunos propusieron vender nuestros cuerpos a cambio 
+        de dinero, creímos que lo mejor era otorgar la oportunidad de donar una 
+        módica suma de dinero a cambio de productos súper novedosos (?).</p>
+        <p>Dale a la flechita <i></i> y te seguimos contando.</p>
+      </div>
+      <div class="slide">
+        <h4>Por eso creamos esta sección del sitio. Cómo funciona es muy simple: </h4> 
+        <p>Mirá qué podés recibir a cambio de donar equis suma de dinero a la causa.</p>
+        <p>Elegí el monto de donación que quieras realizar.</p>
+        <p>Hacé click en “Donar”.</p>
+        <p>Ingresá tu información que irá al Equipo de Logística Súper 
+        Confidencial de #PremiosCatatonias (<a href="http://twitter.com/balefin" target="_blank">@Balefin</a>).</p>
+      </div>
+      <div class="slide">
+        <p>Esperá a que juntemos todas las donaciones para un día de la 
+        semana y las pasamos a buscar por donde te quede mejor. </p>
+        <p>Al donar, tu user de Twitter pasa a ser un “sponsor” y comparte 
+        espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
+        más prioritario el espacio que se ocupa.</p> 
+        <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
+        les regalamos un hermoso escobillón para wáter con la imagen de un pajarito 
+        cagando estampado en el frente. De nada.</p>
+      </div>
      </article>
   </header>
 
@@ -308,25 +329,14 @@ gala
     <ul id="Grid">
       @foreach ($productos as $producto)
       <li class="mix {{{ $producto->categoria }}}" data-type="{{{ $producto->categoria }}}" id="{{ $producto->id }}">
-        <div class="comprado none"></div>
         <div class="top"></div>
         <div class="etiqueta">
-          <figure>
-            <a href="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" data-lightbox="image-1" title="{{{ $producto->descripcion }}}">
-            <img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="175" height="175"></a>
-          </figure>
+          <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>
-          <div class="preciogo">
-            <div class="precio" id="precio">$ <span>{{{ $producto->precio }}}</span></div>
-            <form class="go">
-              <select name="cantidad" id="cantidad">
-              @for ($i = 1; $i <= 5; $i++)
-                <option>{{ $i }}</option>
-              @endfor
-              </select>
-              <a href="#" class="comprar" onclick="agregarTienda({{ $producto->id }})">Comprar</a>
-            </form>
-          </div>
+          <article>
+            <p>{{{ $producto->descripcion }}}</p>
+          </article>
+          <div class="boton"><a href="#" onclick="agregarTienda({{ $producto->id }})">Doná ${{{ $producto->precio }}}</a></div>
         </div>
       </li>
       @endforeach
@@ -335,39 +345,24 @@ gala
 
   <!--| Checkout
   ===================================== |-->
-  <form id="form-pedido">
-    <section class="checkout">
-      <div class="tabla">
-        <h5>Hasta ahora vas comprando esto:</h5>
-        <table>
-          <tbody>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td class="total">Total:</td>
-              <td class="precio" id="total">$ <span>0</span></td>
-              <td></td>
-            </tr>
-          </tfoot>
-        </table>
+  <section class="checkout">
+    <h5>¡Gracias por tu donación! Sos lo más.<br>
+    Para poder pasarla a buscar y
+    darte tus regalos, necesitamos la siguiente información: </h5>
+    <form id="form-pedido">
+      <div class="form-column">
+        <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
+        <input type="text" placeholder="Usuario de Twitter" name="twitter" id="twitter" required />
+        <input type="email" placeholder="Email" name="email" id="email" required />
+        <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
+        <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
-      <div class="form">
-        <h5>Ahora tus datos y te lo mandamos</h5>      
-        <div class="form-column">
-          <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
-          <input type="email" placeholder="Email" name="email" id="email" required />
-          <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
-          <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
-        </div>
-        <div class="form-column">
-          <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
-          <input type="submit" class="submit" value="enviar" /> 
-        </div>      
+      <div class="form-column">
+        <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <input type="submit" class="submit" value="Enviar" />
       </div>
-    </section>
-  </form>
+    </form>
+  </section>
 
 </div></div></div>
 
@@ -394,7 +389,7 @@ gala
         <div class="logos">
           <div class="logo casitanno"><a target="_blank" href="http://www.facebook.com/pages/Casitanno-restobar/171005276275918"></a></div>
           <div class="logo fernet"><a target="_blank" href="http://www.fernetbranca.com/"></a></div>
-          <div class="logo miller"><a target="_blank" href="http://www.mgd.com/"></a></div>
+          <div class="logo miller"><a target="_blank" href="http://twitter.com/Miller_Uruguay"></a></div>
           <div class="logo natalia"><a target="_blank" href="http://www.nataliasastre.com/"></a></div>
           <div class="logo boton"><a target="_blank" href="http://boton.tv/index.php?region=uy"></a></div>
           <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
