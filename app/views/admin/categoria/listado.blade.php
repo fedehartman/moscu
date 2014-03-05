@@ -12,7 +12,7 @@
     <span>Listado de Categor&iacute;as</span>
   </h1>
   <div class="pull-right">
-    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/categoria/agregar/') }}">Nueva Categor&iacute;a</a>
+    <a class="btn btn-success" href="{{ URL::to('/admin/categoria/agregar/') }}">Nueva Categor&iacute;a</a>
   </div>
 </div>
 
@@ -45,11 +45,8 @@
                 <td>
                   <div class="text-right">
 	                  <div class="btn-group">
-	                    <a class="btn btn-link btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
-	                      @if(Categoria::esTweetDelAno($categoria->id)) {{ count($categoria->tweetsAno()) }}
-	                      @else {{ count($categoria->participantes()) }}
-	                      @endif
-	                      <i class="icon-group"></i>
+	                    <a class="btn btn-info btn-xs" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}">
+                      <i class="icon-group"></i>
 	                    </a>
 	                    <a class="btn btn-warning btn-xs" href="{{ URL::to('/admin/categoria/tweets/'. $categoria->id) }}" alt="Tweets de la Categor&iacute;a" title="Tweets de la Categor&iacute;a">
 	                      <i class="icon-twitter"></i>

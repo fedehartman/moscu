@@ -12,7 +12,7 @@
     <span>Listado de Usuarios</span>
   </h1>
   <div class="pull-right">
-    <a class="btn btn-success hidden-xs" href="{{ URL::to('/admin/usuario/agregar/') }}">Nuevo Usuario</a>
+    <a class="btn btn-success" href="{{ URL::to('/admin/usuario/agregar/') }}">Nuevo Usuario</a>
   </div>
 </div>
 
