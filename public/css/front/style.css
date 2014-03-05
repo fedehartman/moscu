@@ -2519,7 +2519,7 @@ footer {
   margin: 45px 0px 0px 0px; }
   .tienda .listado ul li {
     width: 375px;
-    height: 510px;
+    height: 545px;
     margin: 0px 22px 44px 22px;
     background-color: #fff;
     padding: 5px 0px 15px 0px;
@@ -2551,10 +2551,12 @@ footer {
       margin: 0px 0px 10px 20px; }
     .tienda .listado ul li h4 {
       width: 335px;
-      margin: 5px 0px 5px 21px;
+      margin: 5px 0px 9px 13px;
+      padding: 3px 0px 3px 10px;
+      background-color: #1f5c99;
       font-size: 2em;
       line-height: 1.5em;
-      color: #1f5c99;
+      color: #fff;
       font-weight: 700;
       font-family: 'Asap', Arial, Helvetica, sans-serif; }
     .tienda .listado ul li article {
@@ -2576,6 +2578,13 @@ footer {
           content: "\f00c";
           margin: 0px 4px 0px 5px;
           display: inline-block; }
+        .tienda .listado ul li article p:first-child {
+          font-weight: 700;
+          padding: 0px 0px 2px 0px;
+          margin: 2px 0px 7px 0px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.09); }
+        .tienda .listado ul li article p:first-child:before {
+          display: none; }
     .tienda .listado ul li .boton {
       width: 320px;
       height: 45px;
