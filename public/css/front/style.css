@@ -2740,6 +2740,18 @@ footer {
 .tienda .checkout form .form-column input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.65); }
 
+.tienda .checkout form .form-column textarea::-webkit-textarea-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
 /*--| Vendor
 -------------------------------------------------------------------------- |--*/
 /*--| Lightbox

@@ -359,7 +359,7 @@ gala
         <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
       <div class="form-column">
-        <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <textarea name="comentario" id="comentario">¿Algún comentario?</textarea>
         <input type="hidden" name="producto" id="producto" />
         <input type="submit" class="submit" value="Enviar" />
       </div>
