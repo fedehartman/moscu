@@ -29,7 +29,13 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-5">
+    <address>
+      <strong>Twitter</strong><br>
+      <p>{{{ $pedido->twitter }}}</p>
+    </address>
+  </div>
+  <div class="col-sm-6 col-sm-offset-1">
     <address>
       <strong>Comentarios</strong><br>
       <p>{{{ $pedido->comentario }}}</p>

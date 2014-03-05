@@ -133,19 +133,34 @@ Route::post('/enviar-pedido', function()
     try {
         $pedido = new Pedido;
         $pedido->nombre = Input::get('nombre');
+        $pedido->twitter = Input::get('twitter');
         $pedido->email = Input::get('email');
         $pedido->direccion = Input::get('direccion');
         $pedido->telefono = Input::get('telefono');
         $pedido->comentario = Input::get('comentario');
         $pedido->save();
 
-        foreach (Input::get('producto') as $prod_id => $cantidad) {
-            $renglon = new PedidoRenglon;
-            $renglon->pedido_id = $pedido->id;
-            $renglon->producto_id = $prod_id;
-            $renglon->cantidad = $cantidad;
-            $renglon->save();
-        }
+        $renglon = new PedidoRenglon;
+        $renglon->pedido_id = $pedido->id;
+        $renglon->producto_id = Input::get('producto');
+        $renglon->cantidad = 1;
+        $renglon->save();
+
+        $contenido = '<p><b>Nombre y Apellido:</b> ' . $pedido->nombre . '</p>';
+        $contenido .= '<p><b>Twitter:</b> ' . $pedido->twitter . '</p>';
+        $contenido .= '<p><b>Email:</b> ' . $pedido->email . '</p>';
+        $contenido .= '<p><b>Dirección:</b> ' . $pedido->direccion . '</p>';
+        $contenido .= '<p><b>Teléfono:</b> ' . $pedido->telefono . '</p>';
+        $contenido .= '<p><b>Comentario:</b> ' . $pedido->comentario . '</p>';
+        $contenido .= '<p><b>Pedido:</b> ' . $pedido->renglonCombo()->producto->descripcion . '</p>';
+
+		$email_data['titulo']    = 'Entrega';
+		$email_data['pedido'] = $contenido;
+
+		Mail::send('emails.pedido', $email_data, function($message) use ($email_data){
+	        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
+	        $message->to(array('andresbotta@gmail.com', 'fede@fedehartman.com'))->subject($email_data['titulo']);
+	    });
 
         return $pedido->toJson();
     } catch (Exception $e) {

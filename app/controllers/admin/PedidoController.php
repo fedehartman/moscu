@@ -8,7 +8,7 @@ class PedidoController extends BaseController {
     }
 
     public function getVer($id) {
-        $data['pedido'] = Pedido::find($id);
+        $data['pedido'] = Pedido::find($id);        
         return View::make('admin.pedido.ver', $data);
     }
 

@@ -93,7 +93,7 @@ Date: Feb - Mar | 2014
 
 <div class="modal none">
   <div class="modalbody">
-    <div class="close"></div>
+    <div class="close" onclick="cerrarModal();"></div>
     <p>Mensaje</p>
   </div>
 </div>
@@ -334,9 +334,9 @@ gala
           <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>
           <article>
-            <p>{{{ $producto->descripcion }}}</p>
+            <p>{{ $producto->descripcion }}</p>
           </article>
-          <div class="boton"><a href="#comprar" >Doná ${{{ $producto->precio }}}</a></div>
+          <div class="boton"><a href="#donar" onclick="donar({{{ $producto->id }}});">Doná ${{{ $producto->precio }}}</a></div>
         </div>
       </li>
       @endforeach
@@ -345,7 +345,7 @@ gala
 
   <!--| Checkout
   ===================================== |-->
-  <section class="checkout" id="comprar">
+  <section class="checkout" id="donar">
     <h5>¡Gracias por tu donación! Sos lo más.<br>
     Para poder pasarla a buscar y
     darte tus regalos, necesitamos la siguiente información: </h5>
@@ -359,6 +359,7 @@ gala
       </div>
       <div class="form-column">
         <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <input type="hidden" name="producto" id="producto" />
         <input type="submit" class="submit" value="Enviar" />
       </div>
     </form>

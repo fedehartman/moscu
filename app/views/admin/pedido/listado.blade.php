@@ -25,6 +25,7 @@
               <tr>
                 <th>Fecha</th>
                 <th>Nombre</th>
+                <th>Twitter</th>
                 <th>Email</th>
                 <th>Tel&eacute;fono</th>
                 <th>Direcci&oacute;n</th>
@@ -36,6 +37,7 @@
               <tr id="pedido_{{ $pedido->id }}">
                 <td>{{{ date('d-m-Y H:i:s', strtotime($pedido->created_at)) }}}</td>
                 <td>{{{ $pedido->nombre }}}</td>
+                <td>{{{ $pedido->twitter }}}</td>
                 <td>{{{ $pedido->email }}}</td>
                 <td>{{{ $pedido->telefono }}}</td>
                 <td>{{{ $pedido->direccion }}}</td>

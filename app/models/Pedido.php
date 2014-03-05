@@ -9,5 +9,9 @@ class Pedido extends Eloquent {
 	public function renglones(){
 		return $this->hasMany('PedidoRenglon');
 	}
+
+	public function renglonCombo(){
+		return $this->hasMany('PedidoRenglon')->first();
+	}
 	
 }

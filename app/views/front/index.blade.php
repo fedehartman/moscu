@@ -31,10 +31,7 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/reset.css') }}">
   <link rel="stylesheet" href="{{ URL::to('/css/front/style.css') }}">
-  <link rel="stylesheet" href="{{ URL::to('/css/front/mq.css') }}">
-  <link rel="stylesheet" href="{{ URL::to('/css/front/move.css') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="{{ URL::to('/js/front/main.js') }}"></script>
@@ -56,27 +53,47 @@ Date: Feb - Mar | 2014
 
 
 
+
 <!--| Analytics
-=============================================================================================== |-->
+=========================================================================== |-->
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-36135240-1', 'premioscatatonias.uy');
   ga('send', 'pageview');
-
 </script>
 
-<div class="mobile"></div>
+
+
+
+
+<!--| Facebook Stuff
+=========================================================================== |-->
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<figure class="none"><img src="{{ URL::asset('/img/front/logopromo.png') }}" width="750px" height="550px"></figure>
+
+
+
 
 
 <!--| Modal
 =========================================================================== |-->
+
 <div class="modal none">
   <div class="modalbody">
-    <div class="close"></div>
+    <div class="close" onclick="cerrarModal();"></div>
     <p>Mensaje</p>
   </div>
 </div>
@@ -86,33 +103,78 @@ Date: Feb - Mar | 2014
 
 <!--| Menú
 =========================================================================== |-->
+
 <header class="main-header">
   <ul>
-    <li class="b00"><span class="none">Inicio</span></li>
-    <li class="b01"><span class="none">Votación</span></li>
-    <li class="b02"><span class="none">Los Premios</span></li>
-    <li class="b03"><span class="none">La Gala</span></li>
-    <li class="b04"><span class="none">Tienda</span></li>
-    <li class="b05"><span class="none">Contacto</span></li>
+    <li class="b00">Inicio</li>
+    <li class="b01">Votación</li>
+    <!-- <li class="b02">Los Premios</li>
+    <li class="b03">La Gala</li>
+    <li class="b04">Tienda</li> -->
+    <li class="b04">Tienda</li>
   </ul>
 </header>
 
 
 
+
+
 <!--| 1· Home
 =========================================================================== |-->
-<div class="a00 home"><div class="wrapper nano"><div class="nano-content">
-home
-</div></div></div>
+
+<div class="a00 home"><div class="wrapper">
+  <h1><span class="none">Premios Catatonias</span></h1>
+  <div class="line line01"></div>
+  <h2>Los Premios Catatonias al Patético Mundo <br>del Twitter Uruguasho
+  llegaron a su 3ra edición. <br><strong>Sábado 15 de Marzo, 20:30hrs.</strong>
+  <br><a href="https://www.google.es/maps/ms?msid=210811873514161027997.0004f3bf0567e6e6f30e7&msa=0&ll=-34.907983,-56.166101&spn=0.015784,0.033023" target="_blank">
+  Prato 2333 esq. Cassinoni.</a></h2>
+  <div class="gif none"><img src="img/.gif" width="200" height="105"></div>
+  <div class="line line02"></div>
+  <div class="line line03"></div>
+  <nav>
+    <ul>
+      <li class="b01"><a href="#">Votá acá</a></li>
+      <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}">&iquest;Quer&eacute;s saber de qu&eacute; se trata?</a></li>
+      <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
+      <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
+      <li class="b03 none"><a href="#">Participá como marca</a></li>
+      <li class="b04"><a href="#">Do’ pesito’ pa’l vino</a></li>
+      <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
+    </ul>
+  </nav>
+  <div class="social">
+    <div class="tw">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="¿Viste que el 15 de marzo son los #PremiosCatatonias? KENERVIO: " data-lang="es" data-count="none" data-hashtags="PremiosCatatonias">Twittear</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+    <div class="fb">
+      <div class="fb-like" data-href="http://premioscatatonias.uy" data-width="120" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+    </div>
+  </div>
+  <div class="line line04"></div>
+  <div class="widget">
+    <a class="twitter-timeline" href="https://twitter.com/search?q=%23PremiosCatatonias" data-widget-id="433411683554308096">Tweets sobre "#PremiosCatatonias"</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+  <div class="creditos">
+    <div class="les"><a href="http://lesmots.uy" target="_blank"><span class="none">Les Mots</span></a></div>
+    <div class="sov"><a href="http://sovietico.de" target="_blank"><span class="none">Sovieticode</span></a></div>
+</div>
+</div></div>
+
+
 
 
 
 <!--| 1· Votación
 =========================================================================== |-->
+
 <div class="a01 votacion"><div class="wrapper nano"><div class="nano-content">
 
   <!--| Header
   ===================================== |-->
+
   <header class="cabezal">
     <h3>Votación</h3>
     <a href="#" class="prev"></a><a href="#" class="next"></a>
@@ -123,7 +185,7 @@ home
         votar. Los ganadores serán anunciados en la <a href="#" class="b03">
         ceremonia de entrega de premios</a> que se realizará el sábado 15 de 
         marzo a partir de las 20:30 horas en un local coqueto que alquilamos en 
-        Prato esq. Cassinoni.</p>
+        Prato 2333 esq. Cassinoni.</p>
         <p>Dale a la flechita <i></i> y te seguimos contando.</p>
       </div>
       <div class="slide">
@@ -196,80 +258,85 @@ home
 
 </div></div></div>
 
+
+
+
+
 <!--| 2· Premios
 =========================================================================== |-->
-<div class="a02 premios"><div class="wrapper nano"><div class="nano-content">
-Premio
+
+<div class="a02 premios none"><div class="wrapper nano"><div class="nano-content">
+premios
 </div></div></div>
+
+
+
+
 
 <!--| 3· Gala
 =========================================================================== |-->
-<div class="a03 gala"><div class="wrapper nano"><div class="nano-content">
-Gala
+
+<div class="a03 gala none"><div class="wrapper nano"><div class="nano-content">
+gala
 </div></div></div>
+
+
+
+
 
 <!--| 4· Tienda
 =========================================================================== |-->
 <div class="a04 tienda"><div class="wrapper nano"><div class="nano-content">
 
-
   <!--| Header
   ===================================== |-->
   <header class="cabezal">
-    <h3>Tienda</h3>
-    <article>
-      <p>Este es un tuit que va a tener 140 caracteres y va a servir para medir la
-       cantidad de texto que va a entrar en esta parte del diseño acá va. Este es 
-       un tuit que va a tener 140 caracteres y va a servir para medir la cantidad 
-       de texto que va a entrar en esta parte del diseño acá va. Este es un tuit 
-       que va a tener 140 caracteres y va a servir para medir la cantidad de texto 
-       que va a entrar en esta parte del diseño acá va. Este es un tuit que va a 
-       tener 140 caracteres y va a servir para medir la cantidad de texto que va a 
-       entrar en esta parte del diseño acá va.</p>
+    <h3>Donaciones</h3>
+    <a href="#" class="prev"></a><a href="#" class="next"></a>
+    <article class="slider">
+      <div class="slide">
+        <p>Este año mucha gente nos preguntó cómo nos podían dar una mano 
+        económica para asegurarse que los #PremiosCatatonias se hagan y se sigan 
+        haciendo. Si bien algunos propusieron vender nuestros cuerpos a cambio 
+        de dinero, creímos que lo mejor era otorgar la oportunidad de donar una 
+        módica suma de dinero a cambio de productos súper novedosos (?).</p>
+        <p>Dale a la flechita <i></i> y te seguimos contando.</p>
+      </div>
+      <div class="slide">
+        <h4>Por eso creamos esta sección del sitio. Cómo funciona es muy simple: </h4> 
+        <p>Mirá qué podés recibir a cambio de donar equis suma de dinero a la causa.</p>
+        <p>Elegí el monto de donación que quieras realizar.</p>
+        <p>Hacé click en “Donar”.</p>
+        <p>Ingresá tu información que irá al Equipo de Logística Súper 
+        Confidencial de #PremiosCatatonias (<a href="http://twitter.com/balefin" target="_blank">@Balefin</a>).</p>
+      </div>
+      <div class="slide">
+        <p>Esperá a que juntemos todas las donaciones para un día de la 
+        semana y las pasamos a buscar por donde te quede mejor. </p>
+        <p>Al donar, tu user de Twitter pasa a ser un “sponsor” y comparte 
+        espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
+        más prioritario el espacio que se ocupa.</p> 
+        <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
+        les regalamos un hermoso escobillón para wáter con la imagen de un pajarito 
+        cagando estampado en el frente. De nada.</p>
+      </div>
      </article>
   </header>
-
-  <!--| Menú
-  ===================================== |-->
-  <nav>
-    <ul>
-      <li class="filter autoadhesivos" data-filter="autoadhesivos">Autoadhesivos</li>
-      <li class="filter cuadernolas" data-filter="cuadernolas">Cuadernolas</li>
-      <li class="filter lapices" data-filter="lapices">Lápices</li>
-      <li class="filter pins" data-filter="pins">Pins</li>
-      <li class="filter remeras" data-filter="remeras">Remeras</li>
-      <li class="filter tazas" data-filter="tazas">Tazas</li>
-      <li class="filter combos" data-filter="combos">Combos</li>
-      <li class="filter active todos" data-filter="all">Todos</li>
-    </ul>
-  </nav>
-
 
   <!--| Listado
   ===================================== |-->
   <section class="listado">
-    <ul id="Grid">
+    <ul>
       @foreach ($productos as $producto)
-      <li class="mix {{{ $producto->categoria }}}" data-type="{{{ $producto->categoria }}}" id="{{ $producto->id }}">
-        <div class="comprado none"></div>
+      <li>
         <div class="top"></div>
         <div class="etiqueta">
-          <figure>
-            <a href="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" data-lightbox="image-1" title="{{{ $producto->descripcion }}}">
-            <img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="175" height="175"></a>
-          </figure>
+          <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>
-          <div class="preciogo">
-            <div class="precio" id="precio">$ <span>{{{ $producto->precio }}}</span></div>
-            <form class="go">
-              <select name="cantidad" id="cantidad">
-              @for ($i = 1; $i <= 5; $i++)
-                <option>{{ $i }}</option>
-              @endfor
-              </select>
-              <a href="#" class="comprar" onclick="agregarTienda({{ $producto->id }})">Comprar</a>
-            </form>
-          </div>
+          <article>
+            <p>{{ $producto->descripcion }}</p>
+          </article>
+          <div class="boton"><a href="#donar" onclick="donar({{{ $producto->id }}});">Doná ${{{ $producto->precio }}}</a></div>
         </div>
       </li>
       @endforeach
@@ -278,39 +345,25 @@ Gala
 
   <!--| Checkout
   ===================================== |-->
-  <form id="form-pedido">
-    <section class="checkout">
-      <div class="tabla">
-        <h5>Hasta ahora vas comprando esto:</h5>
-        <table>
-          <tbody>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td class="total">Total:</td>
-              <td class="precio" id="total">$ <span>0</span></td>
-              <td></td>
-            </tr>
-          </tfoot>
-        </table>
+  <section class="checkout" id="donar">
+    <h5>¡Gracias por tu donación! Sos lo más.<br>
+    Para poder pasarla a buscar y
+    darte tus regalos, necesitamos la siguiente información: </h5>
+    <form id="form-pedido">
+      <div class="form-column">
+        <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
+        <input type="text" placeholder="Usuario de Twitter" name="twitter" id="twitter" required />
+        <input type="email" placeholder="Email" name="email" id="email" required />
+        <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
+        <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
-      <div class="form">
-        <h5>Ahora tus datos y te lo mandamos</h5>      
-        <div class="form-column">
-          <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
-          <input type="email" placeholder="Email" name="email" id="email" required />
-          <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
-          <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
-        </div>
-        <div class="form-column">
-          <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
-          <input type="submit" class="submit" value="enviar" /> 
-        </div>      
+      <div class="form-column">
+        <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <input type="hidden" name="producto" id="producto" />
+        <input type="submit" class="submit" value="Enviar" />
       </div>
-    </section>
-  </form>
+    </form>
+  </section>
 
 </div></div></div>
 
@@ -321,10 +374,43 @@ Gala
 
 <!--| Fotter
 =========================================================================== |-->
+
 <footer>
-  <div class="footer1"></div>
-  <div class="footer2"></div>
+    <div class="footer1">
+      <div class="slider1">
+        <div class="logos">
+          <div class="logo lesmots"><a target="_blank" href="http:/lesmots.uy"></a></div>
+          <div class="logo subrayado"><a target="_blank" href="http://www.subrayado.com.uy/"></a></div>
+          <div class="logo sovieticode"><a target="_blank" href="http://twitter.com/sovieticode"></a></div>
+          <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
+          <div class="logo makeit"><a target="_blank" href="http://makeitwork.com.uy/"></a></div>
+          <div class="logo cativelli"><a target="_blank" href="http://www.cattivelli.com/"></a></div>
+          <div class="logo diving"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
+        </div>
+        <div class="logos">
+          <div class="logo casitanno"><a target="_blank" href="http://www.facebook.com/pages/Casitanno-restobar/171005276275918"></a></div>
+          <div class="logo fernet"><a target="_blank" href="http://www.fernetbranca.com/"></a></div>
+          <div class="logo miller"><a target="_blank" href="http://twitter.com/Miller_Uruguay"></a></div>
+          <div class="logo natalia"><a target="_blank" href="http://www.nataliasastre.com/"></a></div>
+          <div class="logo boton"><a target="_blank" href="http://boton.tv/index.php?region=uy"></a></div>
+          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
+          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
+        </div>
+        <div class="logos">
+          <div class="logo ataque"><a target="_blank" href="http://www.atacaesquimal.com/"></a></div>
+          <div class="logo justicia"><a target="_blank" href="http://www.oceanofm.com/justicia-infinita/"></a></div>
+          <div class="logo candilejas"><a target="_blank" href="http://www.facebook.com/candilejas.resto.7"></a></div>
+          <div class="logo petates"><a target="_blank" href="http://www.mispetates.com/"></a></div>
+          <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
+        </div>
+      </div>
+    </div>
+  <div class="footer2">
+   Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    Diseño & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
+  </div>
 </footer>
+
 
 
 <!--|====================================================================== |-->

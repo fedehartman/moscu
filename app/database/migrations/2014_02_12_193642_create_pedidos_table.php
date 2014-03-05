@@ -16,6 +16,7 @@ class CreatePedidosTable extends Migration {
 			$table->create();
 			$table->increments('id')->unsigned();
 			$table->string('nombre');
+			$table->string('twitter');
 			$table->string('email');
 			$table->string('telefono');
 			$table->string('direccion');
