@@ -334,7 +334,7 @@ gala
           <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>
           <article>
-            <p>{{ $producto->descripcion }}</p>
+            {{ $producto->descripcion }}
           </article>
           <div class="boton"><a href="#donar" onclick="donar({{{ $producto->id }}});">Doná ${{{ $producto->precio }}}</a></div>
         </div>
