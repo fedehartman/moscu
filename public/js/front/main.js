@@ -15,7 +15,7 @@ $(".nano").nanoScroller();
 $('.slider1').cycle({ 
     fx:     'fade', 
     speed:  800, 
-    timeout: 4500, 
+    timeout: 4600, 
   });
 
 
@@ -92,7 +92,7 @@ $(".b01").click(function(e) {
     $(this).addClass('fmov');
     $(this).dequeue();
     });
-  $('.tapar').delay(1200).queue(function(){
+  $('.tapar').delay(700).queue(function(){
     $(this).removeClass('none');
     $(this).dequeue();
     });
@@ -114,7 +114,7 @@ $(".b02").click(function(e) {
     $(this).addClass('fmov');
     $(this).dequeue();
     });
-  $('.tapar').delay(1200).queue(function(){
+  $('.tapar').delay(700).queue(function(){
     $(this).removeClass('none');
     $(this).dequeue();
     });
@@ -135,7 +135,11 @@ $(".b03").click(function(e) {
     $(this).addClass('fmov');
     $(this).dequeue();
     });
-  $('.tapar').delay(1200).queue(function(){
+  $('.tapar').delay(700).queue(function(){
+    $(this).removeClass('none');
+    $(this).dequeue();
+    });
+  $('.tapar').delay(700).queue(function(){
     $(this).removeClass('none');
     $(this).dequeue();
     });
@@ -156,7 +160,7 @@ $(".b04").click(function(e) {
     $(this).addClass('fmov');
     $(this).dequeue();
     });
-  $('.tapar').delay(1200).queue(function(){
+  $('.tapar').delay(700).queue(function(){
     $(this).removeClass('none');
     $(this).dequeue();
     });

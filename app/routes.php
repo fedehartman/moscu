@@ -159,7 +159,7 @@ Route::post('/enviar-pedido', function()
 
 		Mail::send('emails.pedido', $email_data, function($message) use ($email_data){
 	        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
-	        $message->to(array('andresbotta@gmail.com', 'fede@fedehartman.com'))->subject($email_data['titulo']);
+	        $message->to(array('catatonias@gmail.com', 'vale.fynn@gmail.com'))->subject($email_data['titulo']);
 	    });
 
         return $pedido->toJson();

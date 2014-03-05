@@ -317,8 +317,8 @@ gala
         espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
         más prioritario el espacio que se ocupa.</p> 
         <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
-        les regalamos un hermoso escobillón para wáter con la imagen de un pajarito 
-        cagando estampado en el frente. De nada.</p>
+        les regalamos un hermoso escobillón para wáter, genitleza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
+        con la imagen de un pajarito cagando estampado en el frente. De nada</p>
       </div>
      </article>
   </header>
@@ -359,7 +359,7 @@ gala
         <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
       <div class="form-column">
-        <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <textarea placeholder="Decinos cuánto querés donar y algún comentario ahí que te salga" name="comentario" id="comentario"></textarea>
         <input type="hidden" name="producto" id="producto" />
         <input type="submit" class="submit" value="Enviar" />
       </div>
