@@ -336,7 +336,7 @@ gala
           <article>
             <p>{{{ $producto->descripcion }}}</p>
           </article>
-          <div class="boton"><a href="#" onclick="agregarTienda({{ $producto->id }})">Doná ${{{ $producto->precio }}}</a></div>
+          <div class="boton"><a href="#comprar" >Doná ${{{ $producto->precio }}}</a></div>
         </div>
       </li>
       @endforeach
@@ -345,7 +345,7 @@ gala
 
   <!--| Checkout
   ===================================== |-->
-  <section class="checkout">
+  <section class="checkout" id="comprar">
     <h5>¡Gracias por tu donación! Sos lo más.<br>
     Para poder pasarla a buscar y
     darte tus regalos, necesitamos la siguiente información: </h5>

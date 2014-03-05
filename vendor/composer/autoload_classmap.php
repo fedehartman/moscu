@@ -33,6 +33,7 @@ return array(
     'Configuracion' => $baseDir . '/app/models/Configuracion.php',
     'ConfiguracionesTableSeeder' => $baseDir . '/app/database/seeds/ConfiguracionesTableSeeder.php',
     'CreateCategoriasTable' => $baseDir . '/app/database/migrations/2014_02_08_140600_create_categorias_table.php',
+    'CreateClienteHistorialTable' => $baseDir . '/app/database/migrations/2014_03_05_114323_create_cliente_historial_table.php',
     'CreateConfiguracionesTable' => $baseDir . '/app/database/migrations/2014_02_08_190719_create_configuraciones_table.php',
     'CreatePedidoRenglonTable' => $baseDir . '/app/database/migrations/2014_02_12_193729_create_pedido_renglon_table.php',
     'CreatePedidosTable' => $baseDir . '/app/database/migrations/2014_02_12_193642_create_pedidos_table.php',
