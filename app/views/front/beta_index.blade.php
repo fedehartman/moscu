@@ -331,23 +331,18 @@ gala
 
   <section class="listado">
     <ul>
+      @foreach ($productos as $producto)
       <li>
         <div class="top"></div>
         <div class="line"></div>
-        <figure>
-          <a href="../img/front/dummys/producto01.png" data-lightbox="image-1" title="Este es un tuit que va a tener 140 caracteres y va a servir para medir la cantidad de texto que va a entrar en esta parte del diseño acá va">
-          <img src="../img/front/dummys/producto01.png" width="335" height="150"></a>
-        </figure>
-        <h4>Donación #PremiosCatatonias</h4>
+        <figure><img src="../img/front/dummys/producto01.png" width="335" height="150"></a></figure>
+        <h4>{{{ $producto->nombre }}}</h4>
         <article>
-          <p>1 taza de los #PremiosCatatonias con tu usuario o un tweet y el autor.</p>
-          <p>1 remera de los #PremiosCatatonias personalizada</p>
-          <p>1 cuadernola de los #PremiosCatatonias</p>
-          <p>4 lápices con hashtags inscriptos</p>
-          <p>2 pins de los #PremiosCatatonias</p>
+          <p>{{{ $producto->descripcion }}}</p>
         </article>
-        <div class="boton"><a href="#">Doná $1000</a></div>
+        <div class="boton"><a href="#">Doná ${{{ $producto->precio }}}</a></div>
       </li>
+      @endforeach
     </ul>
   </section>
 
@@ -361,11 +356,11 @@ gala
     darte tus regalos, necesitamos la siguiente información: </h5>
     <form>
       <div class="form-column">
-        <input type="text" placeholder="Nombre y apellido" required />
-        <input type="text" placeholder="Usuario de Twitter" required />
-        <input type="email" placeholder="Email" required />
-        <input type="text" placeholder="Dirección" required />
-        <input type="tel" placeholder="Teléfono" required />
+        <input type="text" placeholder="Nombre y apellido" name="nombre" id="nombre" required />
+        <input type="text" placeholder="Usuario de Twitter" name="twitter" id="twitter" required />
+        <input type="email" placeholder="Email" name="email" id="email" required />
+        <input type="text" placeholder="Dirección" name="direccion" id="direccion" required />
+        <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
       <div class="form-column">
         <textarea>¿Algún comentario?</textarea>
