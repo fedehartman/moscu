@@ -155,6 +155,41 @@ html, body {
   overflow-x: hidden; }
 
 /*--| ------------------------------------------------------------------------------------------------------------ |--*/
+/*--| 1· Big Screen
+-------------------------------------------------------------------------- |--*/
+@media (min-width: 1441px) {
+  .wrapper, .nano {
+    height: 82%;
+    margin-top: -20%; }
+
+  .categorias li {
+    margin: 10px; } }
+/*--| 2· 1440
+-------------------------------------------------------------------------- |--*/
+@media (max-width: 1440px) and (min-width: 1367px) {
+  .wrapper, .nano {
+    height: 80%;
+    margin-top: -21%; }
+
+  .categorias li {
+    margin: 24px; } }
+/*--| 3· 1280
+-------------------------------------------------------------------------- |--*/
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .wrapper, .nano {
+    height: 78%;
+    margin-top: -20%; }
+
+  .categorias li {
+    margin: 7px; } }
+/*--| 4· 1024
+-------------------------------------------------------------------------- |--*/
+@media (max-width: 1024px) and (min-width: 781px) {
+  .wrapper, .nano {
+    height: 78%;
+    margin-top: -25%; } }
+/*--| 4· 1024
+-------------------------------------------------------------------------- |--*/
 /*--| Tipografías
 -------------------------------------------------------------------------- |--*/
 @font-face {
@@ -266,48 +301,6 @@ html {
   left: 50%;
   margin: -18% 0px 0px -49%; }
 
-.wrapper, .nano {
-  width: 98%;
-  height: 78%; }
-
-/*--| 1· Big Screen
--------------------------------------------------------------------------- |--*/
-@media (min-width: 1441px) {
-  .wrapper, .nano {
-    height: 82%;
-    margin-top: -20%; }
-
-  .categorias li {
-    margin: 10px; } }
-/*--| 2· 1440
--------------------------------------------------------------------------- |--*/
-@media (max-width: 1440px) and (min-width: 1367px) {
-  .wrapper, .nano {
-    height: 80%;
-    margin-top: -21%; }
-
-  .categorias li {
-    margin: 24px; } }
-/*--| 3· 1280
--------------------------------------------------------------------------- |--*/
-@media (max-width: 1280px) and (min-width: 1025px) {
-  .wrapper, .nano {
-    height: 78%;
-    margin-top: -20%; }
-
-  .categorias li {
-    margin: 7px; } }
-/*--| 4· 1024
--------------------------------------------------------------------------- |--*/
-@media (max-width: 1024px) and (min-width: 781px) {
-  .wrapper, .nano {
-    height: 78%;
-    margin-top: -25%; } }
-/*--| 4· 1024
--------------------------------------------------------------------------- |--*/
-@media (max-width: 781px) and (min-width: 240px) {
-  .mobile {
-    display: block; } }
 .mov-imago {
   animation-name: mov-imago;
   -webkit-animation-name: mov-imago;
@@ -3143,3 +3136,7 @@ footer {
 
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
   opacity: 0.98; }
+
+.wrapper, .nano {
+  width: 98%;
+  height: 78%; }
