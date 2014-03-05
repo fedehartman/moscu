@@ -330,6 +330,7 @@ gala
       @foreach ($productos as $producto)
       <li>
         <div class="top"></div>
+        <div class="line"></div>
         <div class="etiqueta">
           <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>
@@ -358,7 +359,7 @@ gala
         <input type="tel" placeholder="Teléfono" name="telefono" id="telefono" required />
       </div>
       <div class="form-column">
-        <textarea placeholder="¿Algún comentario?" name="comentario" id="comentario"></textarea>
+        <textarea name="comentario" id="comentario">¿Algún comentario?</textarea>
         <input type="hidden" name="producto" id="producto" />
         <input type="submit" class="submit" value="Enviar" />
       </div>

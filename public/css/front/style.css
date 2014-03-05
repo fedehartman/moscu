@@ -2523,7 +2523,10 @@ footer {
     margin: 0px 22px 44px 22px;
     background-color: #fff;
     padding: 5px 0px 15px 0px;
-    float: left; }
+    float: left;
+    -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25); }
     .tienda .listado ul li:nth-child(1) .top {
       background: url(../../img/front/sprite2.png) no-repeat 0px -270px; }
     .tienda .listado ul li:nth-child(2) .top {
@@ -2577,12 +2580,12 @@ footer {
           content: "\f00c";
           margin: 0px 4px 0px 5px;
           display: inline-block; }
-        .tienda .listado ul li article p:nth-child(2) {
+        .tienda .listado ul li article p:first-child {
           font-weight: 700;
           padding: 0px 0px 2px 0px;
           margin: 2px 0px 7px 0px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.09); }
-        .tienda .listado ul li article p:first-child:before, .tienda .listado ul li article p:nth-child(2):before, .tienda .listado ul li article p:last-child:before {
+        .tienda .listado ul li article p:first-child:before {
           display: none; }
     .tienda .listado ul li .boton {
       width: 320px;
@@ -2735,6 +2738,18 @@ footer {
   color: rgba(255, 255, 255, 0.65); }
 
 .tienda .checkout form .form-column input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-webkit-textarea-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.65); }
+
+.tienda .checkout form .form-column textarea::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.65); }
 
 /*--| Vendor
