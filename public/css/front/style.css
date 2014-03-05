@@ -2519,7 +2519,7 @@ footer {
   margin: 45px 0px 0px 0px; }
   .tienda .listado ul li {
     width: 375px;
-    height: 545px;
+    height: 555px;
     margin: 0px 22px 44px 22px;
     background-color: #fff;
     padding: 5px 0px 15px 0px;
@@ -2561,8 +2561,7 @@ footer {
       font-family: 'Asap', Arial, Helvetica, sans-serif; }
     .tienda .listado ul li article {
       width: 335px;
-      height: auto;
-      min-height: 20px;
+      height: 180px;
       overflow: hidden;
       margin: 0px 0px 15px 25px; }
       .tienda .listado ul li article p {
@@ -2615,6 +2614,11 @@ footer {
           margin: 0px 7px 0px 0px;
           font-weight: normal; }
         .tienda .listado ul li .boton a:hover:before {
+          display: inline-block; }
+      .tienda .listado ul li .boton a.donado {
+        background-color: #3d6614; }
+        .tienda .listado ul li .boton a.donado:before {
+          content: "\f00c";
           display: inline-block; }
 .tienda .checkout {
   width: 100%;
