@@ -5,10 +5,9 @@ $(document).ready(function() {
 
 $(".nano").nanoScroller();
 
-$(".mobile").click(function(e) {
-   $(".mobile-lay").addClass('none');
-  return false;
-  });
+
+
+
 
 /*--| Cycle Footer
 -------------------------------------------------------------------------- |--*/
@@ -18,6 +17,9 @@ $('.slider1').cycle({
     speed:  800, 
     timeout: 4500, 
   });
+
+
+
 
 
 /*--| Cycle Textos
@@ -37,9 +39,10 @@ $('.slider').cycle({
 /*--| Tienda
 -------------------------------------------------------------------------- |--*/
 
-$('#Grid').mixitup({});
-
 $('#form-pedido').on('submit',enviarPedido);
+
+
+
 
 
 /*--| Nav
