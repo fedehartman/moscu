@@ -330,6 +330,7 @@ gala
       @foreach ($productos as $producto)
       <li>
         <div class="top"></div>
+        <div class="line"></div>
         <div class="etiqueta">
           <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
           <h4>{{{ $producto->nombre }}}</h4>

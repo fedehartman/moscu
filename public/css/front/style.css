@@ -2523,7 +2523,10 @@ footer {
     margin: 0px 22px 44px 22px;
     background-color: #fff;
     padding: 5px 0px 15px 0px;
-    float: left; }
+    float: left;
+    -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25); }
     .tienda .listado ul li:nth-child(1) .top {
       background: url(../../img/front/sprite2.png) no-repeat 0px -270px; }
     .tienda .listado ul li:nth-child(2) .top {
