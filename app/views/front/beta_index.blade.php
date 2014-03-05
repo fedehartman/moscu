@@ -107,10 +107,10 @@ Date: Feb - Mar | 2014
 <header class="main-header">
   <ul>
     <li class="b00"><span class="none">Inicio</span></li>
-    <li class="b01 none" ><span class="none">Votación</span></li>
+    <li class="b01">Votación</li>
     <li class="b02 none" ><span class="none">Los Premios</span></li>
     <li class="b03 none" ><span class="none">La Gala</span></li>
-    <li class="b04" ><span class="none">Tienda</span></li>
+    <li class="b04">Tienda</li>
     <li class="b05 none" ><span class="none">Contacto</span></li>
   </ul>
 </header>
@@ -139,7 +139,7 @@ Date: Feb - Mar | 2014
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
       <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
       <li class="b03 none"><a href="#">Participá como marca</a></li>
-      <li class="b04 none"><a href="#">Do’ pesito’ pa’l vino</a></li>
+      <li class="b04"><a href="#">Do’ pesito’ pa’l vino</a></li>
       <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
     </ul>
   </nav>
