@@ -326,9 +326,9 @@ gala
   <!--| Listado
   ===================================== |-->
   <section class="listado">
-    <ul id="Grid">
+    <ul>
       @foreach ($productos as $producto)
-      <li class="mix {{{ $producto->categoria }}}" data-type="{{{ $producto->categoria }}}" id="{{ $producto->id }}">
+      <li>
         <div class="top"></div>
         <div class="etiqueta">
           <figure><img src="{{ URL::asset('/uploads/producto/' . $producto->imagen) }}" width="335" height="150"></a></figure>
