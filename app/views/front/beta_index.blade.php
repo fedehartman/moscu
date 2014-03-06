@@ -247,14 +247,14 @@ Date: Feb - Mar | 2014
       <p>{{ $categoria->descripcion }}</p>
       @if($categoria->sponsor_imagen)
       <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
-      @endif
-      @if($categoria->boton_votar)
+      @endif      
       <div class="vota">
+        @if($categoria->boton_votar)
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
           Votá
         </a>
-      </div>
-      @endif
+        @endif
+      </div>      
     </li>
     @endforeach
   </ul>
