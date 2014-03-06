@@ -91,7 +91,7 @@
           <div class="form-group">
             <label class="control-label col-sm-3 col-sm-3" for="boton_votar">Bot&oacute;n de votar</label>
             <div class="col-sm-8 controls">
-              <input class="form-control" data-rule-required="true" id="boton_votar" name="boton_votar" placeholder="Bot&oacute;n de votar" type="text" value="{{{ $categoria->boton_votar }}}" maxlength="140">
+              <input class="form-control" id="boton_votar" name="boton_votar" placeholder="Bot&oacute;n de votar" type="text" value="{{{ $categoria->boton_votar }}}" maxlength="140">
             </div>
           </div>
           <div class="form-group">

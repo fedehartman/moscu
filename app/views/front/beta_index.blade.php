@@ -237,20 +237,22 @@ Date: Feb - Mar | 2014
   ===================================== |-->
   <ul class="categorias">
     @foreach ($categorias as $categoria)
-    <li>
+    <li {{{ $categoria->categoriaClass() }}}>
       <div class="cabezal">
         <figure class="cat"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->imagen) }}}" width="65" height="65"></figure>
-        <h5>{{{ $categoria->nombre }}}</h5>
+        <h5>{{ $categoria->nombre }}</h5>
       </div>
       <p>{{ $categoria->descripcion }}</p>
       @if($categoria->sponsor_imagen)
       <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
       @endif
+      @if($categoria->boton_votar)
       <div class="vota">
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
           Votá
         </a>
       </div>
+      @endif
     </li>
     @endforeach
   </ul>

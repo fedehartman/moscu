@@ -132,4 +132,15 @@ class Categoria extends Eloquent {
         }
     }
 
+    public function categoriaClass() {
+        if ($this->created_at > '2014-02-28') {
+        	if($this->boton_votar)
+        		return 'class="cat-nueva"';
+        	else
+        		return 'class="cat-locked"';
+        }else{
+        	return '';
+        }
+    }
+
 }
