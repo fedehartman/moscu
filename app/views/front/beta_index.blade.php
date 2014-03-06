@@ -129,7 +129,7 @@ Date: Feb - Mar | 2014
   llegaron a su 3ra edición. <br><strong>Sábado 15 de Marzo, 20:30hrs.</strong>
   <br><a href="https://www.google.es/maps/ms?msid=210811873514161027997.0004f3bf0567e6e6f30e7&msa=0&ll=-34.907983,-56.166101&spn=0.015784,0.033023" target="_blank">
   Prato 2333 esq. Cassinoni.</a></h2>
-  <div class="gif none"><img src="img/.gif" width="200" height="105"></div>
+  <div class="gif"></div>
   <div class="line line02"></div>
   <div class="line line03"></div>
   <nav>
@@ -317,7 +317,7 @@ gala
         espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
         más prioritario el espacio que se ocupa.</p> 
         <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
-        les regalamos un hermoso escobillón para wáter, genitleza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
+        les regalamos un hermoso escobillón para wáter, gentileza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
         con la imagen de un pajarito cagando estampado en el frente. De nada</p>
       </div>
      </article>

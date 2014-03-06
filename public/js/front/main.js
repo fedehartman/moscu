@@ -24,12 +24,25 @@ $('.slider1').cycle({
 
 /*--| Cycle Textos
 -------------------------------------------------------------------------- |--*/
+
 $('.slider').cycle({ 
     fx:     'fade', 
     speed:  'fast', 
     timeout: 0, 
     next:   '.next', 
     prev:   '.prev' 
+  });
+
+
+
+
+
+/*--| Home Gif
+-------------------------------------------------------------------------- |--*/
+
+$(".gif").randombg({
+    directory: "../img/front/dummys/gif/",
+    howmany: 12
   });
 
 
@@ -102,7 +115,6 @@ $(".b01").click(function(e) {
   $('.a04').removeClass('m04');
   return false;
   });
-
 
 $(".b02").click(function(e) {
   e.preventDefault();
