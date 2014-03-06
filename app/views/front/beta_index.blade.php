@@ -187,6 +187,7 @@ Date: Feb - Mar | 2014
         marzo a partir de las 20:30 horas en un local coqueto que alquilamos en 
         Prato 2333 esq. Cassinoni.</p>
         <p>Dale a la flechita <i></i> y te seguimos contando.</p>
+        <p><strong class="green>">Los votos efectuados por bots (de Pedro Bordaberry o no), no valen</strong></p>
       </div>
       <div class="slide">
         <h4>¿Cómo voto?</h4> 

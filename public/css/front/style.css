@@ -2409,7 +2409,7 @@ footer {
   background: url(../../img/front/sprite.png) no-repeat 0px -120px; }
 
 .categorias li .cabezal {
-  width: 250px;
+  width: 270px;
   height: 78px;
   margin: 48px 0px 0px 12px; }
 
@@ -2421,15 +2421,15 @@ footer {
   overflow: hidden; }
 
 .categorias li h5 {
-  width: 173px;
-  font-size: 2.1em;
-  line-height: 1.2em;
+  width: 183px;
+  font-size: 2em;
+  line-height: 1.1em;
   color: #fff;
   font-weight: 700;
   font-family: 'Asap', Arial, Helvetica, sans-serif;
   display: block;
   float: left;
-  margin: 8px 0px 0px 10px; }
+  margin: 1px 0px 0px 10px; }
 
 .categorias li p {
   font-size: 1.3em;
