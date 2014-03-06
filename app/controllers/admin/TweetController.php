@@ -5,7 +5,7 @@ class TweetController extends BaseController {
     public function getListado(){    
     	$categoria = Input::get('categoria', '');
 
-        $tweets = Tweet::where('tweet_ano', 0);
+        $tweets = Tweet::where('tweet_ano', 0)->where('procesado', 1);
         if($categoria)
         	$tweets = $tweets->where('categoria_id', $categoria);
 
