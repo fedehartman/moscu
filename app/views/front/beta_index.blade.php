@@ -403,6 +403,9 @@ gala
           <div class="logo candilejas"><a target="_blank" href="http://www.facebook.com/candilejas.resto.7"></a></div>
           <div class="logo petates"><a target="_blank" href="http://www.mispetates.com/"></a></div>
           <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
+          <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
+          <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
+          <div class="logo tarmac"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
         </div>
       </div>
     </div>
