@@ -1,0 +1,95 @@
+/*--| 1· Votación
+-------------------------------------------------------------------------- |--*/
+
+.categorias {
+  height: auto;
+  min-height: 20px;
+  overflow: hidden;
+  margin: 28px 0px 50px 0px;
+  }
+
+.categorias li {
+  width: 290px;
+  height: 410px;
+  margin: 18px;
+  background-color: #8b21a6;
+  float: left;
+  background: url(../../img/front/sprite.png) no-repeat 0px -120px;
+  }
+
+.categorias li .nueva {display: none;}
+
+.categorias li .cabezal {
+  width: 270px;
+  height: 78px;
+  margin: 48px 0px 0px 12px;
+  }
+
+.categorias li .cat {
+  width: 65px;
+  height: 65px;
+  margin: 0px 0px 0px 0px;
+  float: left;
+  overflow: hidden;
+  }
+
+.categorias li h5 {
+  width: 183px;
+  font-size: 2em; line-height: 1.1em; color: #fff;
+  font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  display: block;
+  float: left;
+  margin: 1px 0px 0px 10px;
+  }
+
+.categorias li p {
+  font-size: 1.3em; line-height: 1.35em; color: #324d17;
+  font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  margin: 20px 0px 0px 37px;
+  width: 220px;
+  height: 95px;
+  }
+  .categorias li p a {font-weight: 700; color: #21330f;}
+  .categorias li p a:hover {color: #080d04;}
+
+
+
+@-moz-document url-prefix() {.categorias li p {margin: 10px 0px 0px 37px;}}
+
+.categorias li .sponsor {
+  width: 235px;
+  height: 70px;
+  margin: 18px 0px 11px 30px;
+  }
+
+@-moz-document url-prefix() {.categorias li .sponsor {margin: 24px 0px 14px 30px;}}
+
+.categorias li .vota a {
+  display: block;
+  width: 75px;
+  height: 40px;
+  margin: 0px 0px 0px 215px;
+  background-color: #6ca632;
+  font-size: 2.1em; line-height: 40px; color: #fff;
+  font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all 0.1s ease-in-out;
+     -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+       -o-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+  }
+  .categorias li .vota a:hover {background-color: #5b8c2a;}
+  .categorias li .vota a:active {background-color: #42661f;} 
+
+
+.categorias li.cat-nueva .nueva{
+  display: block;
+  width: 45px;
+  height: 17px;
+  margin: 18px 0px 0px 14px;
+  position: absolute;
+  z-index: 20;
+  background: url(../../img/front/nueva.png) no-repeat 0px 0px;
+}

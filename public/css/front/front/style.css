@@ -2412,9 +2412,6 @@ footer {
   float: left;
   background: url(../../img/front/sprite.png) no-repeat 0px -120px; }
 
-.categorias li.cat-locked {
-  background: url(../../img/front/sprite.png) no-repeat -295px -120px; }
-
 .categorias li .nueva {
   display: none; }
 

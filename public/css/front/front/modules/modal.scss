@@ -1,0 +1,60 @@
+/*--| Modal
+-------------------------------------------------------------------------- |--*/
+
+.modal {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  position: fixed;
+  z-index: 90909090909090909090909090909090;
+  background-color: rgba(0, 0, 0, 0.61);
+  -webkit-transition: all 0.5s ease-in-out;
+     -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+       -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
+  }
+
+.modalbody {
+  width: 500px;
+  height: auto;
+  min-height: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  box-sizing: border-box;
+  padding: 50px 50px 50px 50px;
+  margin: 0px 0px 0px -250px;
+  -webkit-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.35);
+     -moz-box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.35);
+          box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.35);
+  }
+
+.modalbody .close {
+  width: 20px;
+  height: 20px;
+  margin: -40px 0px 0px 415px;
+  position: absolute;
+  cursor: pointer;
+  }
+  .modalbody .close:before {
+    font-family: 'aw';
+    font-size: 2em;
+    content: "\f057";
+    margin: 2px 0px 0px 5px;
+    vertical-align: text-top;
+    color: #143d66;
+    }
+
+.modalbody p {
+  font-size: 1.6em; line-height: 1.5em; color: #143d66;
+  font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  }
+
+.blur {
+  -webkit-filter: blur(3px);
+  -webkit-transition: -webkit-filter .50s;
+  }

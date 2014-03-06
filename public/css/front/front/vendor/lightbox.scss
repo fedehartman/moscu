@@ -1,0 +1,115 @@
+/*--| Lightbox
+--------------------------------- |--*/
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9090909090909090;
+  background-color: rgba(116, 179, 64, 0.79);
+  display: none;
+  }
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 9090909090909091;
+  }
+
+.lightbox .lb-image {display: block; height: auto;}
+
+.lb-outerContainer {
+  
+  background-color: #fff;
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  border: 15px solid #1f5c99;
+  padding: 0px 0px 30px 0px;
+  margin: -30px auto 0px auto;
+  }
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+  }
+
+.lb-cancel {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background: url(../../img/front/lightbox/loader.gif) no-repeat 0px 0px;
+  }
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  }
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+.lb-data .lb-details {
+  width: 430px;
+  float: left;
+  background-color: #1f5c99;
+  margin: -55px 0px 0px -15px;
+  min-height: 50px;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
+  }
+
+@-moz-document url-prefix() {.lb-data .lb-details {width: 390px;}}
+
+.lb-data .lb-caption {
+  font-size: 1.6em; line-height: 1.3em; color: #fff;
+  font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  text-align: left;
+  }
+
+.lb-data .lb-close {
+  display: block;
+  top: -25px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 40;
+  margin: 0px 0px 0px 380px;
+  background-color: #1f5c99;
+  cursor: pointer;
+  }
+  .lb-data .lb-close:before {
+    font-family: 'aw';
+    font-size: 1.7em;
+    content: "\f00d";
+    margin: 0px 0px 0px 7px;
+    vertical-align: text-top;
+    line-height: 30px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    }
+
+.lb-number {color: #1f5c99;}
