@@ -187,6 +187,7 @@ Date: Feb - Mar | 2014
         marzo a partir de las 20:30 horas en un local coqueto que alquilamos en 
         Prato 2333 esq. Cassinoni.</p>
         <p>Dale a la flechita <i></i> y te seguimos contando.</p>
+        <p><strong class="green>">Los votos efectuados por bots (de Pedro Bordaberry o no), no valen</strong></p>
       </div>
       <div class="slide">
         <h4>¿Cómo voto?</h4> 
@@ -319,7 +320,7 @@ gala
         espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
         más prioritario el espacio que se ocupa.</p> 
         <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
-        les regalamos un hermoso escobillón para wáter, genitleza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
+        les regalamos un hermoso escobillón para wáter, gentileza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
         con la imagen de un pajarito cagando estampado en el frente. De nada</p>
       </div>
      </article>
