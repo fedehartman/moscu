@@ -1,0 +1,77 @@
+footer {
+  z-index: 909090909090909090909099;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: -50px;
+  /*bottom: 0px;*/
+  background-color: rgba(0, 0, 0, 0.30);
+  -webkit-transition: all 0.7s ease-in-out;
+     -moz-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+       -o-transition: all 0.7s ease-in-out;
+          transition: all 0.7s ease-in-out;
+  }
+  .fmov {bottom: 0px;}
+
+/*.footer-wrapper {float: left; width: 100%; overflow: hidden;}*/
+
+.footer1 {
+  height: 50px;
+  width: 970px;
+  float: left;
+  }
+
+.footer1 .slider1 {
+  width: 940px;
+  height: 30px;
+  margin: 10px 0px 0px 15px;
+  overflow: hidden;
+  }
+
+.footer1 .slider1 .logos {
+  width: 940px;
+  height: 30px;
+  overflow: hidden;
+  }
+
+.footer1 .slider1 .logos .logo a {
+  float: left;
+  width: 100px;
+  height: 30px;
+  margin: 0px 15px 0px 15px;
+  }
+
+.footer2 {
+  float: right;
+  height: 50px;
+  width: 377px; 
+  font-size: 1em; line-height: 50px; color: rgba(255, 255, 255, 0.65);
+  font-weight: normal; font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: right;
+  margin: 0px 10px 0px 0px;
+  }
+.footer2 a {color: rgba(255, 255, 255, 0.95);}
+
+.footer1 .slider1 .logos .logo.lesmots a {background: url(../../img/front/dummys/logos/lesmots.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.subrayado a {background: url(../../img/front/dummys/logos/subrayado.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.sovieticode a {background: url(../../img/front/dummys/logos/sovieticode.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.vito a {background: url(../../img/front/dummys/logos/vito.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.makeit a {background: url(../../img/front/dummys/logos/makeit.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.cativelli a {background: url(../../img/front/dummys/logos/cattivelli.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.living a {background: url(../../img/front/dummys/logos/living.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.casitanno a {background: url(../../img/front/dummys/logos/casitanno.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.fernet a {background: url(../../img/front/dummys/logos/fernet.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.miller a {background: url(../../img/front/dummys/logos/miller.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.natalia a {background: url(../../img/front/dummys/logos/natalia.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.boton a {background: url(../../img/front/dummys/logos/boton.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.tweet a {background: url(../../img/front/dummys/logos/tweet.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.blog a {background: url(../../img/front/dummys/logos/blog.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.ataque a {background: url(../../img/front/dummys/logos/ataque.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.justicia a {background: url(../../img/front/dummys/logos/justicia.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.candilejas a {background: url(../../img/front/dummys/logos/candilejas.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.petates a {background: url(../../img/front/dummys/logos/petates.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.amareto a {background: url(../../img/front/dummys/logos/amaret.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.cromo a {background: url(../../img/front/dummys/logos/cromo.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.punta a {background: url(../../img/front/dummys/logos/punta.png) no-repeat 0px 0px;}
+.footer1 .slider1 .logos .logo.tarmac a {background: url(../../img/front/dummys/logos/tarmac.png) no-repeat 0px 0px;}

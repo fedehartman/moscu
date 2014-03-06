@@ -1,0 +1,55 @@
+
+/*--| Scroll
+--------------------------------- |--*/
+
+.nano {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  }
+
+.nano > .nano-content {
+  position: absolute;
+  overflow: scroll;
+  overflow-x: hidden;
+  top: 0; right: 0; bottom: 0; left: 0;
+  padding-right: 15px;
+  box-sizing: border-box;
+  }
+
+.nano > .nano-content:focus {outline: thin dotted;}
+.nano > .nano-content::-webkit-scrollbar {visibility: hidden;}
+.has-scrollbar > .nano-content::-webkit-scrollbar {visibility: visible;}
+
+.nano > .nano-pane {
+  background-color: rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: 10px;
+  right: 0; top: 0; bottom: 0;
+  opacity: .01;
+  margin: 0px 0px 0px 0px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  }
+
+.nano > .nano-pane > .nano-slider {
+  background-color: #fff;
+  opacity: .87;
+  position: relative;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  }
+
+.nano > .nano-pane:hover > .nano-slider {opacity: 1;}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {opacity: 0.98;}
+
+.wrapper, .nano {width: 98%; height: 78%;}

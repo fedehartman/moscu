@@ -1,0 +1,211 @@
+/*--| 5· Tienda
+-------------------------------------------------------------------------- |--*/
+
+.tienda {
+
+.listado ul {
+  width: 100%;
+  height: auto;
+  min-height: 20px;
+  overflow: hidden;
+  margin: 45px 0px 0px 0px;
+  li {
+    width: 375px;
+    height: 565px;
+    margin: 0px 22px 44px 22px;
+    background-color: #fff;
+    padding: 5px 0px 15px 0px;
+    float: left;
+    -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    &:nth-child(1) .top {background: url(../../img/front/sprite2.png) no-repeat 0px -270px;}
+    &:nth-child(2) .top {background: url(../../img/front/sprite2.png) no-repeat 0px -335px;}
+    &:nth-child(3) .top {background: url(../../img/front/sprite2.png) no-repeat 0px -400px;}
+    &:nth-child(4) .top {background: url(../../img/front/sprite2.png) no-repeat -335px -270px;}
+    &:nth-child(5) .top {background: url(../../img/front/sprite2.png) no-repeat -335px -335px;}
+    &:nth-child(6) .top {background: url(../../img/front/sprite2.png) no-repeat -335px -400px;}
+    .top {
+      width: 335px;
+      height: 65px;
+      margin: 15px 0px 15px 15px;
+    }
+    .line {
+      width: 375px;
+      height: 1px;
+      margin: 14px 0px 15px 0px;
+      border-bottom: 1px dashed rgba(129, 191, 67, 0.45);
+    }
+    figure {
+      width: 335px;
+      height: 150px;
+      margin: 0px 0px 10px 20px;
+    }
+    h4 {
+      width: 335px;
+      margin: 5px 0px 9px 13px;
+      padding: 3px 0px 3px 10px;
+      background-color: #1f5c99;
+      font-size: 2em; line-height: 1.5em; color: #fff;
+      font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+    }
+    article {
+      width: 335px;
+      height: 190px;
+      overflow: hidden;
+      margin: 0px 0px 15px 25px;
+      p {
+        width: 325px;
+        font-size: 1.3em; line-height: 1.7em; color: #1f5c99;
+        font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+        &:before {
+          font-family: 'aw';
+          font-size: 0.7em;
+          content: "\f00c";
+          margin: 0px 4px 0px 5px;
+          display: inline-block;
+        }
+        &:first-child {
+          font-weight: 700;
+          padding: 0px 0px 2px 0px;
+          margin: 2px 0px 7px 0px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+          }
+        &:first-child:before {display: none;}
+      }
+    }
+    .boton {
+      width: 320px;
+      height: 45px;
+      margin: 0px 0px 0px 60px;
+      background: url(../../img/front/sprite2.png) no-repeat 0px -225px;
+      a {
+        font-size: 2em; line-height: 40px; color: #fff;
+        font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+        text-align: right;
+        display: block;
+        float: right;
+        padding: 0px 20px 0px 30px;
+        @include transition(all 0.2s ease-in-out);
+        &:hover {background-color: #0f2e4d;}
+        &:before {
+          display: none;
+          font-family: 'aw';
+          font-size: 0.9em;
+          content: "\f087";
+          margin: 0px 7px 0px 0px;
+          font-weight: normal;
+        }
+        &:hover:before {display: inline-block;}
+      }
+      a.donado {
+        background-color: #3d6614;
+        &:before {content: "\f00c"; display: inline-block}
+        }
+    }
+  }
+}
+
+.checkout {
+  width: 100%;
+  height: auto;
+  min-height: 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 50px 0px 0px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 20px 0px 0px 0px;
+  h5 {
+    text-align: right;
+    float: left;
+    width: 35%;
+    height: auto;
+    min-height: 20px;
+    overflow: hidden;
+    margin: 0px 30px 10px 20px;
+    font-size: 2em; line-height: 1.5em; color: rgba(255, 255, 255, 0.85);
+    font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+    }
+  form {
+    float: left;
+    width: 60%;
+    height: auto;
+    min-height: 20px;
+    overflow: hidden;
+    .form-column {
+      width: 48%;
+      margin: 0px 10px 0px 0px;
+      float: left;
+      input {
+        width: 100%;
+        height: 40px;
+        padding: 0px 10px 0px 10px;
+        margin: 0px 0px 8px 0px;
+        background-color: rgba(255, 255, 255, 0.08);
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        font-size: 1.5em; line-height: 40px; color: rgba(255, 255, 255, 0.85);
+        font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+        -webkit-transition: all 0.2s ease-in-out;
+           -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+             -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+        &:focus  {
+          background-color: rgba(255, 255, 255, 0.02);
+          color: rgba(255, 255, 255, 0.97);
+          border: 1px solid rgba(31, 92, 153, 0.85);
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 185px;
+        margin: 0px 0px 8px 0px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        resize: none;
+        background-color: rgba(255, 255, 255, 0.08);
+        font-size: 1.5em; line-height: 1.4em; color: rgba(255, 255, 255, 0.65);
+        font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+        &:focus {
+          background-color: rgba(255, 255, 255, 0.02);
+          color: rgba(255, 255, 255, 0.97);
+          border: 1px solid rgba(31, 92, 153, 0.85);
+        }
+      }
+      .submit {
+        width: 40%;
+        height: 40px;
+        margin: 0px 0px 0px 60%;
+        font-size: 1.6em; line-height: 40px; color: #fff;
+        font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+        background-color: #1f5c99;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+           -moz-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+        @include transition(all 0.1s ease-in-out);
+        &:hover {background-color: #143d66;}
+      }
+    }
+  }
+}
+
+}
+
+@-moz-document url-prefix() {.tienda .checkout form .form-column input {width: 95%; padding: 0px 0px 0px 0px;}}
+@-moz-document url-prefix() {.tienda .checkout form .form-column textarea {padding: 0px 0px 0px 0px;}}
+
+.tienda .checkout form .form-column input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column input::-moz-placeholder          {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column input::-moz-placeholder          {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column input::-ms-input-placeholder     {color: rgba(255, 255, 255, 0.65);}
+
+.tienda .checkout form .form-column textarea::-webkit-textarea-placeholder {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column textarea::-moz-placeholder          {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column textarea::-moz-placeholder          {color: rgba(255, 255, 255, 0.65);}
+.tienda .checkout form .form-column textarea::-ms-input-placeholder     {color: rgba(255, 255, 255, 0.65);}
+
