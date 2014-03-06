@@ -129,7 +129,7 @@ Date: Feb - Mar | 2014
   llegaron a su 3ra edición. <br><strong>Sábado 15 de Marzo, 20:30hrs.</strong>
   <br><a href="https://www.google.es/maps/ms?msid=210811873514161027997.0004f3bf0567e6e6f30e7&msa=0&ll=-34.907983,-56.166101&spn=0.015784,0.033023" target="_blank">
   Prato 2333 esq. Cassinoni.</a></h2>
-  <div class="gif none"><img src="img/.gif" width="200" height="105"></div>
+  <div class="gif"></div>
   <div class="line line02"></div>
   <div class="line line03"></div>
   <nav>
@@ -187,6 +187,7 @@ Date: Feb - Mar | 2014
         marzo a partir de las 20:30 horas en un local coqueto que alquilamos en 
         Prato 2333 esq. Cassinoni.</p>
         <p>Dale a la flechita <i></i> y te seguimos contando.</p>
+        <p><strong class="green>">Los votos efectuados por bots (de Pedro Bordaberry o no), no valen</strong></p>
       </div>
       <div class="slide">
         <h4>¿Cómo voto?</h4> 
@@ -237,20 +238,22 @@ Date: Feb - Mar | 2014
   ===================================== |-->
   <ul class="categorias">
     @foreach ($categorias as $categoria)
-    <li>
+    <li {{ $categoria->categoriaClass() }}>
       <div class="cabezal">
         <figure class="cat"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->imagen) }}}" width="65" height="65"></figure>
-        <h5>{{{ $categoria->nombre }}}</h5>
+        <h5>{{ $categoria->nombre }}</h5>
       </div>
       <p>{{ $categoria->descripcion }}</p>
       @if($categoria->sponsor_imagen)
       <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
       @endif
+      @if($categoria->boton_votar)
       <div class="vota">
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
           Votá
         </a>
       </div>
+      @endif
     </li>
     @endforeach
   </ul>
@@ -317,7 +320,7 @@ gala
         espacio con todos los demás. Cuánto mayor sea la suma de la donación, 
         más prioritario el espacio que se ocupa.</p> 
         <p>A los primeros seis que donen a la causa de los #PremiosCatatonias 
-        les regalamos un hermoso escobillón para wáter, genitleza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
+        les regalamos un hermoso escobillón para wáter, gentileza de <a href="http://www.mispetates.com" target="_blank">Mis Petates</a>, 
         con la imagen de un pajarito cagando estampado en el frente. De nada</p>
       </div>
      </article>
@@ -386,23 +389,28 @@ gala
           <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
           <div class="logo makeit"><a target="_blank" href="http://makeitwork.com.uy/"></a></div>
           <div class="logo cativelli"><a target="_blank" href="http://www.cattivelli.com/"></a></div>
-          <div class="logo diving"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
         </div>
         <div class="logos">
+          <div class="logo living"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
           <div class="logo casitanno"><a target="_blank" href="http://www.facebook.com/pages/Casitanno-restobar/171005276275918"></a></div>
           <div class="logo fernet"><a target="_blank" href="http://www.fernetbranca.com/"></a></div>
           <div class="logo miller"><a target="_blank" href="http://twitter.com/Miller_Uruguay"></a></div>
           <div class="logo natalia"><a target="_blank" href="http://www.nataliasastre.com/"></a></div>
           <div class="logo boton"><a target="_blank" href="http://boton.tv/index.php?region=uy"></a></div>
-          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
-          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
         </div>
         <div class="logos">
+          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
+          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
           <div class="logo ataque"><a target="_blank" href="http://www.atacaesquimal.com/"></a></div>
           <div class="logo justicia"><a target="_blank" href="http://www.oceanofm.com/justicia-infinita/"></a></div>
           <div class="logo candilejas"><a target="_blank" href="http://www.facebook.com/candilejas.resto.7"></a></div>
           <div class="logo petates"><a target="_blank" href="http://www.mispetates.com/"></a></div>
+        </div>
+        <div class="logos">
           <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
+          <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
+          <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
+          <div class="logo tarmac"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
         </div>
       </div>
     </div>

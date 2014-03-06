@@ -238,7 +238,7 @@ Date: Feb - Mar | 2014
   ===================================== |-->
   <ul class="categorias">
     @foreach ($categorias as $categoria)
-    <li {{{ $categoria->categoriaClass() }}}>
+    <li {{ $categoria->categoriaClass() }}>
       <div class="cabezal">
         <figure class="cat"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->imagen) }}}" width="65" height="65"></figure>
         <h5>{{ $categoria->nombre }}</h5>
