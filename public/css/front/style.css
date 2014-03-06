@@ -1971,6 +1971,15 @@ footer {
 .footer1 .slider1 .logos .logo.amareto a {
   background: url(../../img/front/dummys/logos/amaret.png) no-repeat 0px 0px; }
 
+.footer1 .slider1 .logos .logo.cromo a {
+  background: url(../../img/front/dummys/logos/cromo.png) no-repeat 0px 0px; }
+
+.footer1 .slider1 .logos .logo.punta a {
+  background: url(../../img/front/dummys/logos/punta.png) no-repeat 0px 0px; }
+
+.footer1 .slider1 .logos .logo.tarmac a {
+  background: url(../../img/front/dummys/logos/tarmac.png) no-repeat 0px 0px; }
+
 /*--| Commons
 -------------------------------------------------------------------------- |--*/
 .wrapper .cabezal {

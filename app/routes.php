@@ -124,7 +124,7 @@ Route::get('/', function()
 Route::get('/pagina', function()
 {
 	$data['productos'] = Producto::all();
-    $data['categorias'] = Categoria::where('created_at', '<' , '2014-02-28')->orderBy('orden')->get();
+    $data['categorias'] = Categoria::where('created_at', '<' , '2014-03-07')->orderBy('orden')->get();
 	return View::make('front.index', $data);
 });
 

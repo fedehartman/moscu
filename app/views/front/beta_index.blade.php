@@ -386,23 +386,28 @@ gala
           <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
           <div class="logo makeit"><a target="_blank" href="http://makeitwork.com.uy/"></a></div>
           <div class="logo cativelli"><a target="_blank" href="http://www.cattivelli.com/"></a></div>
-          <div class="logo diving"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
         </div>
         <div class="logos">
+          <div class="logo living"><a target="_blank" href="https://www.facebook.com/tuliving"></a></div>
           <div class="logo casitanno"><a target="_blank" href="http://www.facebook.com/pages/Casitanno-restobar/171005276275918"></a></div>
           <div class="logo fernet"><a target="_blank" href="http://www.fernetbranca.com/"></a></div>
           <div class="logo miller"><a target="_blank" href="http://twitter.com/Miller_Uruguay"></a></div>
           <div class="logo natalia"><a target="_blank" href="http://www.nataliasastre.com/"></a></div>
           <div class="logo boton"><a target="_blank" href="http://boton.tv/index.php?region=uy"></a></div>
-          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
-          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
         </div>
         <div class="logos">
+          <div class="logo tweet"><a target="_blank" href="http://www.tweet-tag.com/es/"></a></div>
+          <div class="logo blog"><a target="_blank" href="http://blogcouture.info/"></a></div>
           <div class="logo ataque"><a target="_blank" href="http://www.atacaesquimal.com/"></a></div>
           <div class="logo justicia"><a target="_blank" href="http://www.oceanofm.com/justicia-infinita/"></a></div>
           <div class="logo candilejas"><a target="_blank" href="http://www.facebook.com/candilejas.resto.7"></a></div>
           <div class="logo petates"><a target="_blank" href="http://www.mispetates.com/"></a></div>
+        </div>
+        <div class="logos">
           <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
+          <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
+          <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
+          <div class="logo tarmac"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
         </div>
       </div>
     </div>
