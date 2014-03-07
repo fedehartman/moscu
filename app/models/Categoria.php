@@ -143,4 +143,14 @@ class Categoria extends Eloquent {
         }
     }
 
+    public function mejoresTwiteros(){
+		$mejores = DB::select("SELECT categoria_id, twitero_id,(SELECT usuario FROM twiteros WHERE twiteros.id = t2.twitero_id) as twitero, (SELECT count(*) FROM `tweets` t WHERE t.`deleted_at` IS NULL AND t.`categoria_id` = " . $this->id . " AND t.`twitero_id` = t2.`twitero_id` AND `voto_repetido` = 0 AND `procesado` = 1) as votos FROM `tweets` t2 WHERE t2.`deleted_at` IS NULL AND t2.`categoria_id` = " . $this->id . " AND t2.`twitero_id` is not null GROUP BY t2.`twitero_id` ORDER BY `votos` DESC LIMIT 3");
+		return $mejores;
+	}
+
+	public function mejoresTweets(){
+		$mejores = DB::select("SELECT t2.categoria_id, t2.tweet_id, ta.tw_nombre_usuario as tw_ano_nombre_usuario, ta.tw_usuario as tw_ano_usuario, ta.texto as tw_ano_texto, (SELECT count(*) FROM `tweets` t WHERE t.`deleted_at` IS NULL AND t.`categoria_id` = " . $this->id . " AND t.`tweet_id` = t2.`tweet_id` AND `voto_repetido` = 0 AND `procesado` = 1) as votos FROM `tweets` t2, `tweets` ta WHERE t2.`deleted_at` IS NULL AND t2.tweet_id = ta.id AND t2.`categoria_id` = " . $this->id . " AND t2.`tweet_id` is not null GROUP BY t2.`tweet_id` ORDER BY `votos` DESC LIMIT 3");
+		return $mejores;
+	}
+
 }

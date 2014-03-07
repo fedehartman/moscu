@@ -1,15 +1,10 @@
 @extends('admin.layout')
 
-@section('styles')
-<link href="{{ URL::to('/css/admin/plugins/datatables/bootstrap-datatable.css') }}" media="all" rel="stylesheet" type="text/css" />
-@parent
-@stop
-
 @section('content')
 <div class="page-header">
   <h1 class="pull-left">
     <i class="icon-bullhorn"></i>
-    <span>Votos por categor&iacute;a</span>
+    <span>Mejores por categor&iacute;a</span>
   </h1>
   <div class="pull-right">
     <a class="btn btn-success" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
@@ -23,11 +18,10 @@
   <div class="col-sm-12">
     <div class="box box-collapsed">
       @if(Categoria::esTweetDelAno($categoria->id))
-      <div class="box-header purple-background">
+      <div class="box-header fb-background">
         <div class="title">{{{ $categoria->nombre }}}</div>
         <div class="actions">          
-          <a class="btn box-collapse btn-lg btn-link" href="#">
-          Participantes: {{ count($categoria->tweetsAno()) }} <i></i>
+          <a class="btn box-collapse btn btn-link" href="#"> <i></i>
           </a>
         </div>
       </div>
@@ -42,16 +36,16 @@
               </tr>
             </thead>
             <tbody>
-              @foreach($categoria->tweetsAno() as $tweet)
+              @foreach($categoria->mejoresTweets() as $tweet)
               <tr>
                 <td>
-                  <span class="label label-info">{{{ $tweet->tweetAno->tw_nombre_usuario }}} - @{{{ $tweet->tweetAno->tw_usuario }}}</span><br/>
-                  {{{ $tweet->tweetAno->texto }}}
+                  <span class="label label-info">{{{ $tweet->tw_ano_nombre_usuario }}} - @{{{ $tweet->tw_ano_usuario }}}</span><br/>
+                  {{{ $tweet->tw_ano_texto }}}
                 </td>
-                <td>{{ $tweet->contarVotosAno() }}</td>
+                <td>{{ $tweet->votos }}</td>
                 <td>
                   <div class="text-right">
-                    <a class="btn btn-primary btn-xs ver-votos-ano" href="#" data-categoria="{{ $tweet->categoria_id }}" data-tweet="{{ $tweet->tweetAno->id }}" alt="Ver Votos" title="Ver Votos">
+                    <a class="btn btn-primary btn-xs ver-votos-ano" href="#" data-categoria="{{ $tweet->categoria_id }}" data-tweet="{{ $tweet->tweet_id }}" alt="Ver Votos" title="Ver Votos">
                       <i class="icon-search"></i>
                     </a>
                   </div>
@@ -59,21 +53,24 @@
               </tr>
               @endforeach
             </tbody>
-          </table>                   
+          </table>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 text-right"><a class="btn btn-info" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}"><i class="icon-group"></i> Ver todos los participantes</a></div>
+          </div>                  
         </div>
       </div>
       @else
-      <div class="box-header purple-background">
+      <div class="box-header fb-background">
         <div class="title">{{{ $categoria->nombre }}}</div>
         <div class="actions">          
-          <a class="btn box-collapse btn-lg btn-link" href="#">
-          Participantes: {{ count($categoria->participantes()) }} <i></i>
+          <a class="btn box-collapse btn btn-link" href="#"><i></i>
           </a>
         </div>
       </div>
       <div class="box-content">
         <div class="scrollable-area">        
-          <table class="data-table2 table table-bordered table-striped">
+          <table class="table table-bordered table-striped">
             <thead>
               <tr>
                 <th>Twitero</th>
@@ -82,10 +79,10 @@
               </tr>
             </thead>
             <tbody>
-              @foreach($categoria->participantes() as $usuario)
+              @foreach($categoria->mejoresTwiteros() as $usuario)
               <tr>
-                <td>{{ $usuario->mostrarVoto() }}</td>
-                <td>{{ $usuario->contarVotos() }}</td>
+                <td>{{ '@' . $usuario->twitero }}</td>
+                <td>{{ $usuario->votos }}</td>
                 <td>
                   <div class="text-right">
                     <a class="btn btn-primary btn-xs ver-votos" href="#" data-categoria="{{ $usuario->categoria_id }}" data-twitero="{{ $usuario->twitero_id }}" alt="Ver Votos" title="Ver Votos">
@@ -96,7 +93,11 @@
               </tr>
               @endforeach
             </tbody>
-          </table>                   
+          </table>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10 text-right"><a class="btn btn-info" href="{{ URL::to('/admin/categoria/participantes/'. $categoria->id) }}"><i class="icon-group"></i> Ver todos los participantes</a></div>
+          </div>                 
         </div>
       </div>
       @endif
@@ -104,33 +105,4 @@
   </div>
 </div>
 @endforeach
-@stop
-
-@section('script')
-@parent
-<script src="{{ URL::to('/js/admin/plugins/datatables/jquery.dataTables.min.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('/js/admin/plugins/datatables/jquery.dataTables.columnFilter.js') }}" type="text/javascript"></script>
-<script src="{{ URL::to('/js/admin/plugins/datatables/dataTables.overrides.js') }}" type="text/javascript"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.data-table2').dataTable( {
-      "aaSorting": [[ 1, "desc" ]],
-      "sPaginationType": "bootstrap",
-      "iDisplayLength": 10,
-      "bLengthChange": false,
-      "oLanguage": {
-        "sProcessing":     "Procesando...",
-        "sZeroRecords": "No hay registros por el momento",
-        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-        "sSearch": "Buscar: ",
-        "sInfoFiltered": "",
-        "sInfoEmpty": "",
-        "oPaginate": {
-          "sNext": " Siguiente ",
-          "sPrevious": " Anterior "
-        }
-      }
-    } );
-  } );
-</script>
 @stop

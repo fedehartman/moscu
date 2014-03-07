@@ -94,7 +94,7 @@
     $('.data-table2').dataTable( {
       "aaSorting": [[ 1, "desc" ]],
       "sPaginationType": "bootstrap",
-      "iDisplayLength": 25,
+      "iDisplayLength": 30,
       "bLengthChange": false,
       "oLanguage": {
         "sProcessing":     "Procesando...",

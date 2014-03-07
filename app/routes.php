@@ -317,7 +317,7 @@ Route::get('procesar-nuevos-votos', function() {
 
 		Mail::send('emails.base', $email_data, function($message) use ($email_data){
 	        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
-	        $message->to('andresbotta@gmail.com')->subject($email_data['titulo']);
+	        $message->to(array('andresbotta@gmail.com', 'fede@fedehartman.com'))->subject($email_data['titulo']);
 	    });
 	}
 } );
