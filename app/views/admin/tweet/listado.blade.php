@@ -23,6 +23,7 @@
             <div class="col-lg-3 text-right">
               <select class="form-control" name="categoria" id="categoria">
                 <option value="">Todas las categor&iacute;as</option>
+                <option value="null" {{ ($categoria == 'null') ? 'selected' : '' }}>Sin categor&iacute;as</option>
                 @foreach(Categoria::all() as $cat)
                 <option value="{{ $cat->id }}" {{ ($cat->id == $categoria) ? 'selected' : '' }}>{{ $cat->nombre }}</option>
                 @endforeach
@@ -68,9 +69,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
   $('#categoria').on('change',function(){
-    if( $('#categoria').val() > 0){
-      window.location = '/admin/tweet/listado?categoria=' + $('#categoria').val();
-    }
+    window.location = '/admin/tweet/listado?categoria=' + $('#categoria').val();
   });
 });
 </script>

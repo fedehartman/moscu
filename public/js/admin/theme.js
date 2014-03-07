@@ -302,7 +302,7 @@
           sDom: sdom,
           aaSorting: [[ 0, "desc" ]],
           sPaginationType: "bootstrap",
-          "iDisplayLength": 25,
+          "iDisplayLength": 30,
           "bLengthChange": false,
           oLanguage: {
           	"sProcessing":     "Procesando...",
