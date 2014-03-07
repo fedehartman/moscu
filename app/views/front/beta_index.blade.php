@@ -249,7 +249,7 @@ Date: Feb - Mar | 2014
       <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
       @endif      
       <div class="vota">
-        @if($categoria->boton_votar)
+        @if($categoria->puedeVotar())
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
           Votá
         </a>
