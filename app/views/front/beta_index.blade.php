@@ -94,7 +94,7 @@ Date: Feb - Mar | 2014
 <div class="modal none">
   <div class="modalbody">
     <div class="close" onclick="cerrarModal();"></div>
-    <p>Mensaje</p>
+    <p></p>
   </div>
 </div>
 

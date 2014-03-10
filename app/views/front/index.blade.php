@@ -94,11 +94,18 @@ Date: Feb - Mar | 2014
 <div class="modal none">
   <div class="modalbody">
     <div class="close" onclick="cerrarModal();"></div>
-    <p>Mensaje</p>
+    <p></p>
   </div>
 </div>
 
-
+----|// 
+---( @@ ) 
+ooO_(_)_Ooo 
+___|___|___|___|___|__ 
+_|___|___|___|___|___| 
+|__ ESTE ANO NO VA  __| 
+_|__A SER TN FACIL__|___| 
+___|___|___|___|___|___| 
 
 
 <!--| Menú
@@ -249,12 +256,12 @@ Date: Feb - Mar | 2014
       <figure class="sponsor"><img src="{{{ URL::asset('uploads/categoria/' . $categoria->sponsor_imagen) }}}" width="235" height="70"></figure>
       @endif      
       <div class="vota">
-        @if($categoria->boton_votar)
+        @if($categoria->puedeVotar())
         <a href="#" onclick="popup('http://twitter.com/share?text={{{ urlencode($categoria->boton_votar) }}}&amp;url=', 550, 320)">
           Votá
         </a>
         @endif
-      </div>
+      </div>      
     </li>
     @endforeach
   </ul>
