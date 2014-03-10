@@ -2505,6 +2505,71 @@ footer {
   z-index: 20;
   background: url(../../img/front/nueva.png) no-repeat 0px 0px; }
 
+.categorias li.cat-locked {
+background: url(../../img/front/sprite.png) no-repeat -295px -120px;
+}
+
+.categorias li.cat-geek {
+background: url(../../img/front/sprite.png) no-repeat -5px -560px;
+}
+
+.categorias li.cat-cerrada {
+background: url(../../img/front/sprite.png) no-repeat -300px -560px;}
+
+
+/*--| 5· Tienda
+-------------------------------------------------------------------------- |--*/
+
+.modal-geek figure {
+  width: 400px;
+  height: 150px;
+  margin: 0px 0px 0px 0px;
+  background: url(../../img/front/sprite.png) no-repeat 0px -1000px;}
+
+.modal-geek p {margin-left: 1px;}
+.modal-geek form {
+  width: 400px;
+  height: 30px;
+  margin: 20px 0px 10px 0px;
+  }
+
+.modal-geek form input {
+  background-color: #fff;
+  width: 300px;
+  height: 28px;
+  margin: 0px 5px 0px 0px;
+  float: left;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  font-size: 1.3em; line-height: 30px; color: rgba(0, 0, 0, 0.75);
+  font-weight: normal; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  }
+
+.modal-geek form input.submit {
+  cursor: pointer;
+  float: left;
+  width: 60px;
+  height: 30px;
+  margin: 0px 0px 0px 0px;
+  background-color: #1f5c99;
+  font-size: 1.3em; line-height: 30px; color: rgba(255, 255, 255, 0.95);
+  font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+  }
+
+.modal-geek .msg {
+  display: block;
+  width: 380px;
+  padding: 0px 10px 0px 10px;
+  height: 35px;
+  margin: 0px 0px 0px 0px;
+  background-color: #8b21a6;
+  font-size: 1.3em; line-height: 35px; color: rgba(255, 255, 255, 0.90);
+  font-weight: 700; font-family: 'Asap', Arial, Helvetica, sans-serif;
+}
+.modal-geek .msg a {color: rgba(255, 255, 255, 0.90);}
+.modal-geek .msg-error {background-color: #991f1f;}
+.modal-geek .msg-ok {background-color: #74b336;}
+
 /*--| 5· Tienda
 -------------------------------------------------------------------------- |--*/
 .tienda .listado ul {
