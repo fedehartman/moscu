@@ -98,12 +98,32 @@ Date: Feb - Mar | 2014
   </div>
 </div>
 
+
+
+<!--| Modal Geek
+=========================================================================== |-->
+
+<div class="modal modal-geek none">
+  <div class="modalbody">
+    <div class="close"></div>
+    <figure></figure>
+    <p>La pregunta es alkghasd salgkhas  sañlgdhs sdñlgs sgk asg sñlgk sg lksag sa´kgh sgkaj sañkgh asñkhg f?</p>
+    <form>
+      <input type="text" placeholder="Acá tu respuesta" />
+      <input type="submit" class="submit" value="Enviar">
+    </form>
+    <div class="msg msg-error">No, le erraste</div>
+    <div class="msg msg-ok"><a href="#">Perfecto. Clic acá para tuitear que acertaste</a></div>
+  </div>
+</div>
+
+
 ----|// 
 ---( @@ ) 
 ooO_(_)_Ooo 
 ___|___|___|___|___|__ 
 _|___|___|___|___|___| 
-|__ ESTE ANO NO VA  __| 
+|__ ESTE AÑO NO VA  __| 
 _|__A SER TN FACIL__|___| 
 ___|___|___|___|___|___| 
 
