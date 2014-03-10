@@ -184,7 +184,7 @@ Route::post('/gran-gran', function()
     try {
     	if(strtolower(Input::get('respuesta')) == 'klapaucius'){
     		$response['error'] = false;
-    		$response['msg'] = "<a href=\"#\" onclick=\"popup('http://twitter.com/share?text=" . urlencode('Me acabo de ganar una Wacom Intuos gracias a @Tarmac_IT y los #PremiosCatatonias. Uruguay Nomá!!') . "&amp;url=', 550, 320)\">Perfecto. Clic acá para tuitear que acertaste</a>";
+    		$response['msg'] = "<a href=\"#\" onclick=\"popup('http://twitter.com/share?text=" . urlencode('Me acabo de ganar una Wacom Intuos gracias a @Tarmac_IT y los #PremiosCatatonias!! ¿Dónde paso a buscarla @catatonias? Uruguay Nomá!!') . "&amp;url=', 550, 320)\">Felicitaciones! Le acertaste. Click acá para reclamar tu premio - twitteá eso y listo</a>";
     	}else{
     		$response['error'] = true;
     		$response['msg'] = 'No, le erraste.';

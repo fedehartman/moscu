@@ -7,7 +7,7 @@
       <input type="text" placeholder="Acá tu respuesta" name="respuesta" />
       <input type="submit" class="submit" value="Enviar">
     </form>
-    <div class="msg none" id="msg_gran" style="display:none;"></div>
+    <div class="msg" id="msg_gran" style="display:none;"></div>
   </div>
 </div>
 
@@ -34,6 +34,8 @@
       dataType: "json",
       data: params,
       success: function(data){
+        $('#msg_gran').removeClass('msg-error');
+        $('#msg_gran').removeClass('msg-ok');
         if(data.error){
           $('#msg_gran').addClass('msg-error');
           $('#msg_gran').html(data.msg);

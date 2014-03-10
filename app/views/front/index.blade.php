@@ -31,7 +31,7 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css?2') }}">
+  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css?3') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="{{ URL::to('/js/front/main.js?2') }}"></script>
@@ -292,6 +292,9 @@ premios
 <div class="a03 gala"><div class="wrapper nano"><div class="nano-content">
 <figure>
 <div class="map">
+<iframe width="500" height="160" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
+
+
 </div>
 </figure>
 </div></div></div>
