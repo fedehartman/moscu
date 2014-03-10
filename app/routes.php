@@ -117,14 +117,14 @@ Route::get('/landing', function()
 Route::get('/', function()
 {
 	$data['productos'] = Producto::all();
-    $data['categorias'] = Categoria::where('created_at', '<' , '2014-03-07')->orderBy('orden')->get();
+    $data['categorias'] = Categoria::where('id', '<>' , 25)->where('id', '<>' , 27)->where('id', '<>' , 28)->where('id', '<>' , 30)->orderBy('orden')->get();
     return View::make('front.beta_index', $data);
 });
 
 Route::get('/pagina', function()
 {
 	$data['productos'] = Producto::all();
-    $data['categorias'] = Categoria::where('created_at', '<' , '2014-03-07')->orderBy('orden')->get();
+    $data['categorias'] = Categoria::orderBy('orden')->get();
 	return View::make('front.index', $data);
 });
 
