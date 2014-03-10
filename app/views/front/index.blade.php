@@ -118,9 +118,9 @@ Date: Feb - Mar | 2014
   <ul>
     <li class="b00">Inicio</li>
     <li class="b01">Votación</li>
-    <!-- <li class="b02">Los Premios</li>
+    <!-- <li class="b02">Los Premios</li> -->
     <li class="b03">La Gala</li>
-    <li class="b04">Tienda</li> -->
+    <!-- <li class="b04">Tienda</li> -->
     <li class="b04">Tienda</li>
   </ul>
 </header>
@@ -147,7 +147,7 @@ Date: Feb - Mar | 2014
       <li class="b01"><a href="#">Votá acá</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}">&iquest;Quer&eacute;s saber de qu&eacute; se trata?</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
-      <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
+      <li class="b03"><a href="#">Todo sobre la Gala</a></li>
       <li class="b03 none"><a href="#">Participá como marca</a></li>
       <li class="b04"><a href="#">Do’ pesito’ pa’l vino</a></li>
       <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
@@ -289,8 +289,11 @@ premios
 <!--| 3· Gala
 =========================================================================== |-->
 
-<div class="a03 gala none"><div class="wrapper nano"><div class="nano-content">
-gala
+<div class="a03 gala"><div class="wrapper nano"><div class="nano-content">
+<figure>
+<div class="map">
+</div>
+</figure>
 </div></div></div>
 
 

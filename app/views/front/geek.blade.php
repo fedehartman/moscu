@@ -2,7 +2,7 @@
   <div class="modalbody">
     <div class="close" id="gran_close"></div>
     <figure></figure>
-    <p>¿Cuál era el code que te daba un toco de plata en Los Sims?</p>
+    <p>Opa, estás más cerca. Pero antes de dejarte pasar me tenés que dar  §1.000.</p>
     <form id="form-gran">
       <input type="text" placeholder="Acá tu respuesta" name="respuesta" />
       <input type="submit" class="submit" value="Enviar">
