@@ -136,6 +136,8 @@ class Categoria extends Eloquent {
         if ($this->created_at >= '2014-03-07') {
         	if($this->id == 30)
         		return 'class="cat-geek"';
+        	elseif($this->id == 24)
+        		return 'class="cat-locked"';
         	elseif($this->boton_votar)
         		return 'class="cat-nueva"';
         	else

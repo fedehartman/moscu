@@ -169,6 +169,34 @@ Route::post('/enviar-pedido', function()
     }
 });
 
+Route::get('/gran', function()
+{
+    try {
+        return View::make('front.geek');
+    } catch (Exception $e) {
+        Log::error($e);
+        die( $e->getMessage() );
+    }
+});
+
+Route::post('/gran-gran', function()
+{
+    try {
+    	if(strtolower(Input::get('respuesta')) == 'klapaucius'){
+    		$response['error'] = false;
+    		$response['msg'] = "<a href=\"#\" onclick=\"popup('http://twitter.com/share?text=" . urlencode('Me acabo de ganar una Wacom Intuos gracias a @Tarmac_IT y los #PremiosCatatonias. Uruguay Nomá!!') . "&amp;url=', 550, 320)\">Perfecto. Clic acá para tuitear que acertaste</a>";
+    	}else{
+    		$response['error'] = true;
+    		$response['msg'] = 'No, le erraste.';
+    	}
+
+        echo json_encode($response);
+    } catch (Exception $e) {
+        Log::error($e);
+        die( $e->getMessage() );
+    }
+});
+
 // Route::get('twitter', function()
 // {
 // 	/* If access tokens are not available redirect to connect page. */

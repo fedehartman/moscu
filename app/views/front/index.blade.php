@@ -31,11 +31,11 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css?2') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="{{ URL::to('/js/front/main.js') }}"></script>
-  <script src="{{ URL::to('/js/front/plugins.js') }}"></script>
+  <script src="{{ URL::to('/js/front/main.js?2') }}"></script>
+  <script src="{{ URL::to('/js/front/plugins.js?2') }}"></script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script type="text/javascript">
     var BASE_PATH = "{{Request::root()}}";
@@ -50,7 +50,7 @@ Date: Feb - Mar | 2014
 </head>
 
 <body>
-
+<div class="none" id="gran"></div>
 
 
 
@@ -99,33 +99,16 @@ Date: Feb - Mar | 2014
 </div>
 
 
-
-<!--| Modal Geek
-=========================================================================== |-->
-
-<div class="modal modal-geek none">
-  <div class="modalbody">
-    <div class="close"></div>
-    <figure></figure>
-    <p>La pregunta es alkghasd salgkhas  sañlgdhs sdñlgs sgk asg sñlgk sg lksag sa´kgh sgkaj sañkgh asñkhg f?</p>
-    <form>
-      <input type="text" placeholder="Acá tu respuesta" />
-      <input type="submit" class="submit" value="Enviar">
-    </form>
-    <div class="msg msg-error">No, le erraste</div>
-    <div class="msg msg-ok"><a href="#">Perfecto. Clic acá para tuitear que acertaste</a></div>
-  </div>
-</div>
-
-
-----|// 
----( @@ ) 
-ooO_(_)_Ooo 
-___|___|___|___|___|__ 
-_|___|___|___|___|___| 
-|__ ESTE AÑO NO VA  __| 
-_|__A SER TN FACIL__|___| 
-___|___|___|___|___|___| 
+<!-- 
+                                        ----|// 
+                                        ---( @@ ) 
+                                        ooO_(_)_Ooo 
+                                        ___|___|___|___|___|__ 
+                                        _|___|___|___|___|___| 
+                                        |__ ESTE AÑO NO VA  __| 
+                                        _|__A SER TAN FACIL__|___| 
+                                        ___|___|___|___|___|___|  
+-->
 
 
 <!--| Menú
@@ -260,7 +243,6 @@ ___|___|___|___|___|___|
      </article>
   </header>
 
-
   <!--| Categorias
   ===================================== |-->
   <ul class="categorias">
@@ -310,8 +292,6 @@ premios
 <div class="a03 gala none"><div class="wrapper nano"><div class="nano-content">
 gala
 </div></div></div>
-
-
 
 
 
@@ -444,7 +424,7 @@ gala
     </div>
   <div class="footer2">
    Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    Diseño & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
+    Dise<a href="#" id="btn_gran">ñ</a>o & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
 
