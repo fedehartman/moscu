@@ -108,9 +108,9 @@ Date: Feb - Mar | 2014
   <ul>
     <li class="b00">Inicio</li>
     <li class="b01">Votación</li>
-    <!-- <li class="b02">Los Premios</li>
+    <!-- <li class="b02">Los Premios</li> -->
     <li class="b03">La Gala</li>
-    <li class="b04">Tienda</li> -->
+    <!-- <li class="b04">Tienda</li> -->
     <li class="b04">Tienda</li>
   </ul>
 </header>
@@ -137,7 +137,7 @@ Date: Feb - Mar | 2014
       <li class="b01"><a href="#">Votá acá</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}">&iquest;Quer&eacute;s saber de qu&eacute; se trata?</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
-      <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
+      <li class="b03"><a href="#">Todo sobre la Gala</a></li>
       <li class="b03 none"><a href="#">Participá como marca</a></li>
       <li class="b04"><a href="#">Do’ pesito’ pa’l vino</a></li>
       <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
@@ -280,8 +280,29 @@ premios
 <!--| 3· Gala
 =========================================================================== |-->
 
-<div class="a03 gala none"><div class="wrapper nano"><div class="nano-content">
-gala
+<div class="a03 gala"><div class="wrapper nano"><div class="nano-content">
+  <figure>
+  <div class="map">
+  <iframe width="500" height="160" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
+
+
+  </div>
+  <a href="http://twitter.com/casitanno" target="_blank" class="lin l-01"></a>
+  <a href="http://twitter.com/LivingPqueRodo" target="_blank" class="lin l-02"></a>
+  <a href="http://twitter.com/botontv" target="_blank" class="lin l-03"></a>
+  <a href="http://twitter.com/Maruchachacha" target="_blank" class="lin l-04"></a>
+  <a href="http://twitter.com/ElDiegoDejo" target="_blank" class="lin l-05"></a>
+  <a href="http://twitter.com/blogcouture" target="_blank" class="lin l-06"></a>
+  <a href="http://twitter.com/casitanno" target="_blank" class="lin l-07"></a>
+  <a href="http://twitter.com/LivingPqueRodo" target="_blank" class="lin l-08"></a>
+  <a href="http://twitter.com/makeitwork" target="_blank" class="lin l-09"></a>
+  <a href="http://twitter.com/AtacaEsquimal" target="_blank" class="lin l-10"></a>
+  <a href="http://twitter.com/NataliaSastreUy" target="_blank" class="lin l-11"></a>
+  <a href="http://twitter.com/CromoHair" target="_blank" class="lin l-12"></a>
+  <a href="http://twitter.com/Subrayado" target="_blank" class="lin l-13"></a>
+  <a href="http://www.facebook.com/candilejas.resto.7" target="_blank" class="lin l-14"></a>
+  <a href="http://twitter.com/Cativelli" target="_blank" class="lin l-15"></a>
+  </figure>
 </div></div></div>
 
 
