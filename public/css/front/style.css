@@ -1818,7 +1818,7 @@ html {
   transition: all 0.5s ease-in-out; }
 
 .modalbody {
-  width: 500px;
+  width: 535px;
   height: auto;
   min-height: 20px;
   overflow: hidden;
@@ -1836,7 +1836,7 @@ html {
 .modalbody .close {
   width: 20px;
   height: 20px;
-  margin: -40px 0px 0px 415px;
+  margin: -40px 0px 0px 450px;
   position: absolute;
   cursor: pointer; }
 
