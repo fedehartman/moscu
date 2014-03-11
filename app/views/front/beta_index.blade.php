@@ -31,11 +31,11 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css') }}">
+  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css?3') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="{{ URL::to('/js/front/main.js') }}"></script>
-  <script src="{{ URL::to('/js/front/plugins.js') }}"></script>
+  <script src="{{ URL::to('/js/front/main.js?2') }}"></script>
+  <script src="{{ URL::to('/js/front/plugins.js?2') }}"></script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script type="text/javascript">
     var BASE_PATH = "{{Request::root()}}";
@@ -50,7 +50,7 @@ Date: Feb - Mar | 2014
 </head>
 
 <body>
-
+<div class="none" id="gran"></div>
 
 
 
@@ -94,11 +94,21 @@ Date: Feb - Mar | 2014
 <div class="modal none">
   <div class="modalbody">
     <div class="close" onclick="cerrarModal();"></div>
-    <p>Mensaje</p>
+    <p></p>
   </div>
 </div>
 
 
+<!-- 
+                                        ----|// 
+                                        ---( @@ ) 
+                                        ooO_(_)_Ooo 
+                                        ___|___|___|___|___|__ 
+                                        _|___|___|___|___|___| 
+                                        |__ ESTE AÑO NO VA  __| 
+                                        _|__A SER TAN FACIL__|___| 
+                                        ___|___|___|___|___|___|  
+-->
 
 
 <!--| Menú
@@ -108,9 +118,8 @@ Date: Feb - Mar | 2014
   <ul>
     <li class="b00">Inicio</li>
     <li class="b01">Votación</li>
-    <!-- <li class="b02">Los Premios</li>
-    <li class="b03">La Gala</li>
-    <li class="b04">Tienda</li> -->
+    <!-- <li class="b02">Los Premios</li> -->
+    <!-- <li class="b03">La Gala</li> -->
     <li class="b04">Tienda</li>
   </ul>
 </header>
@@ -137,7 +146,7 @@ Date: Feb - Mar | 2014
       <li class="b01"><a href="#">Votá acá</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-Brief.pdf') }}">&iquest;Quer&eacute;s saber de qu&eacute; se trata?</a></li>
       <li><a href="{{ URL::to('/attach/PremiosCatatonias2014-PropuestaComercial.pdf') }}">&iquest;Quer&eacute;s participar como marca?</a></li>
-      <li class="b02 none"><a href="#">Todo sobre la Gala</a></li>
+      <!-- <li class="b03"><a href="#">Todo sobre la Gala</a></li> -->
       <li class="b03 none"><a href="#">Participá como marca</a></li>
       <li class="b04"><a href="#">Do’ pesito’ pa’l vino</a></li>
       <li class="b05 none"><a href="#">¿Qué es esto? ¿Se puede romper?</a></li>
@@ -233,7 +242,6 @@ Date: Feb - Mar | 2014
      </article>
   </header>
 
-
   <!--| Categorias
   ===================================== |-->
   <ul class="categorias">
@@ -280,11 +288,15 @@ premios
 <!--| 3· Gala
 =========================================================================== |-->
 
-<div class="a03 gala none"><div class="wrapper nano"><div class="nano-content">
-gala
+<div class="a03 gala"><div class="wrapper nano"><div class="nano-content">
+<figure>
+<div class="map">
+<iframe width="500" height="160" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;output=embed"></iframe><br /><small><a href="https://www.google.es/maps/ms?msa=0&amp;msid=210811873514161027997.0004f3bf0567e6e6f30e7&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-34.908317,-56.163912&amp;spn=0.011262,0.04283&amp;z=14&amp;source=embed" style="color:#0000FF;text-align:left"></a></small>
+
+
+</div>
+</figure>
 </div></div></div>
-
-
 
 
 
@@ -417,7 +429,7 @@ gala
     </div>
   <div class="footer2">
    Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    Diseño & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
+    Dise<a href="#" id="btn_gran">ñ</a>o & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
 
