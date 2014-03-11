@@ -1824,7 +1824,7 @@ html {
   overflow: hidden;
   background-color: #fff;
   position: absolute;
-  top: 80px;
+  top: 90px;
   left: 50%;
   box-sizing: border-box;
   padding: 50px 50px 50px 50px;
@@ -2662,6 +2662,73 @@ nav ul {
   position: absolute;
   z-index: 20;
   background: url(../../img/front/nueva.png) no-repeat 0px 0px; }
+
+.lin {
+  width: 100px;
+  height: 25px;
+  margin: 0px 0px 0px 0px;
+  position: absolute;
+  display: block; }
+
+.l-01 {
+  width: 85px;
+  margin: 345px 0px 0px 477px; }
+
+.l-02 {
+  width: 126px;
+  margin: 373px 0px 0px 372px; }
+
+.l-03 {
+  width: 64px;
+  margin: 68px 0px 0px 847px; }
+
+.l-04 {
+  width: 127px;
+  margin: 89px 0px 0px 791px; }
+
+.l-05 {
+  width: 100px;
+  margin: 89px 0px 0px 929px; }
+
+.l-06 {
+  width: 100px;
+  margin: 127px 0px 0px 925px; }
+
+.l-07 {
+  width: 85px;
+  margin: 167px 0px 0px 854px; }
+
+.l-08 {
+  width: 126px;
+  margin: 167px 0px 0px 951px; }
+
+.l-09 {
+  width: 123px;
+  margin: 208px 0px 0px 801px; }
+
+.l-10 {
+  width: 121px;
+  margin: 247px 0px 0px 943px; }
+
+.l-11 {
+  width: 132px;
+  margin: 289px 0px 0px 785px; }
+
+.l-12 {
+  width: 90px;
+  margin: 328px 0px 0px 871px; }
+
+.l-13 {
+  width: 89px;
+  margin: 368px 0px 0px 862px; }
+
+.l-14 {
+  width: 75px;
+  margin: 368px 0px 0px 962px; }
+
+.l-15 {
+  width: 81px;
+  margin: 408px 0px 0px 802px; }
 
 /*--| 5· Tienda
 -------------------------------------------------------------------------- |--*/
