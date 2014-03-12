@@ -2077,7 +2077,7 @@ footer {
 /*.footer-wrapper {float: left; width: 100%; overflow: hidden;}*/
 .footer1 {
   height: 50px;
-  width: 970px;
+  width: 915px;
   float: left; }
 
 .footer1 .slider1 {
@@ -2100,7 +2100,7 @@ footer {
 .footer2 {
   float: right;
   height: 50px;
-  width: 377px;
+  width: 410px;
   font-size: 1em;
   line-height: 50px;
   color: rgba(255, 255, 255, 0.65);
