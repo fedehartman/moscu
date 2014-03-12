@@ -31,10 +31,10 @@ Date: Feb - Mar | 2014
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/apple-touch-icon.png') }}">
   <link rel="shortcut icon" href="{{ URL::asset('/img/front/favicon.ico') }}" />
 
-  <link rel="stylesheet" href="{{ URL::to('/css/front/style.css?3') }}">
+  <link rel="stylesheet" href="{{ URL::to('/css/front/style2.css') }}">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="{{ URL::to('/js/front/main.js?2') }}"></script>
+  <script src="{{ URL::to('/js/front/main2.js') }}"></script>
   <script src="{{ URL::to('/js/front/plugins.js?2') }}"></script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
   <script type="text/javascript">
@@ -88,6 +88,25 @@ Date: Feb - Mar | 2014
 
 
 
+<!--| Menú
+=========================================================================== |-->
+
+<header class="site-header">
+  <div class="h-wrapper">
+    <h1><a href="http://premioscatatonias.uy"><span class="none">Premios Catatonias</span></a></h1>
+    <ul>
+      <li class="b00">Inicio</li>
+      <li class="b01">Votación</li>
+      <li class="b02">La Gala</li>
+      <!-- <li class="b03">Participá</li> -->
+      <li class="b04">Donaciones</li>
+      <!-- <li class="b05">Los Premios</li> -->
+    </ul>
+  </div>
+</header>
+
+
+
 <!--| Modal
 =========================================================================== |-->
 
@@ -109,21 +128,6 @@ Date: Feb - Mar | 2014
                                         _|__A SER TAN FACIL__|___| 
                                         ___|___|___|___|___|___|  
 -->
-
-
-<!--| Menú
-=========================================================================== |-->
-
-<header class="main-header">
-  <ul>
-    <li class="b00">Inicio</li>
-    <li class="b01">Votación</li>
-    <!-- <li class="b02">Los Premios</li> -->
-    <li class="b03">La Gala</li>
-    <!-- <li class="b04">Tienda</li> -->
-    <li class="b04">Tienda</li>
-  </ul>
-</header>
 
 
 

@@ -3058,16 +3058,12 @@ nav ul {
 -------------------------------------------------------------------------- |--*/
 /*--| Scroll
 --------------------------------- |--*/
-/*.nano {
+.nano {
   position: relative;
   width: 1220px;
   height: 100%;
-  overflow: hidden; }*/
-.nano {
-  position: relative;
-  width: 100%;
-  height: 100%;
   overflow: hidden; }
+
 .nano > .nano-content {
   position: absolute;
   overflow: scroll;
@@ -3120,9 +3116,7 @@ nav ul {
 
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
   opacity: 0.98; }
-.wrapper, .nano {
-  width: 98%;
-  height: 78%; }
+
 /*--| 1· Big Screen
 -------------------------------------------------------------------------- |--*/
 /* @media (min-width: 1441px) { 

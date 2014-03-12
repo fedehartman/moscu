@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+/*--| Body Height
+-------------------------------------------------------------------------- |--*/
+
+var vh = $(window).height();
+$(".wrapper").height(vh-120);
+
+
+
 /*--| Nav
 -------------------------------------------------------------------------- |--*/
 
@@ -28,8 +37,8 @@ $(".b00").click(function(e) {
   $('.a02').removeClass('m02');
   $('.a03').removeClass('m03');
   $('.a04').removeClass('m04');
-  /*$('.site-header ul li').removeClass('active');
-  $('.site-header ul li.b00').addClass('active');*/
+  $('.site-header ul li').removeClass('active');
+  $('.site-header ul li.b00').addClass('active');
   return false;
   });
 
@@ -51,8 +60,8 @@ $(".b01").click(function(e) {
   $('.a02').removeClass('m02');
   $('.a03').removeClass('m03');
   $('.a04').removeClass('m04');
-  /*$('.site-header ul li').removeClass('active');
-  $('.site-header ul li.b01').addClass('active');*/
+  $('.site-header ul li').removeClass('active');
+  $('.site-header ul li.b01').addClass('active');
   return false;
   });
 
@@ -74,8 +83,8 @@ $(".b02").click(function(e) {
   $('.a02').addClass('m02');
   $('.a03').removeClass('m03');
   $('.a04').removeClass('m04');
-  /*$('.site-header ul li').removeClass('active');
-  $('.site-header ul li.b02').addClass('active');*/
+  $('.site-header ul li').removeClass('active');
+  $('.site-header ul li.b02').addClass('active');
   return false;
   });
 
@@ -101,8 +110,8 @@ $(".b03").click(function(e) {
   $('.a02').removeClass('m02');
   $('.a03').addClass('m03');
   $('.a04').removeClass('m04');
-  /*$('.site-header ul li').removeClass('active');
-  $('.site-header ul li.b03').addClass('active');*/
+  $('.site-header ul li').removeClass('active');
+  $('.site-header ul li.b03').addClass('active');
   return false;
   });
 
@@ -124,17 +133,10 @@ $(".b04").click(function(e) {
   $('.a02').removeClass('m02');
   $('.a03').removeClass('m03');
   $('.a04').addClass('m04');
-  /*$('.site-header ul li').removeClass('active');
-  $('.site-header ul li.b04').addClass('active');*/
+  $('.site-header ul li').removeClass('active');
+  $('.site-header ul li.b04').addClass('active');
   return false;
   });
-/*--| Body Height
--------------------------------------------------------------------------- |--*/
-/*
-var vh = $(window).height();
-
-$(".wrapper").height(vh-120);*/
-
 
 
 
@@ -212,7 +214,6 @@ $(".tienda .listado ul li .boton a").click(function(e) {
   $(".tienda .listado ul li .boton a").removeClass('donado');
   $(this).addClass('donado');
 });
-
 
 
 
