@@ -99,7 +99,8 @@ Etílicas, en lo posible. <br>
 <strong>La posta</strong><br>
 Como los premios tienen el nombre de @catatonias, ella puede cambiar lo que quiera en cualquier momento y no se hace responsable de nada. Los votos efectuadors por Bots (de Pedro Bordaberry o no), no valen.  Igual eso es lo de menos, todos sabemos que en realidad quieren ir a La Gala a ver si finalmente se puede decir que en Twitter se coge.
 <br><br>
-<strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong></p>
+<strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong><br><br>
+<strong>No podés participar si tenés menos de 18 años. No podés ganás si no vas a La Gala</strong></p>
   </div>
 </div>
 
