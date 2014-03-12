@@ -408,7 +408,7 @@ premios
     <div class="footer1">
       <div class="slider1">
         <div class="logos">
-          <div class="logo lesmots"><a target="_blank" href="http:/lesmots.uy"></a></div>
+          <div class="logo lesmots"><a target="_blank" href="http://lesmots.uy"></a></div>
           <div class="logo subrayado"><a target="_blank" href="http://www.subrayado.com.uy/"></a></div>
           <div class="logo sovieticode"><a target="_blank" href="http://twitter.com/sovieticode"></a></div>
           <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
