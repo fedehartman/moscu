@@ -257,6 +257,18 @@ function cerrarModal(){
   return false;
 }
 
+function mostrarModalBases(){
+  $(".a00, .a01, .a02, .a03, .a04, header, footer").addClass('blur');
+  $(".modal-ter").removeClass('none');
+  return false;
+}
+
+function cerrarModalBases(){
+  $(".a00, .a01, .a02, .a03, .a04, header, footer").removeClass('blur');
+  $(".modal-ter").addClass('none');
+  return false;
+}
+
 /*--| Tienda
 -------------------------------------------------------------------------- |--*/
 function donar(producto_id){

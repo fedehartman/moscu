@@ -89,7 +89,7 @@ Date: Feb - Mar | 2014
 
 <div class="modal modal-ter none">
   <div class="modalbody">
-    <div class="close" onclick="cerrarModal();"></div>
+    <div class="close" onclick="cerrarModalBases();"></div>
     <p><strong>Bases</strong><br>
 Pueden usar las bases que quieran a La Gala de los #PremiosCatatonias. De todas formas, asegúrense de estar lindos así pueden estar en el Fashion Police. 
 <br><br>
@@ -102,29 +102,6 @@ Como los premios tienen el nombre de @catatonias, ella puede cambiar lo que quie
 <strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong></p>
   </div>
 </div>
-
-<!--| Modal
-=========================================================================== |-->
-
-<!--| Modal
-=========================================================================== |-->
-
-<div class="modal modal-ter none">
-  <div class="modalbody">
-    <div class="close" onclick="cerrarModal();"></div>
-    <p><strong>Bases</strong><br>
-Pueden usar las bases que quieran a La Gala de los #PremiosCatatonias. De todas formas, asegúrense de estar lindos así pueden estar en el Fashion Police. 
-<br><br>
-<strong>Condiciones</strong><br>
-Etílicas, en lo posible. <br>
-<br>
-<strong>La posta</strong><br>
-Como los premios tienen el nombre de @catatonias, ella puede cambiar lo que quiera en cualquier momento y no se hace responsable de nada. Los votos efectuadors por Bots (de Pedro Bordaberry o no), no valen.  Igual eso es lo de menos, todos sabemos que en realidad quieren ir a La Gala a ver si finalmente se puede decir que en Twitter se coge.
-<br><br>
-<strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong></p>
-  </div>
-</div>
-
 
 
 
@@ -480,7 +457,7 @@ premios
       </div>
     </div>
   <div class="footer2">
-    <a class="modal-ter-open" href="#">Bases y condiciones</a>&nbsp;&nbsp;|&nbsp;&nbsp;Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a class="modal-ter-open" href="#" onclick="mostrarModalBases();">Bases y condiciones</a>&nbsp;&nbsp;|&nbsp;&nbsp;Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
    <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
