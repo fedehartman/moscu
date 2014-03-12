@@ -50,7 +50,7 @@ Date: Feb - Mar | 2014
 </head>
 
 <body>
-
+<div class="none" id="gran"></div>
 
 
 
@@ -302,6 +302,9 @@ premios
   <a href="http://twitter.com/Subrayado" target="_blank" class="lin l-13"></a>
   <a href="http://www.facebook.com/candilejas.resto.7" target="_blank" class="lin l-14"></a>
   <a href="http://twitter.com/Cativelli" target="_blank" class="lin l-15"></a>
+  <a href="http://twitter.com/vyboryta" target="_blank" class="lin l-16"></a>
+  <a href="http://twitter.com/Rayorama_" target="_blank" class="lin l-17"></a>
+  <a href="http://twitter.com/Velcro_Negro" target="_blank" class="lin l-18"></a>
   </figure>
 </div></div></div>
 
@@ -432,13 +435,13 @@ premios
           <div class="logo amareto"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
           <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
           <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
-          <div class="logo tarmac"><a target="_blank" href="http://www.amaretto.com.uy/"></a></div>
+          <div class="logo tarmac"><a target="_blank" href="http://www.tarmac.io/"></a></div>
         </div>
       </div>
     </div>
   <div class="footer2">
    Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    Diseño & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
+    Dise<a href="#" id="btn_gran">ñ</a>o & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
 

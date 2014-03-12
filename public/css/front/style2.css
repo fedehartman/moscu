@@ -2811,21 +2811,6 @@ nav ul {
   width: 81px;
   margin: 408px 0px 0px 802px; }
 
-
-.l-16 {
-  width: 81px;
-  margin: 408px 0px 0px 802px; }
-
-
-.l-17 {
-  width: 81px;
-  margin: 408px 0px 0px 802px; }
-
-
-.l-18 {
-  width: 81px;
-  margin: 408px 0px 0px 802px; }
-
 /*--| 5· Tienda
 -------------------------------------------------------------------------- |--*/
 .tienda .listado ul {
@@ -3073,16 +3058,12 @@ nav ul {
 -------------------------------------------------------------------------- |--*/
 /*--| Scroll
 --------------------------------- |--*/
-/*.nano {
+.nano {
   position: relative;
   width: 1220px;
   height: 100%;
-  overflow: hidden; }*/
-.nano {
-  position: relative;
-  width: 100%;
-  height: 100%;
   overflow: hidden; }
+
 .nano > .nano-content {
   position: absolute;
   overflow: scroll;
@@ -3135,9 +3116,7 @@ nav ul {
 
 .nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
   opacity: 0.98; }
-.wrapper, .nano {
-  width: 98%;
-  height: 78%; }
+
 /*--| 1· Big Screen
 -------------------------------------------------------------------------- |--*/
 /* @media (min-width: 1441px) { 
@@ -3149,16 +3128,13 @@ nav ul {
  */
 /*--| 2· 1440
 -------------------------------------------------------------------------- |--*/
+/* @media (max-width: 1440px) and (min-width: 1367px) { 
 
-@media (max-width: 1440px) and (min-width: 1367px) {
-  .wrapper, .nano {
-    height: 80%;
-    margin-top: -21%;
-     }
+  .wrapper, .nano {height: 80%; margin-top: -21%; background-color: #8b21a6;}
+  .categorias li {margin: 24px;}
 
-  .categorias li {
-    margin: 24px; } }
-
+}
+ */
 /*--| 3· 1280
 -------------------------------------------------------------------------- |--*/
 /* @media (max-width: 1280px) and (min-width: 1025px) { 
