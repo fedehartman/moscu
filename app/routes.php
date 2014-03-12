@@ -324,7 +324,7 @@ Route::get('procesar-nuevos-votos', function() {
 				$tweet_id = NULL;
 			}
 			Tweet::guardarVoto($tweet, $categoria_id, $twitero_id, $tweet_id);
-			if($c == 1){
+			if($c == count($votos->statuses)){
 				Configuracion::saveConfiguracion('max_id', $tweet->id_str);
 				Configuracion::saveConfiguracion('since_id', $tweet->id_str);	
 			}			
