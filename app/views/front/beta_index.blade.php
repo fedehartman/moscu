@@ -100,7 +100,7 @@ Etílicas, en lo posible. <br>
 Como los premios tienen el nombre de @catatonias, ella puede cambiar lo que quiera en cualquier momento y no se hace responsable de nada. Los votos efectuadors por Bots (de Pedro Bordaberry o no), no valen.  Igual eso es lo de menos, todos sabemos que en realidad quieren ir a La Gala a ver si finalmente se puede decir que en Twitter se coge.
 <br><br>
 <strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong><br><br>
-<strong>No podés participar si tenés menos de 18 años. No podés ganás si no vas a La Gala</strong></p>
+<strong>No podés participar si tenés menos de 18 años. No podés ganar si no vas a La Gala</strong></p>
   </div>
 </div>
 
@@ -454,6 +454,8 @@ premios
           <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
           <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
           <div class="logo tarmac"><a target="_blank" href="http://www.tarmac.io/"></a></div>
+          <div class="logo jameson"><a target="_blank" href="http://www.facebook.com/Jamesonuruguay"></a></div>
+          <div class="logo velcro"><a target="_blank" href="http://www.twitter.com/Velcro_Negro"></a></div>
         </div>
       </div>
     </div>
