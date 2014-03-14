@@ -394,7 +394,7 @@ Route::get('procesar-viejos-votos', function() {
 Route::get('via-tweets', function() {
 	$connection = new TwitterOAuth(Config::get('twitter.CONSUMER_KEY'), Config::get('twitter.CONSUMER_SECRET'));
 
-	$tweets = Tweet::where('via', '')->get();
+	$tweets = Tweet::where('via', '')->orderBy('fecha')->get();
     foreach ($tweets as $tw) {
 		$tweet = $connection->get('statuses/show', array('id' => $tw->tw_id));
 		if (!isset($tweet->errors)) {
@@ -409,7 +409,7 @@ Route::get('via-tweets', function() {
 		        $tweet_bd->via = $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message;
 		        $tweet_bd->save();
 
-		    	$contenido  = '<p>No se pudo acceder al tweet id <b>' . $tw->id . '</b></p>';
+		    	$contenido  = '<p>No se pudo acceder al tweet <b>' . $tw->id . '</b></p>';
 		    	$contenido  .= '<p><b>Error</b> ' . $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message . '</p>';
 
 				$email_data['titulo'] = 'Via en tweets';
