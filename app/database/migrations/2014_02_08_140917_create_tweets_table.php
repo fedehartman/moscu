@@ -26,6 +26,7 @@ class CreateTweetsTable extends Migration {
 			$table->boolean('voto_repetido');
 			$table->boolean('tweet_ano');
 			$table->boolean('procesado');
+			$table->string('via');
 			$table->softDeletes();
 			$table->timestamps();
 		});
