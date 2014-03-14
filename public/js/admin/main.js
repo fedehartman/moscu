@@ -102,9 +102,10 @@ function datosUsuario(e){
   e.stopPropagation();
 
   var usuario = $(this).data('usuario');
+  var nombre_usuario = $(this).data('nombre_usuario');
   $.ajax({
     type: "get",
-    url: BASE_PATH + '/admin/datos-usuario/' + usuario,
+    url: BASE_PATH + '/admin/datos-usuario/' + usuario + '/' + nombre_usuario,
     dataType: "html",
     success: function(data){
       $('#modal-ver .modal-title').html('Datos del usuario');

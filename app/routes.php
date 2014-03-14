@@ -91,14 +91,14 @@ Route::get('admin/ver-votos-ano/{categoria_id}/{tweet_id}', function($categoria_
     return View::make('admin.ver_votos', $data);
 } );
 
-Route::get('admin/datos-usuario/{tw_id_usuario}', function($tw_id_usuario) {
+Route::get('admin/datos-usuario/{tw_id_usuario}/{tw_usuario}', function($tw_id_usuario, $tw_usuario) {
 	$connection = new TwitterOAuth(Config::get('twitter.CONSUMER_KEY'), Config::get('twitter.CONSUMER_SECRET'));
 	$usuario = $connection->get('users/show', array('user_id' => $tw_id_usuario));
 
 	$data['tweets'] = 0;
     $data['siguiendo'] = 0;
     $data['seguidores']= 0;
-    $data['usuario']= $tw_id_usuario;
+    $data['usuario']= $tw_usuario;
 	if (!isset($usuario->errors)) {
 	    $data['tweets'] = $usuario->statuses_count;
 	    $data['siguiendo'] = $usuario->friends_count;
@@ -397,11 +397,30 @@ Route::get('via-tweets', function() {
 	$tweets = Tweet::where('via', '')->get();
     foreach ($tweets as $tw) {
 		$tweet = $connection->get('statuses/show', array('id' => $tw->tw_id));
-
 		if (!isset($tweet->errors)) {
-			$tweet_bd = Tweet::where('tw_id', $tweet->id_str)->first();
+			$tweet_bd = Tweet::find($tw->id);
 	        $tweet_bd->via = $tweet->source;
 	        $tweet_bd->save();
+		}else{
+			if($tweet->errors[0]->code == '88'){
+				break;
+		    }else{
+		    	$tweet_bd = Tweet::find($tw->id);
+		        $tweet_bd->via = $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message;
+		        $tweet_bd->save();
+
+		    	$contenido  = '<p>No se pudo acceder al tweet id <b>' . $tw->id . '</b></p>';
+		    	$contenido  .= '<p><b>Error</b> ' . $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message . '</p>';
+
+				$email_data['titulo'] = 'Via en tweets';
+				$email_data['texto'] = $contenido;
+				$email_data['tweets'] = array();
+
+				Mail::send('emails.base', $email_data, function($message) use ($email_data){
+			        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
+			        $message->to('andresbotta@gmail.com')->subject($email_data['titulo']);
+			    });
+		    }
 		}
 	}	
 } );

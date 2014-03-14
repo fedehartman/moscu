@@ -40,7 +40,7 @@
                 <td>{{{ date('d-m-Y H:i:s', strtotime($tweet->fecha)) }}}</td>
                 <td>{{ $tweet->mostrarEstado() }}</td>
                 <td>
-                  <a class="btn btn-info btn-xs datos-usuario" href="#" data-usuario="{{ $tweet->tw_id_usuario }}">{{{ $tweet->tw_nombre_usuario }}} - @{{{ $tweet->tw_usuario }}}</a> - {{ $tweet->via }}<br/>
+                  <a class="btn btn-info btn-xs datos-usuario" href="#" data-usuario="{{ $tweet->tw_id_usuario }}" data-nombre_usuario="{{ $tweet->tw_usuario }}">{{{ $tweet->tw_nombre_usuario }}} - @{{{ $tweet->tw_usuario }}}</a> - <span class="label label-default">{{ $tweet->via }}</span><br/>
                   {{{ $tweet->texto }}}
                 </td>
                 <td>{{{ $tweet->mostrarVoto() }}}</td>                
