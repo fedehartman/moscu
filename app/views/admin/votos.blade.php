@@ -6,9 +6,9 @@
     <i class="icon-bullhorn"></i>
     <span>Mejores por categor&iacute;a</span>
   </h1>
-  <div class="pull-right">
+  <!-- <div class="pull-right">
     <a class="btn btn-success" href="{{ URL::to('/admin/procesar-votos/') }}">Procesar Tweets</a>
-  </div>
+  </div> -->
 </div>
 
 @include('admin.partials.mensajes')

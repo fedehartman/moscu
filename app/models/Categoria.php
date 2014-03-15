@@ -133,28 +133,12 @@ class Categoria extends Eloquent {
     }
 
     public function categoriaClass() {
-        if ($this->created_at >= '2014-03-07') {
-        	if($this->id == 30)
-        		return 'class="cat-geek"';
-        	elseif($this->id == 24)
-        		return 'class="cat-locked"';
-        	elseif($this->boton_votar)
-        		return 'class="cat-nueva"';
-        	else
-        		return 'class="cat-locked"';
-        }else{
-        	if(date('Y-m-d') >= '2014-03-15'){
-        		if($this->id == 24)
-        			return '';
-        		else
-        			return 'class="cat-cerrada"';
-        	}else{
-        		if($this->id == 9)
-        			return 'class="cat-cerrada"';
-        		else
-        			return '';
-        	}
-        }
+    	if($this->id == 30)
+    		return 'class="cat-geek"';
+    	if($this->id == 24)
+			return 'class="cat-locked"';
+    	else
+    		return 'class="cat-cerrada"';
     }
 
     public function puedeVotar() {

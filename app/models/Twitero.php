@@ -29,7 +29,7 @@ class Twitero extends Eloquent {
 			$url = str_replace('http://favstar.fm/users/', '', $url);
 
 			$screen_name = explode('/', $url);
-			$tweet_ano_id = explode('/', $tweet->entities->urls[0]->expanded_url);
+			$tweet_ano_id = explode('/', $url);
 
 			$tweet_ano = NULL;
 			$tw_ano = $connection->get('statuses/show', array('id' => end($tweet_ano_id)));
