@@ -79,6 +79,21 @@ $(".b02").click(function(e) {
   return false;
   });
 
+  $("#btn_gran").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $.ajax({
+      type: "get",
+      url: BASE_PATH + '/gran',
+      dataType: "html",
+      success: function(data){
+        $(".a00, .a01, .a02, .a03, .a04, header, footer").addClass('blur');
+        $("#gran").html(data);
+        $("#gran").removeClass('none');
+      }
+    });
+  });
+
 $(".b03").click(function(e) {
   e.preventDefault();
   $('header').delay(450).queue(function(){
@@ -186,23 +201,6 @@ $(".gif").randombg({
 
 
 
-
-/*--| Countdown
--------------------------------------------------------------------------- |--*/
-
-$(".kkcountdown").kkcountdown({
-  dayText   : ' día, ',
-  daysText  : ' días, ',
-  hoursText : ' horas, ',
-  minutesText : 'minutos y ',
-  secondsText : ' segundos',
-  displayZeroDays : true
-});
-
-
-
-
-
 /*--| Tienda
 -------------------------------------------------------------------------- |--*/
 
@@ -238,6 +236,18 @@ function cerrarModal(){
   $(".a00, .a01, .a02, .a03, .a04, header, footer").removeClass('blur');
   $(".modalbody p").html('');
   $(".modal").addClass('none');
+  return false;
+}
+
+function mostrarModalBases(){
+  $(".a00, .a01, .a02, .a03, .a04, header, footer").addClass('blur');
+  $(".modal-ter").removeClass('none');
+  return false;
+}
+
+function cerrarModalBases(){
+  $(".a00, .a01, .a02, .a03, .a04, header, footer").removeClass('blur');
+  $(".modal-ter").addClass('none');
   return false;
 }
 

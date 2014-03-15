@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.ver').on('click',ver);
     $('.ver-votos').on('click',verVotos);
     $('.ver-votos-ano').on('click',verVotosAno);
+    $('.datos-usuario').on('click',datosUsuario);
     $('.borrar').on('click',borrar);
 
     $('.buscar').on('click',function(){
@@ -90,6 +91,24 @@ function verVotosAno(e){
     dataType: "html",
     success: function(data){
       $('#modal-ver .modal-title').html('Listado de Votos');
+      $('#modal-ver .modal-body').html(data);
+      $('#modal-ver').modal('toggle');
+    }
+  });
+}
+
+function datosUsuario(e){
+  e.preventDefault();
+  e.stopPropagation();
+
+  var usuario = $(this).data('usuario');
+  var nombre_usuario = $(this).data('nombre_usuario');
+  $.ajax({
+    type: "get",
+    url: BASE_PATH + '/admin/datos-usuario/' + usuario + '/' + nombre_usuario,
+    dataType: "html",
+    success: function(data){
+      $('#modal-ver .modal-title').html('Datos del usuario');
       $('#modal-ver .modal-body').html(data);
       $('#modal-ver').modal('toggle');
     }

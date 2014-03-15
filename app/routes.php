@@ -59,20 +59,12 @@ Route::post('admin/cambiar-clave', function() {
 } );
 
 Route::get('admin/votos', function() {
-	// $tweets = Tweet::orderBy('fecha', 'desc')->get();
- //    Tweet::reiniciarVotosRepetido();
- //    foreach ($tweets as $tweet) {
-	// 	$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
-	// 	$tweet->actualizarVoto($categoria_id);
-	// }
-
     $data['categorias'] = Categoria::orderBy('orden')->get();
     return View::make('admin.votos', $data);
 } );
 
 Route::get('admin/procesar-votos', function() {
-    $tweets = Tweet::where('tweet_ano', 0)->where('procesado', '0')->orderBy('fecha', 'desc')->get();
-    // Tweet::reiniciarVotosRepetido();
+    $tweets = Tweet::where('tweet_ano', 0)->where('procesado', 0)->orderBy('fecha')->get();
     foreach ($tweets as $tweet) {
 		$categoria_id = Categoria::votoEnLaCategoriaBD($tweet);
 		if(Categoria::esTweetDelAno($categoria_id)){
@@ -86,7 +78,7 @@ Route::get('admin/procesar-votos', function() {
 		$tweet->actualizarVoto($categoria_id, $twitero_id, $tweet_id);
 	}
 
-    return Redirect::to('admin/votos')->with('msg_ok', true)->with('msg', 'Se procesaron ' . count($tweets) . ' votos.');
+    return Redirect::to('admin/tweet/listado')->with('msg_ok', true)->with('msg', 'Se procesaron ' . count($tweets) . ' votos.');
 } );
 
 Route::get('admin/ver-votos/{categoria_id}/{twitero_id}', function($categoria_id, $twitero_id) {
@@ -97,6 +89,24 @@ Route::get('admin/ver-votos/{categoria_id}/{twitero_id}', function($categoria_id
 Route::get('admin/ver-votos-ano/{categoria_id}/{tweet_id}', function($categoria_id, $tweet_id) {
     $data['tweets'] = Tweet::where('categoria_id', $categoria_id)->where('tweet_id', $tweet_id)->where('voto_repetido', 0)->get();
     return View::make('admin.ver_votos', $data);
+} );
+
+Route::get('admin/datos-usuario/{tw_id_usuario}/{tw_usuario}', function($tw_id_usuario, $tw_usuario) {
+	$connection = new TwitterOAuth(Config::get('twitter.CONSUMER_KEY'), Config::get('twitter.CONSUMER_SECRET'));
+	$usuario = $connection->get('users/show', array('user_id' => $tw_id_usuario));
+
+	$data['tweets'] = 0;
+    $data['siguiendo'] = 0;
+    $data['seguidores']= 0;
+    $data['usuario']= $tw_usuario;
+	if (!isset($usuario->errors)) {
+	    $data['tweets'] = $usuario->statuses_count;
+	    $data['siguiendo'] = $usuario->friends_count;
+	    $data['seguidores']= $usuario->followers_count;
+	}
+
+    return View::make('admin.datos_usuario', $data);
+
 } );
 
 Route::controller('admin/usuario','UsuarioController');
@@ -184,7 +194,7 @@ Route::post('/gran-gran', function()
     try {
     	if(strtolower(Input::get('respuesta')) == 'klapaucius'){
     		$response['error'] = false;
-    		$response['msg'] = "<a href=\"#\" onclick=\"popup('http://twitter.com/share?text=" . urlencode('Me acabo de ganar una Wacom Intuos gracias a @Tarmac_IT y los #PremiosCatatonias!! ¿Dónde paso a buscarla @catatonias? Uruguay Nomá!!') . "&amp;url=', 550, 320)\">Felicitaciones! Le acertaste. Click acá para reclamar tu premio - twitteá eso y listo</a>";
+    		$response['msg'] = "<a href=\"#\" onclick=\"popup('http://twitter.com/share?text=" . urlencode('Perdí una Wacom Intuos gracias a @Tarmac_IT por ser 2º pero me toca un escobillón para water de los #PremiosCatatonias! Entregá @catatonias.') . "&amp;url=', 550, 320)\">Felicitaciones! Le acertaste. Click acá para reclamar tu premio - twitteá eso y listo</a>";
     	}else{
     		$response['error'] = true;
     		$response['msg'] = 'No, le erraste.';
@@ -324,10 +334,10 @@ Route::get('procesar-nuevos-votos', function() {
 				$tweet_id = NULL;
 			}
 			Tweet::guardarVoto($tweet, $categoria_id, $twitero_id, $tweet_id);
-			if($c == count($votos->statuses)){
+			if($c == 1)
 				Configuracion::saveConfiguracion('max_id', $tweet->id_str);
-				Configuracion::saveConfiguracion('since_id', $tweet->id_str);	
-			}			
+			if($c == count($votos->statuses))
+				Configuracion::saveConfiguracion('since_id', $tweet->id_str);
 
 	        $text_mail = '<p><b>twitero:</b> @' . $tweet->user->screen_name . '<br/>';
 			$text_mail .= '<b>id:</b> ' . $tweet->id_str . '<br/>';
@@ -359,25 +369,60 @@ Route::get('procesar-viejos-votos', function() {
 
 	$votos = $connection->get('search/tweets', $parameters);
 
-	$c = 0;
 	foreach (array_reverse($votos->statuses) as $tweet) {
-		$c++;
-		$categoria_id = Categoria::votoEnLaCategoria($tweet);
-		if(Categoria::esTweetDelAno($categoria_id)){
-			$cat_ano = Twitero::votoAlTwiteroDelTweet($tweet->id_str);
-			$twitero_id = $cat_ano['twitero_id'];
-			$tweet_id = $cat_ano['tweet_id'];
+		$tweet_bd = Tweet::where('tw_id', $tweet->id_str)->first();
+      	if(!$tweet_bd){
+			$categoria_id = Categoria::votoEnLaCategoria($tweet);
+			if(Categoria::esTweetDelAno($categoria_id)){
+				$cat_ano = Twitero::votoAlTwiteroDelTweet($tweet->id_str);
+				$twitero_id = $cat_ano['twitero_id'];
+				$tweet_id = $cat_ano['tweet_id'];
+			}else{
+				$twitero_id = Twitero::votoAlTwitero($tweet);
+				$tweet_id = NULL;
+			}
+			Tweet::guardarVoto($tweet, $categoria_id, $twitero_id, $tweet_id);
+			Configuracion::saveConfiguracion('max_id', $tweet->id_str);
 		}else{
-			$twitero_id = Twitero::votoAlTwitero($tweet);
-			$tweet_id = NULL;
-		}
-		Tweet::guardarVoto($tweet, $categoria_id, $twitero_id, $tweet_id);
-		if($c == count($votos->statuses)){
-			Configuracion::saveConfiguracion('max_id', $tweet->id_str);	
+			break;
 		}
 	}
 	
 	print_r(count($votos->statuses));die();
+} );
+
+Route::get('via-tweets', function() {
+	$connection = new TwitterOAuth(Config::get('twitter.CONSUMER_KEY'), Config::get('twitter.CONSUMER_SECRET'));
+
+	$tweets = Tweet::where('via', '')->orderBy('fecha')->get();
+    foreach ($tweets as $tw) {
+		$tweet = $connection->get('statuses/show', array('id' => $tw->tw_id));
+		if (!isset($tweet->errors)) {
+			$tweet_bd = Tweet::find($tw->id);
+	        $tweet_bd->via = $tweet->source;
+	        $tweet_bd->save();
+		}else{
+			if($tweet->errors[0]->code == '88'){
+				break;
+		    }else{
+		    	$tweet_bd = Tweet::find($tw->id);
+		        $tweet_bd->via = $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message;
+		        $tweet_bd->save();
+
+		    	$contenido  = '<p>No se pudo acceder al tweet <b>' . $tw->id . '</b></p>';
+		    	$contenido  .= '<p><b>Error</b> ' . $tweet->errors[0]->code . ' - ' . $tweet->errors[0]->message . '</p>';
+
+				$email_data['titulo'] = 'Via en tweets';
+				$email_data['texto'] = $contenido;
+				$email_data['tweets'] = array();
+
+				Mail::send('emails.base', $email_data, function($message) use ($email_data){
+			        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
+			        $message->to('andresbotta@gmail.com')->subject($email_data['titulo']);
+			    });
+		    }
+		}
+	}	
 } );
 
 // //LOG CONSULTAS A LA BASE DE DATOS

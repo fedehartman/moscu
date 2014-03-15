@@ -33,7 +33,7 @@
         <div class="col-sm-3">
           <div class="box-content box-statistic">
             <h3 class="title text-success">{{ Tweet::totalVotos() }}</h3>
-            <small>votos</small>
+            <small>votos válidos</small>
             <div class="text-success icon-star align-right"></div>
           </div>
         </div>

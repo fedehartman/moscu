@@ -84,7 +84,25 @@ Date: Feb - Mar | 2014
 
 <figure class="none"><img src="{{ URL::asset('/img/front/logopromo.png') }}" width="750px" height="550px"></figure>
 
+<!--| Modal
+=========================================================================== |-->
 
+<div class="modal modal-ter none">
+  <div class="modalbody">
+    <div class="close" onclick="cerrarModalBases();"></div>
+    <p><strong>Bases</strong><br>
+Pueden usar las bases que quieran a La Gala de los #PremiosCatatonias. De todas formas, asegúrense de estar lindos así pueden estar en el Fashion Police. 
+<br><br>
+<strong>Condiciones</strong><br>
+Etílicas, en lo posible. <br>
+<br>
+<strong>La posta</strong><br>
+Como los premios tienen el nombre de @catatonias, ella puede cambiar lo que quiera en cualquier momento y no se hace responsable de nada. Los votos efectuadors por Bots (de Pedro Bordaberry o no), no valen.  Igual eso es lo de menos, todos sabemos que en realidad quieren ir a La Gala a ver si finalmente se puede decir que en Twitter se coge.
+<br><br>
+<strong>Al votar y promocionar los #PremiosCatatonias, estás aceptando estas condiciones.</strong><br><br>
+<strong>No podés participar si tenés menos de 18 años. No podés ganar si no vas a La Gala</strong></p>
+  </div>
+</div>
 
 
 
@@ -302,6 +320,9 @@ premios
   <a href="http://twitter.com/Subrayado" target="_blank" class="lin l-13"></a>
   <a href="http://www.facebook.com/candilejas.resto.7" target="_blank" class="lin l-14"></a>
   <a href="http://twitter.com/Cativelli" target="_blank" class="lin l-15"></a>
+  <a href="http://twitter.com/vyboryta" target="_blank" class="lin l-16"></a>
+  <a href="http://twitter.com/Rayorama_" target="_blank" class="lin l-17"></a>
+  <a href="http://twitter.com/Velcro_Negro" target="_blank" class="lin l-18"></a>
   </figure>
 </div></div></div>
 
@@ -405,7 +426,7 @@ premios
     <div class="footer1">
       <div class="slider1">
         <div class="logos">
-          <div class="logo lesmots"><a target="_blank" href="http:/lesmots.uy"></a></div>
+          <div class="logo lesmots"><a target="_blank" href="http://lesmots.uy"></a></div>
           <div class="logo subrayado"><a target="_blank" href="http://www.subrayado.com.uy/"></a></div>
           <div class="logo sovieticode"><a target="_blank" href="http://twitter.com/sovieticode"></a></div>
           <div class="logo vito"><a target="_blank" href="http://twitter.com/vito_magarulo"></a></div>
@@ -433,12 +454,14 @@ premios
           <div class="logo cromo"><a target="_blank" href="http://www.cromo.com.uy/"></a></div>
           <div class="logo punta"><a target="_blank" href="http://www.puntacarretasweb.com.uy/"></a></div>
           <div class="logo tarmac"><a target="_blank" href="http://www.tarmac.io/"></a></div>
+          <div class="logo jameson"><a target="_blank" href="http://www.facebook.com/Jamesonuruguay"></a></div>
+          <div class="logo velcro"><a target="_blank" href="http://www.twitter.com/Velcro_Negro"></a></div>
         </div>
       </div>
     </div>
   <div class="footer2">
-   Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    Dise<a href="#" id="btn_gran">ñ</a>o & Desarrollo: <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
+    <a class="modal-ter-open" href="#" onclick="mostrarModalBases();">Bases y condiciones</a>&nbsp;&nbsp;|&nbsp;&nbsp;Excusa para hacer algo lindo de: <a href="http://lesmots.uy" targe="_blank">LesMots</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+   <a href="http://twitter.com/sovieticode" targe="_blank">Sovieticode</a> 
   </div>
 </footer>
 
