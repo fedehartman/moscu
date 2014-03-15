@@ -143,7 +143,7 @@ class Categoria extends Eloquent {
         	else
         		return 'class="cat-locked"';
         }else{
-        	if(date('Y-m-d') >= '2014-03-15'){
+        	if(date('Y-m-d') >= '2014-03-16'){
         		if($this->id == 24)
         			return '';
         		else
@@ -160,7 +160,7 @@ class Categoria extends Eloquent {
     public function puedeVotar() {
     	if (date('Y-m-d') >= '2014-03-08' && $this->id == 9)
         	return false;
-        elseif (date('Y-m-d') >= '2014-03-15' && $this->id != 24)
+        elseif ($this->id != 24)
         	return false;
         elseif (!$this->boton_votar)
         	return false;
