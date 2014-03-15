@@ -142,15 +142,15 @@ class Categoria extends Eloquent {
     }
 
     public function puedeVotar() {
-    	if (date('Y-m-d') >= '2014-03-08' && $this->id == 9)
-        	return false;
-        elseif (date('Y-m-d') >= '2014-03-15' && $this->id != 24)
-        	return false;
-        elseif (!$this->boton_votar)
-        	return false;
-        else
-        	return true;
-    }
+		if (date('Y-m-d') >= '2014-03-08' && $this->id == 9)
+			return false;
+		elseif (date('Y-m-d') >= '2014-03-16' && $this->id != 24)
+			return false;
+		elseif (!$this->boton_votar)
+			return false;
+		else
+			return true;
+	}
 
     public function mejoresTwiteros(){
 		$mejores = DB::select("SELECT categoria_id, twitero_id,(SELECT usuario FROM twiteros WHERE twiteros.id = t2.twitero_id) as twitero, (SELECT count(*) FROM `tweets` t WHERE t.`deleted_at` IS NULL AND t.`categoria_id` = " . $this->id . " AND t.`twitero_id` = t2.`twitero_id` AND `voto_repetido` = 0 AND `procesado` = 1) as votos FROM `tweets` t2 WHERE t2.`deleted_at` IS NULL AND t2.`categoria_id` = " . $this->id . " AND t2.`twitero_id` is not null GROUP BY t2.`twitero_id` ORDER BY `votos` DESC, twitero_id LIMIT 3");
