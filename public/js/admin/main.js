@@ -3,7 +3,6 @@ $(document).ready(function(){
     $('.ver').on('click',ver);
     $('.ver-votos').on('click',verVotos);
     $('.ver-votos-ano').on('click',verVotosAno);
-    $('.datos-usuario').on('click',datosUsuario);
     $('.borrar').on('click',borrar);
 
     $('.buscar').on('click',function(){
@@ -97,12 +96,7 @@ function verVotosAno(e){
   });
 }
 
-function datosUsuario(e){
-  e.preventDefault();
-  e.stopPropagation();
-
-  var usuario = $(this).data('usuario');
-  var nombre_usuario = $(this).data('nombre_usuario');
+function datosUsuario(usuario, nombre_usuario){
   $.ajax({
     type: "get",
     url: BASE_PATH + '/admin/datos-usuario/' + usuario + '/' + nombre_usuario,

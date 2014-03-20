@@ -347,16 +347,16 @@ Route::get('procesar-nuevos-votos', function() {
 			$tweet_cargados[] = $text_mail;
 		}
 
-		$contenido  = '<p><b>Se encontraron:</b> ' . count($votos->statuses) . ' nuevos tweets</p>';
+		// $contenido  = '<p><b>Se encontraron:</b> ' . count($votos->statuses) . ' nuevos tweets</p>';
 
-		$email_data['titulo']    = 'Se ejecuto el cron de nuevos tweets';
-		$email_data['texto'] = $contenido;
-		$email_data['tweets'] = $tweet_cargados;
+		// $email_data['titulo']    = 'Se ejecuto el cron de nuevos tweets';
+		// $email_data['texto'] = $contenido;
+		// $email_data['tweets'] = $tweet_cargados;
 
-		Mail::send('emails.base', $email_data, function($message) use ($email_data){
-	        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
-	        $message->to(array('andresbotta@gmail.com', 'fede@fedehartman.com'))->subject($email_data['titulo']);
-	    });
+		// Mail::send('emails.base', $email_data, function($message) use ($email_data){
+	 //        $message->from('info@premioscatatonias.com.uy', 'Premios Catatonias');
+	 //        $message->to(array('andresbotta@gmail.com', 'fede@fedehartman.com'))->subject($email_data['titulo']);
+	 //    });
 	}
 } );
 
